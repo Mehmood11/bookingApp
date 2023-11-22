@@ -1,10 +1,5 @@
-import styles from "./page.module.css";
-import { CustomJobStepperSection } from "@/public/calendar-card/calendar-card";
+import About from "@/sections/dashboard/about";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      {/* <CustomJobStepperSection /> */}
-    </main>
-  );
+  return <About />; // We'll Place Sign-in Page here
 }
