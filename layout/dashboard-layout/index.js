@@ -5,9 +5,9 @@ import Footer from "./footer";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Stack sx={{ height: "84vh" }}>
+    <Stack sx={{ height: "100vh" }}>
       <Header />
-      <Box>{children}</Box>
+      {children}
       <Footer />
     </Stack>
   );
