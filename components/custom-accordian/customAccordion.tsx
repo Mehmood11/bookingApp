@@ -7,23 +7,36 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const accordionItems = [
-  { title: "Accordion 1", content: "Content for Accordion 1" },
-  { title: "Accordion 2", content: "Content for Accordion 2" },
-  // Add more items as needed
-];
 
-const CustomAccordion = ({ items }) => {
+const CustomAccordion = ({ items=[] }) => {
   return (
     <div>
-      {accordionItems.map((item, index) => (
-        <Accordion key={index}>
+      {items.map((item, index) => (
+        <Accordion
+          sx={{
+            boxShadow: "none",
+            background: "transparent",
+            "&:before": {
+              backgroundColor: "transparent",
+            },
+          }}
+          key={index}
+        >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            sx={{ borderBottom: "none" }}
+            expandIcon={
+              <ExpandMoreIcon
+                sx={{ width: "24px", height: "24px", color: "#3B4D60" }}
+              />
+            }
             aria-controls={`panel${index + 1}-content`}
             id={`panel${index + 1}-header`}
           >
-            <Typography>{item.title}</Typography>
+            <Typography
+              sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: 500 }}
+            >
+              {item.title}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>{item.content}</Typography>

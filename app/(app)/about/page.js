@@ -1,8 +1,8 @@
-import CustomAccordion from "@/components/custom-accordian/customAccordion";
+"use client";
 import React from "react";
 
 const page = () => {
-  return <CustomAccordion />;
+  return <div>about</div>;
 };
 
 export default page;
