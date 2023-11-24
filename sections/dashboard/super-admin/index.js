@@ -7,7 +7,6 @@ import totalBooking from "../../../assets/images/total-booking.svg";
 import todayBooking from "../../../assets/images/today-booking.svg";
 import dashboardCard from "../../../assets/images/dashboardCard.svg";
 
-
 const dashboard = [
   {
     id: 1,
