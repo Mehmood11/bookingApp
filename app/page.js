@@ -1,5 +1,12 @@
-import About from "@/sections/dashboard/about";
+
+import TableExample from "@/components/table-example";
+import FlightStepper from "@/sections/dashboard/stepper";
 
 export default function Home() {
-  return <About />; // We'll Place Sign-in Page here
+  return (
+    <>
+      <FlightStepper />
+      <TableExample />
+    </>
+  ); // We'll Place Sign-in Page here
 }

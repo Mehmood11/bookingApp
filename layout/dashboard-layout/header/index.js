@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Tooltip from "@mui/material/Tooltip";
 import { IconButton, useTheme, Container, Button } from "@mui/material";
 import DesktopNavbar from "../navbar/desktop-navbar";
 import MobileNavbar from "../navbar/mobile-navbar";
@@ -10,7 +9,6 @@ import MobileNavbar from "../navbar/mobile-navbar";
 const Header = () => {
   const [anchorElAdd, setAnchorElAdd] = useState(null);
   const [open, setOpen] = useState(false);
-  // const [openNotifications, setOpenNotifications] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const theme = useTheme();
 
@@ -63,11 +61,9 @@ const Header = () => {
             </Button>
           </Box>
 
-          {/* <Box sx={{ flexGrow: 0 }}> */}
           <Button variant="outlined" sx={{ border: "none", color: "white" }}>
             Login
           </Button>
-          {/* </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

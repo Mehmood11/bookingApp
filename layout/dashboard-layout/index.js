@@ -1,14 +1,12 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
 import Header from "./header";
-import Footer from "./footer";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Stack sx={{ height: "100vh" }}>
+    <Stack sx={{ height: "100vh", maxHeight: "90vh" }}>
       <Header />
-      {children}
-      <Footer />
+      <Box p={2}>{children}</Box>
     </Stack>
   );
 };

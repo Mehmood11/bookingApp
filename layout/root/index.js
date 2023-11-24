@@ -6,7 +6,8 @@ const Layout = ({ children }) => {
     <Stack
       sx={{
         // minHeight: "100vh",
-        // height: "100vh",
+        height: "100vh",
+        maxHeight: "90vh",
         backgroundImage: `url(${bg.src})`,
         backgroundPosition: "100%",
         backgroundSize: "cover",

@@ -1,10 +1,6 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 // google fonts
