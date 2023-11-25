@@ -1,10 +1,13 @@
 "use client";
 
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import CustomTable from "./custom-table";
+import TableHeader from "./custom-table/table-header";
 
 const TableExample = () => {
+  const [searchParam, setSearchParam] = useState();
+
   const exampleData = [
     {
       id: 1,
@@ -30,6 +33,22 @@ const TableExample = () => {
   ];
   return (
     <Box>
+      <TableHeader
+        onChanged={(e) => {
+          setSearchParam(e);
+        }}
+        filterButtonShow
+        filterButtonLabel="Filter"
+        tableHeaderData={[
+          {
+            type: "search",
+            FieldProps: {
+              name: "search",
+              placeholder: "Search name",
+            },
+          },
+        ]}
+      />
       <CustomTable
         data={exampleData}
         columns={column}

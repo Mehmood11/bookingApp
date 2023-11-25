@@ -1,3 +1,4 @@
+"use client"
 import { FormProvider as Form } from "react-hook-form";
 
 const FormProvider = ({ children, onSubmit, methods }) => {
