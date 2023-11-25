@@ -5,10 +5,11 @@ import Toolbar from "@mui/material/Toolbar";
 import { IconButton, useTheme, Container, Button } from "@mui/material";
 import DesktopNavbar from "../navbar/desktop-navbar";
 import MobileNavbar from "../navbar/mobile-navbar";
+import ProfileDropDown from "@/components/profile-drop-down";
 
 const Header = () => {
   const [anchorElAdd, setAnchorElAdd] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [login, setLogin] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const theme = useTheme();
 
@@ -33,37 +34,42 @@ const Header = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <DesktopNavbar
-            handleOpenAdd={handleOpenAdd}
-            handleCloseAdd={handleCloseAdd}
-            anchorElAdd={anchorElAdd}
-          />
+          <DesktopNavbar />
           <MobileNavbar
             toggleDrawerMenu={toggleDrawerMenu}
-            handleOpenAdd={handleOpenAdd}
-            handleCloseAdd={handleCloseAdd}
-            anchorElAdd={anchorElAdd}
             openMenu={openMenu}
           />
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "white",
-                color: "black",
-                "&:hover": {
-                  backgroundColor: "white",
-                },
-              }}
-            >
-              Become An Agent
-            </Button>
-          </Box>
+          {!login ? (
+            <>
+              <Box sx={{ flexGrow: 0 }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "white",
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor: "white",
+                    },
+                  }}
+                >
+                  Become An Agent
+                </Button>
+              </Box>
 
-          <Button variant="outlined" sx={{ border: "none", color: "white" }}>
-            Login
-          </Button>
+              <Button
+                variant="outlined"
+                sx={{ border: "none", color: "white" }}
+                onClick={() => {
+                  setLogin(true);
+                }}
+              >
+                Login
+              </Button>
+            </>
+          ) : (
+            <ProfileDropDown />
+          )}
         </Toolbar>
       </Container>
     </AppBar>

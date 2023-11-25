@@ -1,12 +1,11 @@
+import React from "react";
+import SearchFlight from "@/sections/dashboard/search-flight";
+import DashboardLayout from "./(app)/layout";
 
-import TableExample from "@/components/table-example";
-import FlightStepper from "@/sections/dashboard/stepper";
-
-export default function Home() {
+const page = () => {
   return (
-    <>
-      <FlightStepper />
-      <TableExample />
-    </>
-  ); // We'll Place Sign-in Page here
-}
+    <DashboardLayout /> // We'll Place Sign-in Page here
+  );
+};
+
+export default page;
