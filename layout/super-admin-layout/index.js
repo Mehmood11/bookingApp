@@ -1,7 +1,7 @@
 import React from "react";
 
 const SuperAdminLayout = ({ children }) => {
-  return <div>{children} Afsar </div>;
+  return <div>{children}</div>;
 };
 
 export default SuperAdminLayout;
