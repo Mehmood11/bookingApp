@@ -45,7 +45,7 @@ const AddExtra = () => {
         <Box sx={{width:"100%",maxWidth:"300px"}}>
         <RHFCustomSelect
           name="services"
-          label="Controlled"
+          outerLabel="Choose Passenger Extra Service"
           size="small"
           options={servicesData}
         />
