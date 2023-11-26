@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
+    "@mui/x-date-pickers": "^6.18.2",
     "@tanstack/react-table": "^8.10.7",
     "next": "14.0.3",
     "react": "^18",

@@ -19,10 +19,9 @@ const servicesData = [
 const AddExtra = () => {
   const methods = useForm();
 
-  const { handleSubmit, getValues  } = methods;
+  const { handleSubmit  } = methods;
 
   const onSubmitHandler = (data) => {
-    // const selectedValue = getValues("services");
     console.log(data);
   }
   return (

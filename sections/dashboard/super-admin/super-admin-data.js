@@ -56,7 +56,6 @@ export const cardData = [
       agentName: "Baljeet Kaur",
       total: "76.98$",
       status: "In Process",
-      // status: <Button variant="contained" sx={{width:"95px", backgroundColor:"#629bf8", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>In Process</Button>,
       bookingDate: "02/07/2022",
     },
     {
@@ -69,7 +68,6 @@ export const cardData = [
       agentName: "Baljeet Kaur",
       total: "76.98$",
       status: "Conform",
-      // status: <Button variant="contained"  sx={{width:"95px", backgroundColor:"#40c79a", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>Conform</Button>,
       bookingDate: "02/07/2022",
     },
     {
