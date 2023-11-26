@@ -2,11 +2,11 @@ import React, { useState, Children } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import { styles } from "./tabs.styles";
 
-const CustomTabs = ({ tabsArray = [], children, Index = 0 }) => {
+const CustomTabs = ({ tabsArray = [], children, Index = 0 , tabStyle = {}}) => {
   const tabChildren = Children.toArray(children);
   const [value, setValue] = useState(Index);
   return (
-    <Box>
+    <Box sx={tabStyle}>
       <Box sx={styles.tabsWrapper}>
         <Tabs
           classes={{ root: "_root", indicator: "_indicator" }}
@@ -23,12 +23,13 @@ const CustomTabs = ({ tabsArray = [], children, Index = 0 }) => {
               key={index}
               label={tab}
               value={index}
+              sx={{p: 2}}
             />
           ))}
         </Tabs>
       </Box>
       {tabChildren?.map(
-        (child, index) => value === index && <Box key={index}>{child}</Box>
+        (child, index) => value === index && <Box key={index} p={2}>{child}</Box>
       )}
     </Box>
   );

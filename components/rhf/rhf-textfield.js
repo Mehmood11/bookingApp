@@ -23,6 +23,7 @@ const RHFTextField = ({
   ...other
 }) => {
   const { control } = useFormContext();
+  const [showPassword, setShowPassword] = useState(false);
   const [showPassword, setShowPassword] = useState (false);
 
   const endAdornment =
@@ -46,7 +47,9 @@ const RHFTextField = ({
       control={control}
       render={({ field, fieldState: { error } }) => (
         <Stack gap="0.6rem">
-          {outerLabel && <FormLabel>{outerLabel}</FormLabel>}
+          {outerLabel && (
+            <FormLabel sx={{ color: "white" }}>{outerLabel}</FormLabel>
+          )}
           <TextField
             {...field}
             error={Boolean(error)}
@@ -60,6 +63,18 @@ const RHFTextField = ({
             }}
             fullWidth={fullWidth}
             {...other}
+            sx={{
+              borderRadius: "0.8125rem",
+              backgroundColor: "rgba(255, 255, 255, 0.8)",
+              boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
+              backdropFilter: "blur(10px)",
+              "& .MuiInputBase-root": {
+                borderRadius: "0.8125rem",
+              },
+              "& .MuiInputBase-input": {
+                ml: 2,
+              },
+            }}
           />
         </Stack>
       )}
