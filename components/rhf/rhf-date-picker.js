@@ -11,7 +11,9 @@ const RHFDatePicker = ({ name, label, outerLabel, ...other }) => {
       render={({ field, fieldState: { error } }) => {
         return (
           <Stack gap="0.6rem">
-            {outerLabel && <FormLabel>{outerLabel}</FormLabel>}
+            {outerLabel && (
+              <FormLabel sx={{ color: "white" }}>{outerLabel}</FormLabel>
+            )}
 
             <DatePicker
               {...field}
@@ -26,6 +28,10 @@ const RHFDatePicker = ({ name, label, outerLabel, ...other }) => {
                 },
               }}
               label={label}
+              sx={{ borderRadius: "0.8125rem",
+              backgroundColor: "rgba(255, 255, 255, 0.8)",
+              boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
+              backdropFilter: "blur(10px)", }}
             />
           </Stack>
         );
