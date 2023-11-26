@@ -5,6 +5,7 @@ import React from "react";
 import bg from "../../assets/bg.svg";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 const Layout = ({ children }) => {
   return (
     <Stack
@@ -21,9 +22,11 @@ const Layout = ({ children }) => {
         boxSizing: "border-box",
       }}
     >
-     <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <ApiProvider api={baseAPI}>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
       {children}
      </LocalizationProvider>
+     </ApiProvider>
     </Stack>
   );
 };
