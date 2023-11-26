@@ -14,16 +14,15 @@ import { useForm } from "react-hook-form";
 const servicesData = [
   { id: 1, label: "Option 1", value: "option1" },
   { id: 2, label: "Option 2", value: "option2" },
-  // Add more options as needed
 ];
 
 const AddExtra = () => {
   const methods = useForm();
 
-  const { handleSubmit, watch } = methods;
+  const { handleSubmit, getValues  } = methods;
 
-  const onSubmitHandler = (data) => {
-    const selectedValue = watch('services');
+  const onSubmitHandler = () => {
+    const selectedValue = getValues("services");
     console.log("Selected Value:", selectedValue);
   }
   return (
@@ -36,7 +35,7 @@ const AddExtra = () => {
         Add Somthing{" "}
         <Typography
           variant="h5"
-          component="sapn"
+          component="span"
           sx={{ color: "#2278C8", fonSize: "12px", fontWeight: "600" }}
         >
           Extra
@@ -94,7 +93,7 @@ const AddExtra = () => {
           variant="contained"
           sx={{
             fontWeight: "500",
-            fontSize: "12px",
+            fontSize: "14px",
             textTransform: "capitalize",
             backgroundColor: "#EB3334",
           }}

@@ -55,7 +55,8 @@ export const cardData = [
       departureDate: "12/12/23",
       agentName: "Baljeet Kaur",
       total: "76.98$",
-      status: <Button variant="contained" sx={{width:"95px", backgroundColor:"#629bf8", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>In Process</Button>,
+      status: "In Process",
+      // status: <Button variant="contained" sx={{width:"95px", backgroundColor:"#629bf8", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>In Process</Button>,
       bookingDate: "02/07/2022",
     },
     {
@@ -67,11 +68,12 @@ export const cardData = [
       departureDate: "12/12/23",
       agentName: "Baljeet Kaur",
       total: "76.98$",
-      status: <Button variant="contained"  sx={{width:"95px", backgroundColor:"#40c79a", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>Conform</Button>,
+      status: "Conform",
+      // status: <Button variant="contained"  sx={{width:"95px", backgroundColor:"#40c79a", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>Conform</Button>,
       bookingDate: "02/07/2022",
     },
     {
-      id: 2,
+      id: 3,
       airLine: southAirline,
       bookingId: "BK3663",
       destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
@@ -79,7 +81,19 @@ export const cardData = [
       departureDate: "12/12/23",
       agentName: "Baljeet Kaur",
       total: "76.98$",
-      status: <Button variant="contained" color="error" sx={{width:"95px", backgroundColor:"#f26969", fontSize:"12px", fontWeight:"500", textTransform:"capitalize"}}>Rejected</Button>,
+      status: "Rejected",
+      bookingDate: "02/07/2022",
+    },
+    {
+      id: 4,
+      airLine: southAirline,
+      bookingId: "BK3663",
+      destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
+      leadpax: "Baljeet Kaur",
+      departureDate: "12/12/23",
+      agentName: "Baljeet Kaur",
+      total: "76.98$",
+      status: "Pending",
       bookingDate: "02/07/2022",
     },
   ]
@@ -132,7 +146,34 @@ export const cardData = [
     {
       accessorFn: (row) => row?.status ?? "",
       id: "status",
-      cell: (info) => info.getValue(),
+      cell: (info) => {
+        return <Button variant="contained" sx={{
+          width: "95px",
+          backgroundColor: `${
+            info.getValue() === "Rejected"
+              ? "#ff0000" 
+              : info.getValue() === "Conform"
+              ? "#40c79a" 
+              : info.getValue() === "In Process"
+              ? "#629bf8"
+              : "#f7b13c" // Pending Color
+          }`,
+          "&:hover": {
+            backgroundColor: `${
+              info.getValue() === "Rejected"
+                ? "#ff0000" // Red
+                : info.getValue() === "Conform"
+                ? "#40c79a" // Green
+                : info.getValue() === "In Process"
+                ? "#629bf8" // Blue
+                : "#f7b13c" // Pending
+            }`,
+          },
+          fontSize: "12px",
+          fontWeight: "500",
+          textTransform: "capitalize",
+        }}>{(info.getValue())}</Button>;
+      },
       header: () => <span>Status</span>,
     },
     {
