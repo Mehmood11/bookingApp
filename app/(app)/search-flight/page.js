@@ -1,10 +1,8 @@
-import SearchFlight from '@/sections/dashboard/search-flight'
-import React from 'react'
+import SearchFlight from "@/sections/dashboard/search-flight";
+import React from "react";
 
 const page = () => {
-  return (
-    <SearchFlight />
-  )
-}
+  return <SearchFlight />;
+};
 
-export default page
+export default page;
