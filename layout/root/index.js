@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         // minHeight: "100vh",
         height: "100vh",
         maxHeight: "90vh",
-        // backgroundImage: `url(${bg.src})`,
+        backgroundImage: `url(${bg.src})`,
         backgroundPosition: "top",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
