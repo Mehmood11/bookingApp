@@ -1,15 +1,14 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
 import Header from "./header";
-import Footer from "./footer";
+import bg from "../../assets/bg.svg";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Stack sx={{ height: "100vh" }}>
+    <>
       <Header />
-      {children}
-      <Footer />
-    </Stack>
+      <Box p={2} height={'100%'}>{children}</Box>
+    </>
   );
 };
 

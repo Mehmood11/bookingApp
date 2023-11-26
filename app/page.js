@@ -1,5 +1,11 @@
-import About from "@/sections/dashboard/about";
+import React from "react";
+import SearchFlight from "@/sections/dashboard/search-flight";
+import DashboardLayout from "./(app)/layout";
 
-export default function Home() {
-  return <About />; // We'll Place Sign-in Page here
-}
+const page = () => {
+  return (
+    <DashboardLayout /> // We'll Place Sign-in Page here
+  );
+};
+
+export default page;

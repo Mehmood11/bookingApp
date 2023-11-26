@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 const pagesNavbar = [
-  { id: 1, title: "About Us", link: "/about" },
+  { id: 1, title: "About Us", link: "/search-flight" },
   { id: 2, title: "Flight Schedule", link: "/flight-schedule" },
   { id: 3, title: "Account Settings", link: "/account-setting" },
   { id: 4, title: "Manage Bookings", link: "/manage-bookings" },
@@ -24,9 +24,6 @@ const pagesNavbar = [
 
 const MobileNavbar = ({
   toggleDrawerMenu,
-  handleOpenAdd,
-  handleCloseAdd,
-  anchorElAdd,
   openMenu,
 }) => {
   return (
@@ -61,7 +58,7 @@ const MobileNavbar = ({
 
       <Box sx={{ flexGrow: 1, display: { xs: "flex", lg: "none" } }}>
         <Link href="/">
-          <Image src={logo} />
+          <Image src={logo} alt='logo'/>
         </Link>
       </Box>
     </>
