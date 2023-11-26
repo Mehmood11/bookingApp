@@ -20,6 +20,7 @@ const DashboardCard = (props) => {
       <CardContent
         sx={{
           p: 3,
+          borderRadius: "8",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
