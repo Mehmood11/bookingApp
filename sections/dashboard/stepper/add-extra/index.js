@@ -21,9 +21,9 @@ const AddExtra = () => {
 
   const { handleSubmit, getValues  } = methods;
 
-  const onSubmitHandler = () => {
-    const selectedValue = getValues("services");
-    console.log("Selected Value:", selectedValue);
+  const onSubmitHandler = (data) => {
+    // const selectedValue = getValues("services");
+    console.log(data);
   }
   return (
     <Box>

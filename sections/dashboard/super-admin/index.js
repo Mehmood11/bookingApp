@@ -6,11 +6,13 @@ import DashboardCard from "@/components/dashboard-card";
 import { TableData, cardData, columns } from "./super-admin-data";
 import TableHeader from "@/components/custom-table/table-header";
 import CustomTable from "@/components/custom-table";
+import AddExtra from "../stepper/add-extra";
 
 const SuperAdmin = () => {
   const [searchParam, setSearchParam] = useState();
   return (
     <Box>
+      <AddExtra />
       <Grid container spacing={2} mb="40px">
         {cardData.map((item) => (
           <Grid item xs={12} md={6} lg={3}>
