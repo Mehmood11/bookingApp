@@ -21,9 +21,6 @@ const OneWay = ({ watch }) => {
             borderRadius: "8px",
           }}
         >
-          {/* <Typography variant="h5" component="p" sx={{ fontWeight: "bold" }}>
-            {watch("from")?.address?.city}
-          </Typography> */}
           <RHFAutoCompleteAsync
             name="from"
             queryKey="id"
@@ -68,9 +65,6 @@ const OneWay = ({ watch }) => {
             borderRadius: "8px",
           }}
         >
-          {/* <Typography variant="h5" component="p" sx={{ fontWeight: "bold" }}>
-            Mumbai
-          </Typography> */}
            <RHFAutoCompleteAsync
             name="to"
             queryKey="id"

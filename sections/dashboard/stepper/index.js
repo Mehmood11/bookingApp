@@ -37,7 +37,7 @@ const FlightStepper = () => {
         columnGap: "10px",
         boxSizing: "border-box",
         flexWrap: "nowrap",
-        height: "100%",
+        height: "100vh",
       }}
     >
       <Grid

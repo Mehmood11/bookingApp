@@ -11,6 +11,7 @@ import Image from "next/image";
 import RHFTextField from "@/components/rhf/rhf-textfield";
 import CustomTabs from "@/components/custom-tabs/customTabs";
 import OneWay from "@/components/one-way";
+import Header from "@/layout/dashboard-layout/header";
 const SearchFlight = () => {
   const methods = useForm({
     defaultValues: {
@@ -35,6 +36,9 @@ const SearchFlight = () => {
           alignContent: "center",
         }}
       >
+        <Grid item xs={12}>
+        <Header />
+        </Grid>
         <Grid item xs={12}>
           <Typography variant="h4" sx={{ maxWidth: "550px" }}>
             <Typography variant="h4" component="span" sx={{ color: "#EB3334" }}>
