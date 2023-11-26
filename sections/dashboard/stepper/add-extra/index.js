@@ -74,17 +74,6 @@ const AddExtra = () => {
               <ListItemText primary="Additional bags booked are non refundable" />
             </ListItem>
           </List>
-          {/* <ul
-            style={{
-              color: "#64748B",
-              listStyle: "none",
-              fontSize: "14px",
-              lineHeight: 2,
-            }}
-          >
-            <li>Each bag cannot weigh more than 23kgs</li>
-            <li>Additional bags booked are non refundable</li>
-          </ul> */}
         </Box>
 
         <Button
