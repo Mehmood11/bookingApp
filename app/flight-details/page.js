@@ -1,3 +1,4 @@
+"use client";
 import FlightStepper from "@/sections/dashboard/stepper";
 import React from "react";
 
