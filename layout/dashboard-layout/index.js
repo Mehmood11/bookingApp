@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
+import bg from "../../assets/bg.svg";
 import Header from "./header";
 
 const DashboardLayout = ({ children }) => {
@@ -19,9 +20,7 @@ const DashboardLayout = ({ children }) => {
       }}
     >
       {/* <Header /> */}
-      <Box height={"100%"}>
-        {children}
-      </Box>
+      <Box height={"100%"}>{children}</Box>
     </Stack>
   );
 };

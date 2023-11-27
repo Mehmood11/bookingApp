@@ -3,7 +3,7 @@ import React from "react";
 import DashboardLayout from "./layout";
 
 const page = () => {
-  return <DashboardLayout />;
+  return <SearchFlight />;
 };
 
 export default page;
