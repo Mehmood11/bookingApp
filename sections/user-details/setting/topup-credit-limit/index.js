@@ -41,6 +41,7 @@ const TopUpCreditLimit = () => {
               <RHFTextField
                 type="text"
                 name="amount"
+                defaultValues="ytu"
                 placeholder="$ 0"
                 outerLabel="Enter Amount ($)"
               />
