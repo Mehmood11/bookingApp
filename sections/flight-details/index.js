@@ -9,7 +9,16 @@ import {
   Box,
 } from "@mui/material";
 import CustomChildRenderer from "./child-renderer";
-import CustomFlightStepper from "./custom-stepper";
+//import CustomFlightStepper from "./custom-stepper";
+import dynamic from "next/dynamic";
+import FlightDetailsSideBar from "@/sections/flight-details/flight-details-sidebar/flightDetailsSideBar";
+import SelectFlight from "@/sections/flight-details/select-flight/selectFlight";
+import BookingSummarySidbar from "@/sections/flight-details/booking-summary/bookingSummary";
+
+const CustomFlightStepper = dynamic(() => import("./custom-stepper"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 const steps = [
   "Search",
@@ -19,8 +28,8 @@ const steps = [
   "Payment",
 ];
 
-const FlightStepper = () => {
-  const [active, setActive] = useState(1);
+const FlightDetails = () => {
+  const [active, setActive] = useState(2);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -46,13 +55,18 @@ const FlightStepper = () => {
         md={3}
         sx={{
           backgroundColor: "#f1f1f1",
-          borderRadius: "6px",
-          p: 2,
+          borderRadius: "12px",
+          p: 3,
           boxSizing: "border-box",
-          color: "black",
+          color: "#465365",
+          border: "1px solid #FFF",
+          background:
+            "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+          boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+          backdropFilter: "blur(12px)",
         }}
       >
-        Sidebar
+        {active === 1 ? <FlightDetailsSideBar /> : <BookingSummarySidbar />}
       </Grid>
       <Grid
         item
@@ -72,8 +86,8 @@ const FlightStepper = () => {
             backgroundColor: "#f1f1f1",
             borderRadius: "6px",
             width: "100%",
-            p: 2,
-            maxHeight: "15vh",
+            p: 5,
+            maxHeight: "120px",
 
             "& ::-webkit-scrollbar": {
               height: "5px !important",
@@ -122,7 +136,9 @@ const FlightStepper = () => {
           >
             <CustomChildRenderer index={active}>
               <p>Comp 1</p>
-              <p>Comp 2</p>
+              <p>
+                <SelectFlight />
+              </p>
               <p>Comp 3</p>
               <p>Comp 4</p>
               <p>Comp 5</p>
@@ -134,4 +150,4 @@ const FlightStepper = () => {
   );
 };
 
-export default FlightStepper;
+export default FlightDetails;

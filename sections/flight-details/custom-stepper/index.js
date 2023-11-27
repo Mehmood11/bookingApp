@@ -1,8 +1,10 @@
+"use client";
 import { Step, StepLabel, Stepper } from "@mui/material";
 import {
   ColorLibConnector,
   ColorLibStepIconRoot,
 } from "./custom-stepper.style";
+
 import { Check } from "@mui/icons-material";
 import CircleIcon from "@mui/icons-material/Circle";
 function ColorLibStepIcon(props) {
@@ -32,7 +34,7 @@ const CustomFlightStepper = ({ steps, active }) => {
       connector={<ColorLibConnector />}
       sx={{ width: "100%" }}
     >
-      {steps.map((label, i) => (
+      {steps?.map((label, i) => (
         <Step key={label}>
           <StepLabel StepIconComponent={ColorLibStepIcon}>{label}</StepLabel>
         </Step>
