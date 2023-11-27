@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { Box, Stack } from "@mui/material";
+import Header from "@/layout/dashboard-layout/header";
 
 const FlightDetailsLayout = ({ children }) => {
   return (
@@ -13,7 +15,8 @@ const FlightDetailsLayout = ({ children }) => {
         p: 3,
       }}
     >
-      {children}
+      <Header />
+      <Box mt={6}>{children}</Box>
     </Stack>
   );
 };

@@ -24,7 +24,6 @@ const RHFTextField = ({
 }) => {
   const { control } = useFormContext();
   const [showPassword, setShowPassword] = useState(false);
-  const [showPassword, setShowPassword] = useState (false);
 
   const endAdornment =
     type === "password" ? (
