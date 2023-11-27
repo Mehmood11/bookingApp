@@ -1,8 +1,9 @@
+"use client";
 import React, { useState, Children } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import { styles } from "./tabs.styles";
 
-const CustomTabs = ({ tabsArray = [], children, Index = 0 , tabStyle = {}}) => {
+const CustomTabs = ({ tabsArray = [], children, Index = 0, tabStyle = {} }) => {
   const tabChildren = Children.toArray(children);
   const [value, setValue] = useState(Index);
   return (
@@ -23,13 +24,18 @@ const CustomTabs = ({ tabsArray = [], children, Index = 0 , tabStyle = {}}) => {
               key={index}
               label={tab}
               value={index}
-              sx={{p: 2}}
+              sx={{ p: 2 }}
             />
           ))}
         </Tabs>
       </Box>
       {tabChildren?.map(
-        (child, index) => value === index && <Box key={index} p={2}>{child}</Box>
+        (child, index) =>
+          value === index && (
+            <Box key={index} p={2}>
+              {child}
+            </Box>
+          )
       )}
     </Box>
   );
