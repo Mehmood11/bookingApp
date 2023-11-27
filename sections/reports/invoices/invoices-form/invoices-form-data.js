@@ -64,7 +64,7 @@ export const InvoicesData = [
   export const defaultValues = {
     agentDetails: "Agent Details",
     bookingRefNo: "Booking Ref No",
-    services: "Servicess",
+    services: "Services",
     passengerName: "Passenger Name",
     from: new Date(),
     toDate: new Date(),

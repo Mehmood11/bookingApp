@@ -6,13 +6,16 @@ import DashboardCard from "@/components/dashboard-card";
 import { TableData, cardData, columns } from "./super-admin-data";
 import TableHeader from "@/components/custom-table/table-header";
 import CustomTable from "@/components/custom-table";
+import Setting from "../user-details/setting";
 
 const SuperAdmin = () => {
   const [searchParam, setSearchParam] = useState();
   return (
     <Box>
 
-      <Grid container spacing={2} mb="40px">
+<Setting />
+
+      {/* <Grid container spacing={2} mb="40px">
         {cardData.map((item) => (
           <Grid item xs={12} md={6} lg={3} key={item?.id}>
             <DashboardCard
@@ -53,7 +56,7 @@ const SuperAdmin = () => {
         isPagination
       />
       </CardContent>
-      </Card>
+      </Card> */}
 
     </Box>
   );
