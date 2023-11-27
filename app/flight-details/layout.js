@@ -16,7 +16,7 @@ const FlightDetailsLayout = ({ children }) => {
       }}
     >
       <Header />
-      {children}
+      <Box mt={6}>{children}</Box>
     </Stack>
   );
 };
