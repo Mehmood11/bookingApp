@@ -19,8 +19,11 @@ const DashboardLayout = ({ children }) => {
         boxSizing: "border-box",
       }}
     >
-      {/* <Header /> */}
-      <Box height={"100%"}>{children}</Box>
+      <Header />
+
+      <Box sx={{ p: 2, mt: 2 }} height={"100%"}>
+        {children}
+      </Box>
     </Stack>
   );
 };

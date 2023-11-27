@@ -33,21 +33,22 @@ const SearchFlight = () => {
           justifyContent: "flex-start",
           height: "100%",
           alignItems: "flex-start",
-          alignContent: "center",
+          alignContent: "flex-start",
+          paddingX: 6,
         }}
       >
+        {/* <Grid item xs={12}>
+          <Header />
+        </Grid> */}
         <Grid item xs={12}>
-        <Header />
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h4" sx={{ maxWidth: "550px" }}>
-            <Typography variant="h4" component="span" sx={{ color: "#EB3334" }}>
+          <Typography sx={{ fontWeight: 600 }} variant="h2">
+            {/* <Typography variant="h2" component="span" sx={{ color: "#EB3334" }}>
               Explore
-            </Typography>{" "}
-            the World's Wonders From Any Location , Anytime!
+            </Typography>{" "} */}
+            Explore the World's Wonders From <br /> Any Location , Anytime!
           </Typography>
         </Grid>
-        <Grid item xs={12} container rowSpacing={2} columnGap={2}>
+        <Grid mt={4} item xs={12} container rowSpacing={2} columnGap={2}>
           <Grid item xs={12} md={3}>
             <RHFTextField
               name="ticket"
