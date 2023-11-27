@@ -3,9 +3,9 @@ import FormProvider from "@/components/rhf/form-provider";
 import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useForm } from "react-hook-form";
-import profileIcon from "../../../assets/profileIcon.svg";
-import passportNo from "../../../assets/passportNo.svg";
-import ticket from "../../../assets/ticket.svg";
+import profileIcon from "../../assets/profileIcon.svg";
+import passportNo from "../../assets/passportNo.svg";
+import ticket from "../../assets/ticket.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 import RHFTextField from "@/components/rhf/rhf-textfield";
@@ -41,7 +41,7 @@ const SearchFlight = () => {
           <Header />
         </Grid> */}
         <Grid item xs={12}>
-          <Typography sx={{ fontWeight: 600 }} variant="h2">
+          <Typography sx={{ fontWeight: 600 }} variant="h3">
             {/* <Typography variant="h2" component="span" sx={{ color: "#EB3334" }}>
               Explore
             </Typography>{" "} */}

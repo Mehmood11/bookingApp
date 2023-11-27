@@ -1,9 +1,9 @@
 "use client";
-import FlightStepper from "@/sections/dashboard/stepper";
+import FlightDetails from "@/sections/flight-details";
 import React from "react";
 
 const page = () => {
-  return <FlightStepper />;
+  return <FlightDetails />;
 };
 
 export default page;

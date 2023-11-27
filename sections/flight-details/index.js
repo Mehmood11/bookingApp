@@ -12,6 +12,8 @@ import CustomChildRenderer from "./child-renderer";
 //import CustomFlightStepper from "./custom-stepper";
 import dynamic from "next/dynamic";
 import FlightDetailsSideBar from "@/sections/flight-details/flight-details-sidebar/flightDetailsSideBar";
+import SelectFlight from "@/sections/flight-details/select-flight/selectFlight";
+import BookingSummarySidbar from "@/sections/flight-details/booking-summary/bookingSummary";
 
 const CustomFlightStepper = dynamic(() => import("./custom-stepper"), {
   ssr: false,
@@ -26,8 +28,8 @@ const steps = [
   "Payment",
 ];
 
-const FlightStepper = () => {
-  const [active, setActive] = useState(1);
+const FlightDetails = () => {
+  const [active, setActive] = useState(2);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -64,7 +66,7 @@ const FlightStepper = () => {
           backdropFilter: "blur(12px)",
         }}
       >
-        <FlightDetailsSideBar/>
+        {active === 1 ? <FlightDetailsSideBar /> : <BookingSummarySidbar />}
       </Grid>
       <Grid
         item
@@ -84,8 +86,8 @@ const FlightStepper = () => {
             backgroundColor: "#f1f1f1",
             borderRadius: "6px",
             width: "100%",
-            p: 2,
-            maxHeight: "15vh",
+            p: 5,
+            maxHeight: "120px",
 
             "& ::-webkit-scrollbar": {
               height: "5px !important",
@@ -134,7 +136,9 @@ const FlightStepper = () => {
           >
             <CustomChildRenderer index={active}>
               <p>Comp 1</p>
-              <p>Comp 2</p>
+              <p>
+                <SelectFlight />
+              </p>
               <p>Comp 3</p>
               <p>Comp 4</p>
               <p>Comp 5</p>
@@ -146,4 +150,4 @@ const FlightStepper = () => {
   );
 };
 
-export default FlightStepper;
+export default FlightDetails;

@@ -5,7 +5,7 @@ import Header from "@/layout/dashboard-layout/header";
 
 const FlightDetailsLayout = ({ children }) => {
   return (
-    <Stack
+   <Stack
       sx={{
         borderRadius: "1.3125rem",
         background:

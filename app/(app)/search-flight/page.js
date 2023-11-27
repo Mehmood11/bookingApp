@@ -1,4 +1,4 @@
-import SearchFlight from "@/sections/dashboard/search-flight";
+import SearchFlight from "@/sections/search-flight";
 import React from "react";
 
 const page = () => {

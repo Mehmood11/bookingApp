@@ -34,7 +34,7 @@ const CustomFlightStepper = ({ steps, active }) => {
       connector={<ColorLibConnector />}
       sx={{ width: "100%" }}
     >
-      {steps.map((label, i) => (
+      {steps?.map((label, i) => (
         <Step key={label}>
           <StepLabel StepIconComponent={ColorLibStepIcon}>{label}</StepLabel>
         </Step>

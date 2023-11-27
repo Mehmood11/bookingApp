@@ -1,15 +1,69 @@
-import CustomAccordion from "@/components/custom-accordian/customAccordion";
-import { Box, Divider } from "@mui/material";
+"use client";
 import React from "react";
-
-const filterData = [
-  {
-    title: "Price",
-    content: "ergergergerg",
-  },
-];
+import CustomAccordion from "@/components/custom-accordian/customAccordion";
+import FormProvider from "@/components/rhf/form-provider";
+import RHFTextField from "@/components/rhf/rhf-textfield";
+import { Box, Divider, Stack } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { RHFCheckbox } from "@/components/rhf/rhf-checkbox";
 
 const FlightDetailsSideBar = () => {
+  const methods = useForm({
+    defaultValues: {
+      ticket: "",
+      passportNum: "",
+      passengerName: "",
+      from: null,
+      to: null,
+    },
+  });
+
+  const filterData = [
+    {
+      title: "Price",
+      content: (
+        <Box>
+          <FormProvider methods={methods}>
+            <Stack flexDirection="row" gap={4}>
+              <RHFTextField
+                type="number"
+                name="min"
+                placeholder=""
+                outerLabel="min"
+              />
+              <RHFTextField
+                type="number"
+                name="max"
+                placeholder=""
+                outerLabel="max"
+              />
+            </Stack>
+          </FormProvider>
+        </Box>
+      ),
+    },
+    {
+      title: "Departure time",
+      
+      content: (
+        <FormProvider methods={methods}>
+          <Stack flexDirection="colunm" gap={2}>
+            <RHFCheckbox name="min" placeholder="" label="One Way" />
+            <RHFCheckbox name="max" placeholder="" label="Return" />
+          </Stack>
+        </FormProvider>
+      ),
+    },
+    {
+      title: "Journey duration",
+      content: "test 1",
+    },
+    {
+      title: "Airlines",
+      content: "test 2",
+    },
+  ];
+
   return (
     <Box>
       <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>Filters</Box>
@@ -19,7 +73,9 @@ const FlightDetailsSideBar = () => {
             "1px solid linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
         }}
       />
-      <CustomAccordion item={filterData} />
+      <Box>
+        <CustomAccordion items={filterData} />
+      </Box>
     </Box>
   );
 };
