@@ -32,7 +32,7 @@ const steps = [
 ];
 
 const FlightDetails = () => {
-  const [active, setActive] = useState(4);
+  const [active, setActive] = useState(1);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -86,8 +86,11 @@ const FlightDetails = () => {
           item
           sm={12}
           sx={{
-            backgroundColor: "#f1f1f1",
-            borderRadius: "6px",
+            background:
+            "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+          boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+          backdropFilter: "blur(12px)",
+            borderRadius: "12px",
             width: "100%",
             p: 5,
             maxHeight: "120px",
@@ -97,7 +100,7 @@ const FlightDetails = () => {
             },
             "& ::-webkit-scrollbar-thumb": {
               backgroundColor: "primary.main",
-              borderRadius: "6px",
+              borderRadius: "12px",
             },
           }}
         >
@@ -117,8 +120,11 @@ const FlightDetails = () => {
           container
           sx={{
             height: "55vh",
-            backgroundColor: "#f1f1f1",
-            borderRadius: "6px",
+            background:
+            "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+          boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+          backdropFilter: "blur(12px)",
+            borderRadius: "12px",
             p: 2,
             "& ::-webkit-scrollbar": {
               width: "9px",

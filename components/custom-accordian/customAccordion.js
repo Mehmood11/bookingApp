@@ -8,11 +8,9 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const CustomAccordion = ({ items }) => {
-
   return (
     <div>
       {items?.map((item, index) => {
-       
         return (
           <Accordion
             sx={{
@@ -26,8 +24,6 @@ const CustomAccordion = ({ items }) => {
           >
             <AccordionSummary
               sx={{ borderBottom: "none" }}
-              expanded={true}
-              // onChange={handleChange(item.title)}
               expandIcon={
                 <ExpandMoreIcon
                   sx={{ width: "24px", height: "24px", color: "#3B4D60" }}
