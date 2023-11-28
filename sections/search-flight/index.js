@@ -20,6 +20,7 @@ const SearchFlight = () => {
       passengerName: "",
       from: null,
       to: null,
+      ways: "",
     },
   });
 
@@ -41,7 +42,7 @@ const SearchFlight = () => {
           <Header />
         </Grid> */}
         <Grid item xs={12}>
-          <Typography sx={{ fontWeight: 600 }} variant="h3">
+          <Typography sx={{ fontWeight: 600, color: "white" }} variant="h3">
             {/* <Typography variant="h2" component="span" sx={{ color: "#EB3334" }}>
               Explore
             </Typography>{" "} */}
@@ -94,25 +95,17 @@ const SearchFlight = () => {
             item
             xs={12}
             sx={{
-              mt: 6,
+              mt: 3,
               minHeight: "14rem",
               borderRadius: " 0.75rem",
               background:
                 "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
               boxShadow: " 0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
               backdropFilter: "blur(12px)",
+              p: 2,
             }}
           >
-            <CustomTabs
-              tabStyle={{
-                position: "fixed",
-                top: "-1.5rem",
-                width: "100%",
-              }}
-              tabsArray={["One Way", "Round Way"]}
-            >
-              <OneWay watch={watch} />
-            </CustomTabs>
+            <OneWay watch={watch} />
           </Grid>
           <Grid
             item
