@@ -17,7 +17,7 @@ const VoucherTable = () => {
         isFetching={false}
         isError={false}
         isSuccess
-        isPagination
+        isPagination={false}
       />
     </Box>
   );

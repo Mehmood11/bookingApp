@@ -1,11 +1,11 @@
-"use client";
+"use client"
 import React from "react";
 import { useForm } from "react-hook-form";
+import { Grid, Typography } from "@mui/material";
 import FormProvider from "@/components/rhf/form-provider";
-import { Box, Button, Grid, Typography } from "@mui/material";
-import { changePasswordData, defaultValues } from "./change-password-data";
+import { ProfileCreditLimitData, defaultValues } from "./profile-credit-limit-data";
 
-const ChangePassword = () => {
+const ProfileCreditLimit = () => {
   const methods = useForm({
     defaultValues,
   });
@@ -25,7 +25,7 @@ const ChangePassword = () => {
             component="h5"
             sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
           >
-            Change Password
+            Credit Limit
           </Typography>
           <Typography
             variant="p"
@@ -37,7 +37,7 @@ const ChangePassword = () => {
         </Grid>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
-            {changePasswordData?.map((form) => {
+            {ProfileCreditLimitData?.map((form) => {
               return (
                 <Grid item xs={12} md={6} lg={form?.gridLength} key={form?.id}>
                   <>
@@ -57,29 +57,8 @@ const ChangePassword = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Box sx={{ textAlign: "end", my: 4 }}>
-        <Button
-          size="large"
-          type="submit"
-          variant="contained"
-          sx={{
-            px: 1,
-            width: "140px",
-            fontWeight: "500",
-            fontSize: "14px",
-            borderRadius: "8px",
-            textTransform: "capitalize",
-            backgroundColor: "#e9585a",
-            "&:hover": {
-              backgroundColor: "#e9585a",
-            },
-          }}
-        >
-          Update Password
-        </Button>
-      </Box>
     </FormProvider>
   );
 };
 
-export default ChangePassword;
+export default ProfileCreditLimit;

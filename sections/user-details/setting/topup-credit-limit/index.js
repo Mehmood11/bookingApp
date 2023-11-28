@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Box, Button, Grid, Typography } from "@mui/material";
@@ -58,6 +58,7 @@ const TopUpCreditLimit = () => {
                     width: "140px",
                     fontWeight: "500",
                     fontSize: "14px",
+                    borderRadius:"8px",
                     textTransform: "capitalize",
                     backgroundColor: "#e9585a",
                     "&:hover": {
@@ -65,7 +66,7 @@ const TopUpCreditLimit = () => {
                     },
                   }}
                 >
-                  Pay Now
+                 Pay Now
                 </Button>
               </Box>
             </Grid>

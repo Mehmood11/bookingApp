@@ -14,7 +14,7 @@ const HelpAndOfferCard = (props) => {
 
   return (
     <Card sx={{ textAlign: "center" }}>
-      <Box>
+      <Box sx={{ position: "relative" }}>
         <Avatar
           sx={{
             backgroundColor: "#2278c8",

@@ -17,7 +17,7 @@ const ReceiptsTable = () => {
         isFetching={false}
         isError={false}
         isSuccess
-        isPagination
+        isPagination={false}
       />
     </Box>
   );
