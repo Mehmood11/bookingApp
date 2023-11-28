@@ -8,18 +8,11 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const CustomAccordion = ({ items }) => {
-  const [expanded, setExpanded] = React.useState("Passenger (1 Adult)");
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
   return (
     <div>
       {items?.map((item, index) => {
-        console.log(
-          "expanded === item.title",
-          "Passenger (1 Adult)" === item.title
-        );
+       
         return (
           <Accordion
             sx={{
@@ -34,7 +27,7 @@ const CustomAccordion = ({ items }) => {
             <AccordionSummary
               sx={{ borderBottom: "none" }}
               expanded={true}
-              onChange={handleChange(item.title)}
+              // onChange={handleChange(item.title)}
               expandIcon={
                 <ExpandMoreIcon
                   sx={{ width: "24px", height: "24px", color: "#3B4D60" }}
