@@ -17,6 +17,7 @@ const DashboardLayout = ({ children }) => {
         p: 3,
         borderRadius: "10px",
         boxSizing: "border-box",
+        overflow: "auto",
       }}
     >
       <Header />
