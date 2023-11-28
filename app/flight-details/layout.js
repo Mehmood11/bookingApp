@@ -5,7 +5,7 @@ import Header from "@/layout/dashboard-layout/header";
 
 const FlightDetailsLayout = ({ children }) => {
   return (
-   <Stack
+    <Stack
       sx={{
         borderRadius: "1.3125rem",
         background:
@@ -13,6 +13,20 @@ const FlightDetailsLayout = ({ children }) => {
         height: "100%",
         maxHeight: "90vh",
         p: 3,
+        overflow: "auto",
+        "&::-webkit-scrollbar": {
+          width: "0.4em",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-track": {
+          backgroundColor: "#C2D3DF",
+          borderRadius: "1rem",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          borderRadius: "1rem",
+          backgroundColor: "#21608B",
+        },
       }}
     >
       <Header />

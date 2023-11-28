@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import {
   FormLabel,
@@ -21,6 +21,7 @@ const RHFTextField = ({
   EndIcon,
   outerLabel,
   fullWidth = true,
+  color = "#465365",
   ...other
 }) => {
   const { control } = useFormContext();
@@ -46,9 +47,9 @@ const RHFTextField = ({
       name={name}
       control={control}
       render={({ field, fieldState: { error } }) => (
-        <Stack gap="0.6rem">
+        <Stack>
           {outerLabel && (
-            <FormLabel sx={{ color: "white" }}>{outerLabel}</FormLabel>
+            <FormLabel sx={{ color: color }}>{outerLabel}</FormLabel>
           )}
           <TextField
             {...field}
@@ -64,12 +65,12 @@ const RHFTextField = ({
             fullWidth={fullWidth}
             {...other}
             sx={{
-              borderRadius: "0.8125rem",
+              borderRadius: "0.5125rem",
               backgroundColor: "rgba(255, 255, 255, 0.8)",
               boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
               backdropFilter: "blur(10px)",
               "& .MuiInputBase-root": {
-                borderRadius: "0.8125rem",
+                borderRadius: "0.5125rem",
               },
               "& .MuiInputBase-input": {
                 ml: 2,

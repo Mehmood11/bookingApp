@@ -2,7 +2,14 @@ import { useFormContext, Controller } from "react-hook-form";
 import { DatePicker } from "@mui/x-date-pickers";
 import { FormLabel, Stack } from "@mui/material";
 
-const RHFDatePicker = ({ name, label, outerLabel, ...other }) => {
+const RHFDatePicker = ({
+  name,
+  label,
+  outerLabel,
+  color = "#465365",
+  sxProp,
+  ...other
+}) => {
   const { control } = useFormContext();
   return (
     <Controller
@@ -10,9 +17,9 @@ const RHFDatePicker = ({ name, label, outerLabel, ...other }) => {
       control={control}
       render={({ field, fieldState: { error } }) => {
         return (
-          <Stack gap="0.6rem">
+          <Stack>
             {outerLabel && (
-              <FormLabel sx={{ color: "white" }}>{outerLabel}</FormLabel>
+              <FormLabel sx={{ color: color }}>{outerLabel}</FormLabel>
             )}
 
             <DatePicker
@@ -28,10 +35,13 @@ const RHFDatePicker = ({ name, label, outerLabel, ...other }) => {
                 },
               }}
               label={label}
-              sx={{ borderRadius: "0.8125rem",
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
-              boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
-              backdropFilter: "blur(10px)", }}
+              sx={{
+                ...sxProp,
+                borderRadius: "0.5125rem",
+                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
+                backdropFilter: "blur(10px)",
+              }}
             />
           </Stack>
         );
