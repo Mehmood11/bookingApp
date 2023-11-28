@@ -1,8 +1,8 @@
-import Settings from "@/sections/user-details/settings/settings";
+import Setting from "@/sections/user-details/setting";
 import React from "react";
 
 const page = () => {
-  return <Settings />;
+  return <Setting />;
 };
 
 export default page;

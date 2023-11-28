@@ -36,7 +36,16 @@ const CustomFlightStepper = ({ steps, active }) => {
     >
       {steps?.map((label, i) => (
         <Step key={label}>
-          <StepLabel StepIconComponent={ColorLibStepIcon}>{label}</StepLabel>
+          <StepLabel
+            sx={{
+              fontSize: "13px",
+              fontWeight: 500,
+              
+            }}
+            StepIconComponent={ColorLibStepIcon}
+          >
+            {label}
+          </StepLabel>
         </Step>
       ))}
     </Stepper>
