@@ -32,7 +32,7 @@ const steps = [
 ];
 
 const FlightDetails = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(2);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
