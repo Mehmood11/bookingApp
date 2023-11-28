@@ -3,8 +3,10 @@ import { Box, Menu, MenuItem, Typography } from "@mui/material";
 import { useState } from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { useRouter } from "next/navigation";
 
 const ProfileDropDown = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -48,30 +50,39 @@ const ProfileDropDown = () => {
             component="p"
             color="primary"
             sx={{ fontSize: "14px" }}
+            onClick={() => router.push("/profile")}
           >
             Profile
           </Typography>
         </MenuItem>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose, router.push("/dashboard");
+          }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
           Dashboard
         </MenuItem>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose, router.push("/booking");
+          }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
           Booking
         </MenuItem>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose, router.push("/report");
+          }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
           Report
         </MenuItem>
         <MenuItem
-          onClick={handleClose}
+          onClick={() => {
+            handleClose, router.push("/setting");
+          }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
           Setting

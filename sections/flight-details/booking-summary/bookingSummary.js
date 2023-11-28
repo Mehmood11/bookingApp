@@ -65,7 +65,7 @@ const BookingSummarySidbar = () => {
   ];
   return (
     <Box>
-      <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>Filters</Box>
+      <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>Booking Summary</Box>
       <Divider
         sx={{
           border:

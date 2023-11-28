@@ -29,7 +29,7 @@ const steps = [
 ];
 
 const FlightDetails = () => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(1);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -132,6 +132,7 @@ const FlightDetails = () => {
             sx={{
               height: "100%",
               color: "black",
+              
             }}
           >
             <CustomChildRenderer index={active}>
