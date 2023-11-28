@@ -83,7 +83,7 @@ const RHFAutoCompleteAsync = ({
       control={control}
       render={(form) => {
         return (
-          <Stack gap="0.6rem">
+          <Stack>
             {outerLabel && <FormLabel>{outerLabel}</FormLabel>}
             <Autocomplete
               {...form.field}

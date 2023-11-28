@@ -18,10 +18,22 @@ const DashboardLayout = ({ children }) => {
         borderRadius: "10px",
         boxSizing: "border-box",
         overflow: "auto",
+        "&::-webkit-scrollbar": {
+          width: "0.4em",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-track": {
+          backgroundColor: "#C2D3DF",
+          borderRadius: "1rem",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          borderRadius: "1rem",
+          backgroundColor: "#21608B",
+        },
       }}
     >
       <Header />
-
       <Box sx={{ p: 2, mt: 2 }} height={"100%"}>
         {children}
       </Box>

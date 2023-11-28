@@ -14,6 +14,7 @@ const RHFCustomSelect = ({
   styleMenu,
   placeholder,
   fullWidth = true,
+  color = "#465365",
   ...others
 }) => {
   const { control } = useFormContext();
@@ -33,9 +34,7 @@ const RHFCustomSelect = ({
       render={({ field, fieldState: { error } }) => (
         <FormControl error={Boolean(error)} fullWidth={fullWidth}>
           {outerLabel && (
-            <FormLabel sx={{ pb: "0.6rem", color: "white" }}>
-              {outerLabel}
-            </FormLabel>
+            <FormLabel sx={{ color: color }}>{outerLabel}</FormLabel>
           )}
           <Select
             displayEmpty
@@ -44,7 +43,7 @@ const RHFCustomSelect = ({
             {...field}
             {...others}
             sx={{
-              borderRadius: "0.8125rem",
+              borderRadius: "0.5125rem",
               backgroundColor: "rgba(255, 255, 255, 0.8)",
               boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.20)",
               backdropFilter: "blur(10px)",
@@ -54,11 +53,7 @@ const RHFCustomSelect = ({
               <em style={{ fontStyle: "normal" }}>{placeholder ?? "Select"}</em>
             </MenuItem>
             {options?.map(({ id, label, value }) => (
-              <MenuItem
-                value={value}
-                key={id}
-                sx={{ fontSize: "1.5rem", ...styleMenu }}
-              >
+              <MenuItem value={value} key={id} sx={{ ...styleMenu }}>
                 {label}
               </MenuItem>
             ))}
