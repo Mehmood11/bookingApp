@@ -12,6 +12,13 @@ import RHFTextField from "@/components/rhf/rhf-textfield";
 import CustomTabs from "@/components/custom-tabs/customTabs";
 import OneWay from "@/components/one-way";
 import Header from "@/layout/dashboard-layout/header";
+import dynamic from "next/dynamic";
+
+const DifferentWay = dynamic(() => import("@/components/one-way"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+
 const SearchFlight = () => {
   const methods = useForm({
     defaultValues: {
@@ -21,10 +28,13 @@ const SearchFlight = () => {
       from: null,
       to: null,
       ways: "",
+      date: new Date(),
+      WHCR: true,
+      agent: false,
     },
   });
 
-  const { watch } = methods;
+  const { watch, getValues } = methods;
   return (
     <FormProvider methods={methods}>
       <Grid
@@ -56,6 +66,7 @@ const SearchFlight = () => {
               placeholder="Enter PNR or ticket no"
               outerLabel="PNR / Ticket No"
               StartIcon={<Image src={ticket} alt="ticket" />}
+              color="white"
             />
           </Grid>
           <Grid item xs={12} md={3}>
@@ -64,6 +75,7 @@ const SearchFlight = () => {
               placeholder="Enter Passport no"
               outerLabel="Passport No"
               StartIcon={<Image src={passportNo} alt="passportNo" />}
+              color= 'white'
             />
           </Grid>
           <Grid item xs={12} md={3}>
@@ -72,6 +84,7 @@ const SearchFlight = () => {
               placeholder="Enter passenger no"
               outerLabel="Passenger Name"
               StartIcon={<Image src={profileIcon} alt="ticket" />}
+              color= 'white'
             />
           </Grid>
           <Grid item xs={12} md={2} display={"flex"} alignItems={"flex-end"}>
@@ -105,7 +118,7 @@ const SearchFlight = () => {
               p: 2,
             }}
           >
-            <OneWay watch={watch} />
+            <DifferentWay watch={watch} getValues={getValues} />
           </Grid>
           <Grid
             item

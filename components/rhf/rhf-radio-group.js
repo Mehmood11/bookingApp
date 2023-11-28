@@ -14,6 +14,7 @@ const RHFRadioGroup = ({
   options,
   outerLabel,
   disabled = false,
+  color= '#465365',
   ...other
 }) => {
   const { control } = useFormContext();
@@ -24,7 +25,7 @@ const RHFRadioGroup = ({
       control={control}
       render={({ field, field: { onChange }, fieldState: { error } }) => (
         <div>
-          {outerLabel && <FormLabel>{outerLabel}</FormLabel>}
+          {outerLabel && <FormLabel color={color}>{outerLabel}</FormLabel>}
           <RadioGroup
             {...field}
             row
