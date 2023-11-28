@@ -28,7 +28,7 @@ const SearchFlight = () => {
       from: null,
       to: null,
       ways: "",
-      date: new Date(),
+      date: new Date(12),
       WHCR: true,
       agent: false,
     },
