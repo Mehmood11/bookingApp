@@ -4,7 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { someExtraData } from "./someThingExtraData";
 
-const SomeThingExtra = () => {
+const SomeThingExtra = ({ nextStepHandler }) => {
   const methods = useForm({});
 
   const { handleSubmit } = methods;
@@ -74,6 +74,7 @@ const SomeThingExtra = () => {
             },
           }}
           variant="contained"
+          onClick={nextStepHandler}
         >
           Continue
         </Button>

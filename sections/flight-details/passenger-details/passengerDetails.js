@@ -5,7 +5,7 @@ import FormProvider from "@/components/rhf/form-provider";
 import { passengerData } from "./passengerDetailsData";
 import { useForm } from "react-hook-form";
 
-const PassengerDetails = () => {
+const PassengerDetails = ({ nextStepHandler }) => {
   const methods = useForm({});
 
   const { handleSubmit } = methods;
@@ -57,6 +57,7 @@ const PassengerDetails = () => {
             },
           }}
           variant="contained"
+          onClick={nextStepHandler}
         >
           Continue
         </Button>

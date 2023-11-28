@@ -39,8 +39,8 @@ const HelpAndOfferCard = (props) => {
         {type === "Offer" ? (
           <Box>
             <TextField
+              placeholder="Enter the coupon code"
               id="outlined-basic"
-              label="Outlined"
               variant="outlined"
               size="small"
             />
