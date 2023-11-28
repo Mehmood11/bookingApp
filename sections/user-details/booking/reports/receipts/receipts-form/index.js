@@ -38,20 +38,11 @@ const ReceiptsForm = () => {
         </Grid>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
-            {receiptsData?.map((form) => {
+            {receiptsData?.map((item) => {
+              const { component: Component, componentProps } = item;
               return (
-                <Grid item xs={12} sm={form?.gridLength} key={form?.id}>
-                  <>
-                    <form.component size="small" {...form.componentProps}>
-                      {form.componentProps.select
-                        ? form.options?.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))
-                        : null}
-                    </form.component>
-                  </>
+                <Grid item xs={12} md={6} lg={item?.gridLength} key={item?.id}>
+                  <Component {...componentProps} />
                 </Grid>
               );
             })}
