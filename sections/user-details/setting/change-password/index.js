@@ -55,14 +55,17 @@ const ChangePassword = () => {
           variant="contained"
           sx={{
             px: 1,
-            width: "140px",
+            width: "160px",
             fontWeight: "500",
             fontSize: "14px",
-            borderRadius: "8px",
+            borderRadius: "10px",
             textTransform: "capitalize",
             backgroundColor: "#e9585a",
+            boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
+
             "&:hover": {
               backgroundColor: "#e9585a",
+              boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
             },
           }}
         >

@@ -16,7 +16,7 @@ export const TableData = [
     passengerName: "In Process",
     status: "In Process",
     airLine: turkishAirline,
-    sectc: "In Process",
+    sectc: "sectc",
   },
 ];
 

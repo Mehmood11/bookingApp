@@ -10,8 +10,7 @@ export const searchTripData = [
         outerLabel: "Search Result",
         name: "searchResult",
         fullWidth: true,
-        select: true,
-        options: [{ label: "Scot Fostering", value: "Scot_Fostering" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+        options: [{ label: "Scot Fostering", value: "searchResult" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
       },
       component: RHFCustomSelect,
     },
@@ -42,7 +41,6 @@ export const searchTripData = [
         outerLabel: "Reference Number",
         placeholder: "Reference Number",
         name: "referenceNumber",
-        multiline: true,
       },
       component: RHFTextField,
     },
@@ -53,8 +51,7 @@ export const searchTripData = [
         outerLabel: "Booking Status",
         name: "bookingStatus",
         fullWidth: true,
-        select: true,
-        options: [{ label: "Scot Fostering", value: "Scot_Fostering" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+        options: [{ label: "Scot Fostering", value: "bookingStatus" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
       },
       component: RHFCustomSelect,
       
@@ -65,17 +62,16 @@ export const searchTripData = [
       componentProps: {
         outerLabel: "Passenger Name",
         name: "passengerName",
-        multiline: true,
       },
       component: RHFTextField,
     },
   ];
 
   export const defaultValues = {
-    searchResult: "Booking Date",
+    searchResult: "searchResult",
     from: new Date(),
     toDate: new Date(),
     referenceNumber: "Booking Date",
-    bookingStatus: "Booking Status",
+    bookingStatus: "bookingStatus",
     passengerName: "Passenger Name",
 };

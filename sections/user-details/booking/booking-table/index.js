@@ -10,7 +10,6 @@ const BookingTable = () => {
       <TableHeader
         tableHeaderData={[]}
       />
-
       <CustomTable
         columns={columns}
         data={TableData}

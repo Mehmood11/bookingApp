@@ -10,7 +10,7 @@ import {
 import React from "react";
 
 const HelpAndOfferCard = (props) => {
-  const { maxWidth, icon, title, description, type, btnTitle } = props;
+  const { icon, title = "Need Help ?", description, type, btnTitle } = props;
 
   return (
     <>
@@ -35,7 +35,8 @@ const HelpAndOfferCard = (props) => {
           textAlign: "center",
           borderRadius: "12px",
           width: "100%",
-          maxWidth: { maxWidth },
+          maxWidth: "400px",
+          px: 2,
         }}
       >
         <CardContent>
@@ -50,10 +51,11 @@ const HelpAndOfferCard = (props) => {
           {type === "offer" ? (
             <Box>
               <TextField
-                id="outlined-basic"
-                label="Outlined"
+                id="email"
                 variant="outlined"
                 size="small"
+                placeholder="Enter the coupon code"
+                fullWidth
               />
             </Box>
           ) : (
@@ -62,13 +64,23 @@ const HelpAndOfferCard = (props) => {
                 fontSize: "16px",
                 fontWeight: "600",
                 color: "#344054",
-                // my: 2,
               }}
             >
               {description}
             </Typography>
           )}
-          <Button variant="contained" sx={{ fontWeight: "600", my: 2 }}>
+          <Button
+            variant="contained"
+            sx={{
+              fontSize: "16px",
+              borderRadius: "12px",
+              width: "100%",
+              maxWidth: "240px",
+              fontWeight: "600",
+              textTransform: "capitalize",
+              my: 2,
+            }}
+          >
             {btnTitle}
           </Button>
         </CardContent>

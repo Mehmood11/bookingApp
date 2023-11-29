@@ -12,7 +12,7 @@ import {
 
 import React from "react";
 
-export const RHFCheckbox = ({ name, label, ...other }) => {
+export const RHFCheckbox = ({ name, label, color = "#465365", ...other }) => {
   const { control } = useFormContext();
   return (
     <Controller
@@ -22,7 +22,7 @@ export const RHFCheckbox = ({ name, label, ...other }) => {
         return (
           <FormControl error={Boolean(error)}>
             <FormControlLabel
-              label={<Typography variant="subtitle2">{label}</Typography>}
+              label={<Typography variant="subtitle2" sx={{color: color}}>{label}</Typography>}
               control={
                 <Checkbox
                   {...field}
