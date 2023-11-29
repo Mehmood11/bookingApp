@@ -49,6 +49,7 @@ const UserSideBar = () => {
           "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
         boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
         backdropFilter: "blur(12px)",
+        height: "100%",
       }}
     >
       <Box sx={{ textAlign: "center" }}>
@@ -93,7 +94,11 @@ const UserSideBar = () => {
           );
         })}
       </Stack>
-      {/* <HelpAndOfferCard title="Need Help?" /> */}
+      <HelpAndOfferCard
+        btnTitle="Chat Now"
+        description="A central hub for resolution center, FAQs, live chats and a community. A central hub for resolution center, FAQs, live chats and a community."
+        type="offer"
+      />
     </Box>
   );
 };

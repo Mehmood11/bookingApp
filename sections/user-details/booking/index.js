@@ -30,7 +30,9 @@ const Booking = () => {
           sx={{
             color: "#64748B",
             fontWeight: "500",
+            size: "large",
             width: "200px",
+            borderRadius: "8px",
             textTransform: "capitalize",
           }}
         >
@@ -42,6 +44,8 @@ const Booking = () => {
           sx={{
             fontWeight: "500",
             width: "200px",
+            size: "large",
+            borderRadius: "8px",
             textTransform: "capitalize",
           }}
         >

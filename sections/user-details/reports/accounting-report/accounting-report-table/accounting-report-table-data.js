@@ -9,8 +9,8 @@ export const TableData = [
     passengerName: "663",
     checkIn: "76.98$",
     amount: "76.98$",
-    UserName: "In Process",
-    view: "In Process",
+    UserName: "John",
+    view: "view",
   },
 ];
 
