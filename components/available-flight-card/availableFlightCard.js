@@ -5,7 +5,7 @@ import FlightName from "../../assets/search-flight/Airline.png";
 import { linearProgressClasses } from "@mui/material/LinearProgress";
 import CircleIcon from "@mui/icons-material/Circle";
 
-const AvailableFlightCard = ({nextStepHandler}) => {
+const AvailableFlightCard = ({ nextStepHandler }) => {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,
@@ -59,11 +59,11 @@ const AvailableFlightCard = ({nextStepHandler}) => {
               container
               spacing={2}
             >
-              <Grid item xs={12} md={2.4}>
+              <Grid item xs={12}  lg={3} xl={2.4}>
                 <img src={FlightName.src} alt="flightname" />
               </Grid>
 
-              <Grid item xs={12} md={2.4}>
+              <Grid item xs={12}  lg={2.1} xl={2}>
                 <Box
                   sx={{
                     borderRadius: "12px",
@@ -95,11 +95,15 @@ const AvailableFlightCard = ({nextStepHandler}) => {
                   >
                     MXP, 11:30
                   </Box>
-                  <Box>Malpensa Airport, Italy</Box>
+                  <Box
+                    sx={{ color: "#64748B", fontSize: "12px", fontWeight: 500 }}
+                  >
+                    Malpensa Airport, Italy
+                  </Box>
                 </Box>
               </Grid>
 
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12}  lg={2.4} xl={4}>
                 <Box>
                   <Box
                     sx={{
@@ -140,11 +144,16 @@ const AvailableFlightCard = ({nextStepHandler}) => {
                             display: "flex",
                             alignItems: "center",
                             marginY: 0.8,
-
                           }}
                         >
                           <span>
-                            <CircleIcon sx={{ width: "6px", height: "6px", marginRight:0.5 }} />
+                            <CircleIcon
+                              sx={{
+                                width: "6px",
+                                height: "6px",
+                                marginRight: 0.5,
+                              }}
+                            />
                           </span>
                           {item.title}
                         </Box>
@@ -154,7 +163,7 @@ const AvailableFlightCard = ({nextStepHandler}) => {
                 </Box>
               </Grid>
 
-              <Grid item xs={12} md={2.4}>
+              <Grid item xs={12}  lg={2.1} xl={2}>
                 <Box
                   sx={{
                     borderRadius: "12px",
@@ -186,11 +195,15 @@ const AvailableFlightCard = ({nextStepHandler}) => {
                   >
                     MXP, 11:30
                   </Box>
-                  <Box>Malpensa Airport, Italy</Box>
+                  <Box
+                    sx={{ color: "#64748B", fontSize: "12px", fontWeight: 500 }}
+                  >
+                    Malpensa Airport, Italy
+                  </Box>
                 </Box>
               </Grid>
 
-              <Grid item xs={12} md={1.4}>
+              <Grid item xs={12}  lg={2.2} xl={1.6}>
                 <Box>
                   <Box
                     sx={{

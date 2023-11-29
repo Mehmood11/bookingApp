@@ -47,8 +47,15 @@ const BookingSummarySidbar = () => {
       content: (
         <FormProvider methods={methods}>
           <Stack flexDirection="colunm" gap={1}>
-            <Box>03/10/2023</Box>
-            <Box>Neos Spa</Box>
+            <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#465365" }}>
+              20:00:00-02:15:00
+            </Box>
+            <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#465365" }}>
+              03/10/2023
+            </Box>
+            <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#465365" }}>
+              Neos Spa
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -56,8 +63,12 @@ const BookingSummarySidbar = () => {
                 alignItems: "center",
               }}
             >
-              <Box>20:00:00-02:15:00</Box>
-              <Box>2h 43min</Box>
+              <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#465365" }}>
+                20:00:00-02:15:00
+              </Box>
+              <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#ED5B5C" }}>
+                2h 43min
+              </Box>
             </Box>
           </Stack>
         </FormProvider>
@@ -120,7 +131,7 @@ const BookingSummarySidbar = () => {
       <HelpAndOfferCard
         description="A central hub for resolution center, FAQs, live chats and a community."
         title="Need Help?"
-        btnTitle="Redeem"
+        btnTitle="Chat Now"
       />
     </Box>
   );
