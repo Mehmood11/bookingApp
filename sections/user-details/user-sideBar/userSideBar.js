@@ -75,7 +75,7 @@ const UserSideBar = () => {
         </Box>
       </Box>
 
-      <Stack p={5} flexDirection={"column"} gap={3}>
+      <Stack p={5} flexDirection={"column"} gap={4}>
         {sideBarData.map((item, i) => {
           return (
             <Box

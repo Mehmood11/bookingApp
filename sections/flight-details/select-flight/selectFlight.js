@@ -41,7 +41,7 @@ const cardData = [
   },
 ];
 
-const SelectFlight = () => {
+const SelectFlight = ({ nextStepHandler }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   const handleMouseDown = () => {
@@ -95,7 +95,7 @@ const SelectFlight = () => {
           to <span style={{ color: "#2278C8" }}>Mumbai</span>
         </Box>
         <Box sx={{ height: "50vh", overflowY: "scroll" }}>
-          <AvailableFlightCard />
+          <AvailableFlightCard nextStepHandler={nextStepHandler} />
         </Box>
       </Box>
     </Box>

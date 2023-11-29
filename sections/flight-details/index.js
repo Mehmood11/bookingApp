@@ -14,6 +14,9 @@ import dynamic from "next/dynamic";
 import FlightDetailsSideBar from "@/sections/flight-details/flight-details-sidebar/flightDetailsSideBar";
 import SelectFlight from "@/sections/flight-details/select-flight/selectFlight";
 import BookingSummarySidbar from "@/sections/flight-details/booking-summary/bookingSummary";
+import PassengerDetails from "./passenger-details/passengerDetails";
+import SomeThingExtra from "./something-extra/someThingExtra";
+import Payment from "./payment/payment";
 
 const CustomFlightStepper = dynamic(() => import("./custom-stepper"), {
   ssr: false,
@@ -29,7 +32,7 @@ const steps = [
 ];
 
 const FlightDetails = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(2);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -83,8 +86,11 @@ const FlightDetails = () => {
           item
           sm={12}
           sx={{
-            backgroundColor: "#f1f1f1",
-            borderRadius: "6px",
+            background:
+              "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+            boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+            backdropFilter: "blur(12px)",
+            borderRadius: "12px",
             width: "100%",
             p: 5,
             maxHeight: "120px",
@@ -94,7 +100,7 @@ const FlightDetails = () => {
             },
             "& ::-webkit-scrollbar-thumb": {
               backgroundColor: "primary.main",
-              borderRadius: "6px",
+              borderRadius: "12px",
             },
           }}
         >
@@ -113,9 +119,12 @@ const FlightDetails = () => {
           xs={12}
           container
           sx={{
-            height: "55vh",
-            backgroundColor: "#f1f1f1",
-            borderRadius: "6px",
+            height: "auto",
+            background:
+              "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+            boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+            backdropFilter: "blur(12px)",
+            borderRadius: "12px",
             p: 2,
             "& ::-webkit-scrollbar": {
               width: "9px",
@@ -132,17 +141,14 @@ const FlightDetails = () => {
             sx={{
               height: "100%",
               color: "black",
-              
             }}
           >
             <CustomChildRenderer index={active}>
               <p>Comp 1</p>
-              <p>
-                <SelectFlight />
-              </p>
-              <p>Comp 3</p>
-              <p>Comp 4</p>
-              <p>Comp 5</p>
+              <SelectFlight nextStepHandler={nextStepHandler} />
+              <PassengerDetails nextStepHandler={nextStepHandler} />
+              <SomeThingExtra nextStepHandler={nextStepHandler} />
+              <Payment />
             </CustomChildRenderer>
           </Grid>
         </Grid>

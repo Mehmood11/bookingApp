@@ -5,7 +5,7 @@ import FlightName from "../../assets/search-flight/Airline.png";
 import { linearProgressClasses } from "@mui/material/LinearProgress";
 import CircleIcon from "@mui/icons-material/Circle";
 
-const AvailableFlightCard = () => {
+const AvailableFlightCard = ({nextStepHandler}) => {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,
@@ -216,6 +216,7 @@ const AvailableFlightCard = () => {
                       },
                     }}
                     variant="contained"
+                    onClick={nextStepHandler}
                   >
                     Book Now
                   </Button>

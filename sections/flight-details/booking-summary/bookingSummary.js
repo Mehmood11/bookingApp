@@ -1,4 +1,5 @@
 import CustomAccordion from "@/components/custom-accordian/customAccordion";
+import HelpAndOfferCard from "@/components/help-and-offer-card";
 import FormProvider from "@/components/rhf/form-provider";
 import { RHFCheckbox } from "@/components/rhf/rhf-checkbox";
 import RHFTextField from "@/components/rhf/rhf-textfield";
@@ -64,46 +65,63 @@ const BookingSummarySidbar = () => {
     },
   ];
   return (
-    <Box>
-      <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>Booking Summary</Box>
-      <Divider
-        sx={{
-          border:
-            "1px solid linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
-        }}
-      />
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "90vh",
+        justifyContent: "space-between",
+      }}
+    >
       <Box>
-        <CustomAccordion items={filterData} />
-      </Box>
-
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Box sx={{ color: "#2278C8", fontSize: "16px", fontWeight: 500 }}>
-          Total
+        <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>
+          Booking Summary
         </Box>
-        <Button
+        <Divider
           sx={{
-            borderRadius: "11px",
-            background: "#2278C8",
-            boxShadow: "0px 1.39011px 2.78022px 0px rgba(16, 24, 40, 0.05)",
-            color: "#FFF",
-            fontSize: "24px",
-            fontWeight: 700,
-            "&:hover": {
+            border:
+              "1px solid linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+          }}
+        />
+        <Box>
+          <CustomAccordion items={filterData} />
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ color: "#2278C8", fontSize: "16px", fontWeight: 500 }}>
+            Total
+          </Box>
+          <Button
+            sx={{
+              borderRadius: "11px",
               background: "#2278C8",
               boxShadow: "0px 1.39011px 2.78022px 0px rgba(16, 24, 40, 0.05)",
-            },
-          }}
-          variant="contained"
-        >
-          $381
-        </Button>
+              color: "#FFF",
+              fontSize: "24px",
+              fontWeight: 700,
+              "&:hover": {
+                background: "#2278C8",
+                boxShadow: "0px 1.39011px 2.78022px 0px rgba(16, 24, 40, 0.05)",
+              },
+            }}
+            variant="contained"
+          >
+            $381
+          </Button>
+        </Box>
       </Box>
+
+      <HelpAndOfferCard
+        description="A central hub for resolution center, FAQs, live chats and a community."
+        title="Need Help?"
+        btnTitle="Redeem"
+      />
     </Box>
   );
 };

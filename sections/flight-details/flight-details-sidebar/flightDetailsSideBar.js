@@ -6,6 +6,7 @@ import RHFTextField from "@/components/rhf/rhf-textfield";
 import { Box, Divider, Stack } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { RHFCheckbox } from "@/components/rhf/rhf-checkbox";
+import HelpAndOfferCard from "@/components/help-and-offer-card";
 
 const FlightDetailsSideBar = () => {
   const methods = useForm({
@@ -44,7 +45,7 @@ const FlightDetailsSideBar = () => {
     },
     {
       title: "Departure time",
-      
+
       content: (
         <FormProvider methods={methods}>
           <Stack flexDirection="colunm" gap={2}>
@@ -65,7 +66,14 @@ const FlightDetailsSideBar = () => {
   ];
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "90vh",
+        justifyContent: "space-between",
+      }}
+    >
       <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>Filters</Box>
       <Divider
         sx={{
@@ -76,6 +84,11 @@ const FlightDetailsSideBar = () => {
       <Box>
         <CustomAccordion items={filterData} />
       </Box>
+      <HelpAndOfferCard
+        description="A central hub for resolution center, FAQs, live chats and a community."
+        title="Need Help?"
+        btnTitle="Redeem"
+      />
     </Box>
   );
 };
