@@ -1,4 +1,4 @@
-import Profile from "@/sections/user-details/profile/profile";
+import Profile from "@/sections/user-details/profile";
 import React from "react";
 
 const page = () => {

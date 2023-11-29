@@ -12,4 +12,4 @@ const AccountingReport = () => {
   )
 }
 
-export default AccountingReport
+export default AccountingReport;

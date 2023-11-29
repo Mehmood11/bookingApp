@@ -23,34 +23,25 @@ const AccountingReportForm = () => {
           <Typography
             variant="h5"
             component="h5"
-            sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
+            sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
           >
            Accounting Report
           </Typography>
           <Typography
             variant="p"
             component="p"
-            sx={{ color: "#64748B", fonSize: "12px" }}
+            sx={{ color: "#64748B", fontSize: "12px" }}
           >
           Report will show the deal history of the customer on the order
           </Typography>
         </Grid>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
-            {AccountingReportData?.map((form) => {
+            {AccountingReportData?.map((item) => {
+              const { component: Component, componentProps } = item;
               return (
-                <Grid item xs={12} md={6} lg={form?.gridLength} key={form?.id}>
-                  <>
-                    <form.component size="small" {...form.componentProps}>
-                      {form.componentProps.select
-                        ? form.options?.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))
-                        : null}
-                    </form.component>
-                  </>
+                <Grid item xs={12} md={6} lg={item?.gridLength} key={item?.id}>
+                  <Component {...componentProps} />
                 </Grid>
               );
             })}

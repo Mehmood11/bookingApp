@@ -10,14 +10,13 @@ const AccountingReportTable = () => {
       <TableHeader
         tableHeaderData={[]}
       />
-
       <CustomTable
         columns={columns}
         data={TableData}
         isFetching={false}
         isError={false}
         isSuccess
-        isPagination
+        isPagination={false}
       />
     </Box>
   );

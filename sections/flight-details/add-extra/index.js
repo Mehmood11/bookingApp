@@ -29,13 +29,13 @@ const AddExtra = () => {
       <Typography
         variant="h5"
         component="h5"
-        sx={{ color: "#465365", fonSize: "12px", fontWeight: "600", my: 2 }}
+        sx={{ color: "#465365", fontSize: "12px", fontWeight: "600", my: 2 }}
       >
         Add Somthing{" "}
         <Typography
           variant="h5"
           component="span"
-          sx={{ color: "#2278C8", fonSize: "12px", fontWeight: "600" }}
+          sx={{ color: "#2278C8", fontSize: "12px", fontWeight: "600" }}
         >
           Extra
         </Typography>
