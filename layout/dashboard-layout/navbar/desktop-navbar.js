@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Button, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import logo from "../../../assets/logo.svg";
+import ProfileDropDown from "@/components/profile-drop-down";
 
 const poppins = Poppins({
   weight: "400",
@@ -21,11 +22,13 @@ const pagesNavbar = [
 ];
 
 const DesktopNavbar = () => {
+  const [login, setLogin] = useState(false);
+
   return (
     <>
       <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
         <Link href="/">
-          <Image src={logo} alt='logo' />
+          <Image src={logo} alt="logo" />
         </Link>
       </Box>
       <Box
@@ -37,13 +40,48 @@ const DesktopNavbar = () => {
         }}
       >
         {pagesNavbar.map((page) => (
-          <StyledNavLink
-            key={page.id}
-            href={page.link}
-          >
+          <StyledNavLink key={page.id} href={page.link}>
             {page.title}
           </StyledNavLink>
         ))}
+      </Box>
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: { xs: "none", lg: "flex" },
+          justifyContent: 'flex-end'
+        }}
+      >
+        {!login ? (
+          <>
+            <Box sx={{ flexGrow: 0 }}>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "white",
+                  color: "black",
+                  "&:hover": {
+                    backgroundColor: "white",
+                  },
+                }}
+              >
+                Become An Agent
+              </Button>
+            </Box>
+
+            <Button
+              variant="outlined"
+              sx={{ border: "none", color: "white" }}
+              onClick={() => {
+                setLogin(true);
+              }}
+            >
+              Login
+            </Button>
+          </>
+        ) : (
+          <ProfileDropDown />
+        )}
       </Box>
     </>
   );

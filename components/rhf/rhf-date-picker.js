@@ -1,8 +1,6 @@
 import { useFormContext, Controller } from "react-hook-form";
 import { DatePicker } from "@mui/x-date-pickers";
 import { FormLabel, Stack } from "@mui/material";
-import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
-
 
 const RHFDatePicker = ({
   name,

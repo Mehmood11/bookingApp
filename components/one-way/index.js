@@ -30,7 +30,7 @@ const OneWay = ({ watch, getValues }) => {
           ]}
         />
       </Grid>
-      <Grid xs={12} md={3} item sx={{ color: "black" }}>
+      <Grid xs={12} lg={3} item sx={{ color: "black" }}>
         <Typography variant="body1" sx={{ fontWeight: "600" }}>
           From
         </Typography>
@@ -62,8 +62,8 @@ const OneWay = ({ watch, getValues }) => {
 
       <Grid
         xs={12}
-        md={3}
-        ml={1}
+        lg={3}
+        ml={{ lg: 1, xs: 0 }}
         item
         sx={{ color: "black", position: "relative" }}
       >
@@ -77,8 +77,12 @@ const OneWay = ({ watch, getValues }) => {
             display: "inline-block",
             position: "absolute",
             zIndex: 11,
-            left: "-25px",
-            top: "40px",
+            left: { lg: "-25px", xs: "0px" },
+            top: { lg: "40px", xs: "10%" },
+            right: 0,
+            margin: { xs: "auto", lg: "0" },
+            transform: { xs: "translateY(-50%)", lg: "none" },
+            width: "40px",
           }}
         >
           <SwapHorizIcon
@@ -115,9 +119,13 @@ const OneWay = ({ watch, getValues }) => {
           </Typography>
         </Box>
       </Grid>
-      <Divider orientation="vertical" sx={{ ml: 2 }} flexItem />
-      <Grid container item xs={12} md={5} spacing={1} ml={2}>
-        <Grid xs={12} md={4} item sx={{ color: "black" }}>
+      <Divider
+        orientation="vertical"
+        sx={{ ml: 2, display: {xs: 'none', lg: "inline-block" } }}
+        flexItem
+      />
+      <Grid container item xs={12} lg={5} spacing={1} mt={{xs: 2, lg:0}} ml={{xs: 0, lg:2}}>
+        <Grid xs={12} sm={4} item sx={{ color: "black" }}>
           <Box
             sx={{
               backgroundColor: "#fff",
@@ -202,7 +210,7 @@ const OneWay = ({ watch, getValues }) => {
             </Box>
           </Box>
         </Grid>
-        <Grid xs={12} md={4} item sx={{ color: "black" }}>
+        <Grid xs={12} sm={4} item sx={{ color: "black" }}>
           <Box
             sx={{
               backgroundColor: "#fff",
@@ -242,7 +250,7 @@ const OneWay = ({ watch, getValues }) => {
             </Typography>
           </Box>
         </Grid>
-        <Grid xs={12} md={4} item sx={{ color: "black" }} p={2}>
+        <Grid xs={12} sm={4} item sx={{ color: "black" }}>
           <Box
             sx={{
               backgroundColor: "#fff",
@@ -296,8 +304,8 @@ const OneWay = ({ watch, getValues }) => {
         </Grid>
       </Grid>
       <Grid xs={12} item>
-        <RHFCheckbox name='WHCR' label='WHCR'/>
-        <RHFCheckbox name='agent' label='Agent Allocated Flight'/>
+        <RHFCheckbox name="WHCR" label="WHCR" />
+        <RHFCheckbox name="agent" label="Agent Allocated Flight" />
       </Grid>
     </Grid>
   );
