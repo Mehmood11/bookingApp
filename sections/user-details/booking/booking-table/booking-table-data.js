@@ -1,16 +1,5 @@
-import revenue from "../../../../assets/images/revenue.svg";
-import earning from "../../../../assets/images/earning.svg";
-import totalBooking from "../../../../assets/images/total-booking.svg";
-import todayBooking from "../../../../assets/images/today-booking.svg";
-import dashboardCardOne from "../../../../assets/images/dashboardCardOne.svg";
-import dashboardCardTwo from "../../../../assets/images/dashboardCardTwo.svg";
-import dashboardCardThree from "../../../../assets/images/dashboardCardThree.svg";
-import dashboardCardFour from "../../../../assets/images/dashboardCardFour.svg";
 import turkishAirline from "../../../../assets/images/turkish-airline.svg";
-import americanAirline from "../../../../assets/images/american-airline.svg";
-import southAirline from "../../../../assets/images/southwest-airline.svg";
-import EastIcon from "@mui/icons-material/East";
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Image from "next/image";
 
 export const TableData = [

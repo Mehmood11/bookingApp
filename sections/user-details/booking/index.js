@@ -10,7 +10,13 @@ const Booking = () => {
       <Typography
         variant="h5"
         component="h5"
-        sx={{ color: "#2278C8", fonSize: "24px", fontWeight: "600", mt:2, mb:5 }}
+        sx={{
+          color: "#2278C8",
+          fontSize: "24px",
+          fontWeight: "600",
+          mt: 2,
+          mb: 5,
+        }}
       >
         Booking
       </Typography>

@@ -13,7 +13,7 @@ const Setting = () => {
         component="h5"
         sx={{
           color: "#2278C8",
-          fonSize: "24px",
+          fontSize: "24px",
           fontWeight: "600",
           mt: 2,
           mb: 5,

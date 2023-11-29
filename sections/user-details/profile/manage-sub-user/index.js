@@ -12,7 +12,7 @@ const ManageSubUser = () => {
         <Typography
           variant="h5"
           component="h5"
-          sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
+          sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
         >
           Manage Sub User
         </Typography>

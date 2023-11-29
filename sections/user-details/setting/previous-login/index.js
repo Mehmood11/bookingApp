@@ -11,14 +11,14 @@ const PreviousLogin = () => {
         <Typography
           variant="h5"
           component="h5"
-          sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
+          sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
         >
          Previous Login
         </Typography>
         <Typography
           variant="p"
           component="p"
-          sx={{ color: "#64748B", fonSize: "12px" }}
+          sx={{ color: "#64748B", fontSize: "12px" }}
         >
           History of your past login
         </Typography>
