@@ -28,7 +28,7 @@ const AdvanceBooking = () => {
           <Typography
             variant="p"
             component="p"
-            sx={{ color: "#64748B", fontSize: "12px" }}
+            sx={{ color: "#64748B", fontSize: "14px" }}
           >
             Lorem Ipsum is simply dummy text of the printing
           </Typography>
@@ -56,10 +56,14 @@ const AdvanceBooking = () => {
             width: "140px",
             fontWeight: "500",
             fontSize: "14px",
+            borderRadius: "10px",
             textTransform: "capitalize",
             backgroundColor: "#e9585a",
+            boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
+
             "&:hover": {
               backgroundColor: "#e9585a",
+              boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
             },
           }}
         >
