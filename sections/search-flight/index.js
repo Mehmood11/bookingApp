@@ -9,11 +9,9 @@ import ticket from "../../assets/ticket.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 import RHFTextField from "@/components/rhf/rhf-textfield";
-import CustomTabs from "@/components/custom-tabs/customTabs";
-import OneWay from "@/components/one-way";
-import Header from "@/layout/dashboard-layout/header";
 import dynamic from "next/dynamic";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useRouter } from "next/navigation";
 
 const DifferentWay = dynamic(() => import("@/components/one-way"), {
   ssr: false,
@@ -21,6 +19,7 @@ const DifferentWay = dynamic(() => import("@/components/one-way"), {
 });
 
 const SearchFlight = () => {
+  const router = useRouter();
   const methods = useForm({
     defaultValues: {
       ticket: "",
@@ -140,6 +139,7 @@ const SearchFlight = () => {
                   backgroundColor: "#EB3334",
                 },
               }}
+              onClick={() => router.push("/flight-details")}
             >
               Search Flight
               <KeyboardArrowRightIcon />
