@@ -32,7 +32,7 @@ const steps = [
 ];
 
 const FlightDetails = () => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(1);
 
   const nextStepHandler = () => {
     setActive(active < steps.length - 1 ? active + 1 : 0);
@@ -43,48 +43,28 @@ const FlightDetails = () => {
 
   const theme = useTheme();
   return (
-    <Grid
-      container
-      sx={{
-        columnGap: "10px",
-        boxSizing: "border-box",
-        flexWrap: "nowrap",
-        height: "100vh",
-      }}
-    >
-      <Grid
-        item
-        xs={12}
-        md={3}
-        sx={{
-          backgroundColor: "#f1f1f1",
-          borderRadius: "12px",
-          p: 3,
-          boxSizing: "border-box",
-          color: "#465365",
-          border: "1px solid #FFF",
-          background:
-            "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
-          boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
-          backdropFilter: "blur(12px)",
-        }}
-      >
-        {active === 1 ? <FlightDetailsSideBar /> : <BookingSummarySidbar />}
+    <Grid container spacing={3}>
+      <Grid item lg={3} md={4} xs={12}>
+        <Box
+          sx={{
+            backgroundColor: "#f1f1f1",
+            borderRadius: "12px",
+            p: 3,
+            boxSizing: "border-box",
+            color: "#465365",
+            border: "1px solid #FFF",
+            background:
+              "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+            boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+            backdropFilter: "blur(12px)",
+            height: "100%",
+          }}
+        >
+          {active === 1 ? <FlightDetailsSideBar /> : <BookingSummarySidbar />}
+        </Box>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        md={9}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          rowGap: "10px",
-        }}
-      >
-        <Grid
-          item
-          sm={12}
+      <Grid item lg={9} md={8} xs={12}>
+        <Box
           sx={{
             background:
               "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
@@ -104,21 +84,11 @@ const FlightDetails = () => {
             },
           }}
         >
-          <Box
-            sx={{
-              display: { xs: "flex", lg: "inline-block" },
-              overflowX: { xs: "scroll", lg: "auto" },
-              width: "100%",
-            }}
-          >
-            <CustomFlightStepper active={active} steps={steps} />
-          </Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          container
+          <CustomFlightStepper active={active} steps={steps} />
+        </Box>
+        <Box
           sx={{
+            marginTop: 3,
             height: "auto",
             background:
               "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
@@ -135,23 +105,14 @@ const FlightDetails = () => {
             },
           }}
         >
-          <Grid
-            item
-            sm={12}
-            sx={{
-              height: "100%",
-              color: "black",
-            }}
-          >
-            <CustomChildRenderer index={active}>
-              <p>Comp 1</p>
-              <SelectFlight nextStepHandler={nextStepHandler} />
-              <PassengerDetails nextStepHandler={nextStepHandler} />
-              <SomeThingExtra nextStepHandler={nextStepHandler} />
-              <Payment />
-            </CustomChildRenderer>
-          </Grid>
-        </Grid>
+          <CustomChildRenderer index={active}>
+            <p>Comp 1</p>
+            <SelectFlight nextStepHandler={nextStepHandler} />
+            <PassengerDetails nextStepHandler={nextStepHandler} />
+            <SomeThingExtra nextStepHandler={nextStepHandler} />
+            <Payment />
+          </CustomChildRenderer>
+        </Box>
       </Grid>
     </Grid>
   );

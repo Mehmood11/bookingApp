@@ -87,7 +87,7 @@ const FlightDetailsSideBar = () => {
       <HelpAndOfferCard
         description="A central hub for resolution center, FAQs, live chats and a community."
         title="Need Help?"
-        btnTitle="Redeem"
+        btnTitle="Need Help?"
       />
     </Box>
   );
