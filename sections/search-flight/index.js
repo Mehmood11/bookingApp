@@ -13,6 +13,7 @@ import CustomTabs from "@/components/custom-tabs/customTabs";
 import OneWay from "@/components/one-way";
 import Header from "@/layout/dashboard-layout/header";
 import dynamic from "next/dynamic";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const DifferentWay = dynamic(() => import("@/components/one-way"), {
   ssr: false,
@@ -45,14 +46,21 @@ const SearchFlight = () => {
           height: "100%",
           alignItems: "flex-start",
           alignContent: "flex-start",
-          paddingX: 6,
+          paddingX: { xs: 0, md: 6 },
         }}
       >
         {/* <Grid item xs={12}>
           <Header />
         </Grid> */}
         <Grid item xs={12}>
-          <Typography sx={{ fontWeight: 600, color: "white" }} variant="h3">
+          <Typography
+            sx={{
+              fontWeight: 600,
+              fontSize: { sm: "3rem", xs: "2rem" },
+              color: "white",
+            }}
+            variant="h3"
+          >
             {/* <Typography variant="h2" component="span" sx={{ color: "#EB3334" }}>
               Explore
             </Typography>{" "} */}
@@ -75,7 +83,7 @@ const SearchFlight = () => {
               placeholder="Enter Passport no"
               outerLabel="Passport No"
               StartIcon={<Image src={passportNo} alt="passportNo" />}
-              color= 'white'
+              color="white"
             />
           </Grid>
           <Grid item xs={12} md={3}>
@@ -84,7 +92,7 @@ const SearchFlight = () => {
               placeholder="Enter passenger no"
               outerLabel="Passenger Name"
               StartIcon={<Image src={profileIcon} alt="ticket" />}
-              color= 'white'
+              color="white"
             />
           </Grid>
           <Grid item xs={12} md={2} display={"flex"} alignItems={"flex-end"}>
@@ -119,11 +127,28 @@ const SearchFlight = () => {
             }}
           >
             <DifferentWay watch={watch} getValues={getValues} />
+            <Button
+              variant="contained"
+              sx={{
+                borderRadius: "0.4125rem",
+                backgroundColor: "#EB3334",
+                mb: 0.5,
+                p: "10px 14px",
+                position: "absolute",
+                right: 20,
+                "&:hover": {
+                  backgroundColor: "#EB3334",
+                },
+              }}
+            >
+              Search Flight
+              <KeyboardArrowRightIcon />
+            </Button>
           </Grid>
           <Grid
             item
             xs={12}
-            mt={1}
+            mt={4}
             sx={{
               borderRadius: " 0.75rem",
               background:
