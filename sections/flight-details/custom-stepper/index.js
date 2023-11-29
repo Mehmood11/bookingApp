@@ -18,8 +18,8 @@ function ColorLibStepIcon(props) {
       {!completed && !active && `0${icon}`}
       {active ? (
         <CircleIcon
-          color={"#7A5AF8"}
-          sx={{ color: "#7A5AF8", fontSize: "10px" }}
+          color={"#2278C8"}
+          sx={{ color: "#2278C8", fontSize: "10px" }}
         />
       ) : null}
     </ColorLibStepIconRoot>
