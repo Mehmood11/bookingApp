@@ -1,4 +1,7 @@
 "use client"
+
+import { Button } from "@mui/material";
+
 export const TableData = [
   {
     id: 1,
@@ -67,7 +70,41 @@ export const columns = [
   {
     accessorFn: (row) => row?.status ?? "",
     id: "status",
-    cell: (info) => info.getValue(),
+    cell: (info) => {
+      return (
+        <Button
+          variant="contained"
+          sx={{
+            width: "95px",
+            backgroundColor: `${
+              info.getValue() === "Rejected"
+                ? "#ff0000"
+                : info.getValue() === "Conform"
+                ? "#40c79a"
+                : info.getValue() === "In Process"
+                ? "#629bf8"
+                : "#f7b13c" // Pending Color
+            }`,
+            "&:hover": {
+              backgroundColor: `${
+                info.getValue() === "Rejected"
+                  ? "#ff0000" // Red
+                  : info.getValue() === "Conform"
+                  ? "#40c79a" // Green
+                  : info.getValue() === "In Process"
+                  ? "#629bf8" // Blue
+                  : "#f7b13c" // Pending
+              }`,
+            },
+            fontSize: "12px",
+            fontWeight: "500",
+            textTransform: "capitalize",
+          }}
+        >
+          {info.getValue()}
+        </Button>
+      );
+    },
     header: () => <span>Status</span>,
   },
 ];

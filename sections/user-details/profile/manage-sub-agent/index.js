@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
-import { Grid, Typography } from "@mui/material";
-import CustomTable from "@/components/custom-table";
-import { TableData, columns } from "./previous-login-data";
+import { Button, Grid, Typography } from "@mui/material";
 import TableHeader from "@/components/custom-table/table-header";
+import CustomTable from "@/components/custom-table";
+import { TableData, columns } from "./sub-agent-table-data";
 
-const PreviousLogin = () => {
+const SubAgent = () => {
   return (
     <Grid container rowSpacing={5} columnSpacing={10}>
       <Grid item xs={12} md={4}>
@@ -13,15 +14,19 @@ const PreviousLogin = () => {
           component="h5"
           sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
         >
-         Previous Login
+          Manage Sub Agent
         </Typography>
-        <Typography
-          variant="p"
-          component="p"
-          sx={{ color: "#64748B", fontSize: "12px" }}
+        <Button
+          sx={{
+            textTransform: "capitalize",
+            borderRadius: "0",
+            borderBottom: "1px solid",
+            mt: 1,
+            p: 0,
+          }}
         >
-          History of your past login
-        </Typography>
+          Add Sub User
+        </Button>
       </Grid>
       <Grid item xs={12} md={8}>
         <TableHeader tableHeaderData={[]} />
@@ -39,4 +44,4 @@ const PreviousLogin = () => {
   );
 };
 
-export default PreviousLogin;
+export default SubAgent;

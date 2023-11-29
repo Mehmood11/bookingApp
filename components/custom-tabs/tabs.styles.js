@@ -7,7 +7,7 @@ export const styles = {
     display: "inline-block",
     padding: "4px",
     height: "4rem",
-    marginLeft: "2rem",
+    // marginLeft: "2rem",
     marginBottom: "8px",
     "& ._indicator": {
       display: "none",
@@ -41,7 +41,7 @@ export const styles = {
         padding: "4px 20px",
         minHeight: "unset",
         textTransform: "capitalize",
-        marginLeft: "1rem !important",
+        marginLeft: "0.3rem !important",
         zIndex: 1,
       },
     },

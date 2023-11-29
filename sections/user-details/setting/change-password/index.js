@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import FormProvider from "@/components/rhf/form-provider";
@@ -23,34 +23,25 @@ const ChangePassword = () => {
           <Typography
             variant="h5"
             component="h5"
-            sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
+            sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
           >
             Change Password
           </Typography>
           <Typography
             variant="p"
             component="p"
-            sx={{ color: "#64748B", fonSize: "12px" }}
+            sx={{ color: "#64748B", fontSize: "12px" }}
           >
-           Lorem Ipsum is simply dummy text of the printing
+            Lorem Ipsum is simply dummy text of the printing
           </Typography>
         </Grid>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
-            {changePasswordData?.map((form) => {
+            {changePasswordData?.map((item) => {
+              const { component: Component, componentProps } = item;
               return (
-                <Grid item xs={12} md={6} lg={form?.gridLength} key={form?.id}>
-                  <>
-                    <form.component size="small" {...form.componentProps}>
-                      {form.componentProps.select
-                        ? form.options?.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))
-                        : null}
-                    </form.component>
-                  </>
+                <Grid item xs={12} md={6} lg={item?.gridLength} key={item?.id}>
+                  <Component {...componentProps} />
                 </Grid>
               );
             })}
@@ -67,6 +58,7 @@ const ChangePassword = () => {
             width: "140px",
             fontWeight: "500",
             fontSize: "14px",
+            borderRadius: "8px",
             textTransform: "capitalize",
             backgroundColor: "#e9585a",
             "&:hover": {

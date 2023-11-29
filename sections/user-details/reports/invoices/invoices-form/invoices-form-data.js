@@ -11,7 +11,10 @@ export const InvoicesData = [
         name: "agentDetails",
         fullWidth: true,
         select: true,
-        options: [{ label: "Scot Fostering", value: "Scot_Fostering" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "All", value: "all" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
       },
       component: RHFCustomSelect,
     },
@@ -34,7 +37,10 @@ export const InvoicesData = [
         name: "services",
         fullWidth: true,
         select: true,
-        options: [{ label: "Scot Fostering", value: "Scot_Fostering" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "All", value: "all" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
       },
       component: RHFCustomSelect,
       
@@ -62,9 +68,9 @@ export const InvoicesData = [
   ];
 
   export const defaultValues = {
-    agentDetails: "Agent Details",
+    agentDetails: "all",
     bookingRefNo: "Booking Ref No",
-    services: "Servicess",
+    services: "all",
     passengerName: "Passenger Name",
     from: new Date(),
     toDate: new Date(),

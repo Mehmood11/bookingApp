@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Box, Button, Grid, Typography } from "@mui/material";
@@ -24,14 +24,14 @@ const TopUpCreditLimit = () => {
           <Typography
             variant="h5"
             component="h5"
-            sx={{ color: "#1E5E89", fonSize: "20px", fontWeight: "600" }}
+            sx={{ color: "#1E5E89", fontSize: "20px", fontWeight: "600" }}
           >
             Top Up Credit Limit
           </Typography>
           <Typography
             variant="p"
             component="p"
-            sx={{ color: "#64748B", fonSize: "12px" }}
+            sx={{ color: "#64748B", fontSize: "12px" }}
           >
             Lorem Ipsum is simply dummy text of the printing
           </Typography>
@@ -58,6 +58,7 @@ const TopUpCreditLimit = () => {
                     width: "140px",
                     fontWeight: "500",
                     fontSize: "14px",
+                    borderRadius:"8px",
                     textTransform: "capitalize",
                     backgroundColor: "#e9585a",
                     "&:hover": {
@@ -65,7 +66,7 @@ const TopUpCreditLimit = () => {
                     },
                   }}
                 >
-                  Pay Now
+                 Pay Now
                 </Button>
               </Box>
             </Grid>

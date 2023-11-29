@@ -1,6 +1,4 @@
-import RHFCustomSelect from "@/components/rhf/rhf-custom-select";
 import RHFDatePicker from "@/components/rhf/rhf-date-picker";
-import RHFTextField from "@/components/rhf/rhf-textfield";
 
 export const receiptsData = [
     {

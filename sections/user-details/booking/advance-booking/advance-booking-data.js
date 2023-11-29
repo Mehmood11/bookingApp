@@ -6,40 +6,37 @@ export const searchTripData = [
   {
     id: 1,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "Search Type",
       name: "searchType",
       fullWidth: true,
-      select: true,
     },
     component: RHFCustomSelect,
   },
   {
     id: 2,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "Payment Type",
       name: "paymentType",
       fullWidth: true,
-      select: true,
     },
     component: RHFCustomSelect,
   },
   {
     id: 3,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "AgentDetails",
       name: "agentDetails",
       fullWidth: true,
-      select: true,
     },
     component: RHFCustomSelect,
   },
   {
     id: 4,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "Source",
       name: "source",
       multiline: true,
@@ -49,18 +46,17 @@ export const searchTripData = [
   {
     id: 5,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "Page Record",
       name: "pageRecord",
       fullWidth: true,
-      select: true,
     },
     component: RHFCustomSelect,
   },
   {
     id: 7,
     gridLength: 4,
-    otherOptions: {
+    componentProps: {
       outerLabel: "Passenger Name",
       name: "passengerName",
       multiline: true,
