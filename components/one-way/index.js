@@ -23,7 +23,6 @@ const OneWay = ({ watch, getValues }) => {
       <Grid xs={12} item sx={{ color: "black" }}>
         <RHFRadioGroup
           name="ways"
-          value="oneWay"
           options={[
             { label: "One Way", value: "oneWay" },
             { label: "Round Way", value: "roundWay" },
@@ -122,10 +121,18 @@ const OneWay = ({ watch, getValues }) => {
       </Grid>
       <Divider
         orientation="vertical"
-        sx={{ ml: 2, display: {xs: 'none', lg: "inline-block" } }}
+        sx={{ ml: 2, display: { xs: "none", lg: "inline-block" } }}
         flexItem
       />
-      <Grid container item xs={12} lg={5} spacing={1} mt={{xs: 2, lg:0}} ml={{xs: 0, lg:2}}>
+      <Grid
+        container
+        item
+        xs={12}
+        lg={5}
+        spacing={1}
+        mt={{ xs: 2, lg: 0 }}
+        ml={{ xs: 0, lg: 2 }}
+      >
         <Grid xs={12} sm={4} item sx={{ color: "black" }}>
           <Box
             sx={{
