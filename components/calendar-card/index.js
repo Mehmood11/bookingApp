@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import upArrow from "../../assets/images/upArrow.svg";
-import downArrow from "../../assets/images/upArrow.svg";
+import downArrow from "../../assets/images/downArrow.svg";
 import { Box, CardContent, Paper, Stack, Typography } from "@mui/material";
 
 const CalendarCard = (props) => {
@@ -21,13 +21,17 @@ const CalendarCard = (props) => {
           <Image
             height={60}
             width={60}
-            src={value > 0 ? downArrow : upArrow}
+            src={value >= 85 ? downArrow : upArrow}
             alt="Test"
           />
         </Stack>
         <Box sx={{ textAlign: "right" }}>
-          <Typography color="text.secondary" fontSize="24px" fontWeight="600">
-            {value}
+          <Typography
+            color={value >= 85 ? "#00A885" : "#F46D7B"}
+            fontSize="24px"
+            fontWeight="600"
+          >
+            ${value}
           </Typography>
         </Box>
       </CardContent>

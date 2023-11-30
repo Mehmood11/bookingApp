@@ -31,11 +31,11 @@ const UserDetailsLayout = ({ children }) => {
       }}
     >
       <Header />
-      <Grid mt={1} container spacing={2}>
-        <Grid item xs={12} lg={3}>
+      <Grid mt={1} container spacing={3}>
+        <Grid item xs={12} md={4} lg={3}>
           <UserSideBar />
         </Grid>
-        <Grid item xs={12} lg={9}>
+        <Grid item xs={12} md={8} lg={9}>
           <Box
             sx={{
               backgroundColor: "#f1f1f1",

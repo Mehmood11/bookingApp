@@ -22,8 +22,8 @@ const SomeThingExtra = ({ nextStepHandler }) => {
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmitHandler)}>
-      <Box sx={{ paddingX: "5rem" }}>
-        <Box sx={{ fontSize: "20px", fontWeight: 600, pt: 4, mb: 2 }}>
+      <Box sx={{ paddingX:  {lg :"5rem"} }}>
+        <Box sx={{ fontSize: "20px", fontWeight: 600, pt: 4, mb: 2 , color: "#465365"}}>
           Add Something <span style={{ color: "#2278C8" }}>Extra</span>{" "}
         </Box>
 

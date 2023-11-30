@@ -7,17 +7,17 @@ const cardData = [
   {
     title: "Wednesday",
     description: "October 15",
-    value: 81.9,
+    value: 85.2,
   },
   {
     title: "Thursday ",
     description: "October 16",
-    value: 96.12,
+    value: 80.12,
   },
   {
     title: "Friday",
     description: "October 15",
-    value: 81.9,
+    value: 96.9,
   },
   {
     title: "Saturday",

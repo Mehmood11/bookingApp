@@ -8,10 +8,10 @@ export const passengerData = [
     id: 1,
     gridLength: 4,
     componentProps: {
-      outerLabel: "",
       placeholder: "First Name",
       name: "firstName",
-      multiline: false,
+      size: "medium",
+      fullWidth: true,
     },
     component: RHFTextField,
   },
@@ -19,10 +19,10 @@ export const passengerData = [
     id: 2,
     gridLength: 4,
     componentProps: {
-      outerLabel: "",
       placeholder: "Last Name",
       name: "lastName",
-      multiline: false,
+      size: "medium",
+      fullWidth: true,
     },
     component: RHFTextField,
   },
@@ -30,10 +30,10 @@ export const passengerData = [
     id: 3,
     gridLength: 4,
     componentProps: {
-      outerLabel: "",
       name: "emailId",
       placeholder: "Email Id",
       fullWidth: true,
+      size: "medium",
       select: true,
       options: [
         { label: "id1", value: "id1" },
@@ -46,7 +46,7 @@ export const passengerData = [
     id: 4,
     gridLength: 4,
     componentProps: {
-      outerLabel: "",
+      size: "medium",
       name: "dob",
       placeholder: "DOB: DD/MM/YYYY*",
       fullWidth: true,
@@ -57,7 +57,7 @@ export const passengerData = [
     id: 5,
     gridLength: 4,
     componentProps: {
-      outerLabel: "",
+      size: "medium",
       name: "issueDate",
       placeholder: "DOB: DD/MM/YYYY*",
       fullWidth: true,
@@ -68,6 +68,7 @@ export const passengerData = [
     id: 6,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       name: "expiryDate",
       placeholder: "DOB: DD/MM/YYYY*",
@@ -79,6 +80,7 @@ export const passengerData = [
     id: 7,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       name: "placeOfIssue",
       placeholder: "Place of issue",
@@ -95,6 +97,7 @@ export const passengerData = [
     id: 8,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       placeholder: "Passport no*",
       name: "passportNo",
@@ -106,6 +109,7 @@ export const passengerData = [
     id: 9,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       name: "nationality",
       placeholder: "Nationality*",
@@ -122,6 +126,7 @@ export const passengerData = [
     id: 10,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       placeholder: "Choice File",
       name: "choiceFile",
@@ -133,6 +138,7 @@ export const passengerData = [
     id: 11,
     gridLength: 4,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       placeholder: "Contact number",
       name: "contactNumber",
@@ -144,6 +150,7 @@ export const passengerData = [
     id: 12,
     gridLength: 2,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       name: "nationality",
       placeholder: "Meal",
@@ -157,6 +164,7 @@ export const passengerData = [
     id: 12,
     gridLength: 2,
     componentProps: {
+      size: "medium",
       outerLabel: "",
       name: "wchr",
       placeholder: "WCHR",
