@@ -49,7 +49,7 @@ const DesktopNavbar = () => {
         sx={{
           flexGrow: 1,
           display: { xs: "none", lg: "flex" },
-          justifyContent: 'flex-end'
+          justifyContent: "flex-end",
         }}
       >
         {!login ? (
@@ -59,9 +59,18 @@ const DesktopNavbar = () => {
                 variant="contained"
                 sx={{
                   backgroundColor: "white",
-                  color: "black",
+                  borderRadius: "10px",
+                  boxShadow:
+                    "0px 3.69709px 7.39418px -2.77282px rgba(16, 24, 40, 0.16)",
+                  backdropFilter: "blur(4.159223556518555px)",
+                  padding: "13px 34px",
+                  color: "#1E5E89",
+                  fontSize: "15px",
+                  fontWeight: 500,
                   "&:hover": {
                     backgroundColor: "white",
+                    boxShadow:
+                      "0px 3.69709px 7.39418px -2.77282px rgba(16, 24, 40, 0.16)",
                   },
                 }}
               >
@@ -71,7 +80,16 @@ const DesktopNavbar = () => {
 
             <Button
               variant="outlined"
-              sx={{ border: "none", color: "white" }}
+              sx={{
+                border: "none",
+                color: "white",
+                fontSize: "15px",
+                fontWeight: 600,
+                textTransform: "capitalize",
+                "&:hover": {
+                  border: "none",
+                },
+              }}
               onClick={() => {
                 setLogin(true);
               }}

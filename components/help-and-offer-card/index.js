@@ -13,7 +13,7 @@ const HelpAndOfferCard = (props) => {
   const { icon, title = "Need Help ?", description, type, btnTitle } = props;
 
   return (
-    <>
+    <Box sx={{ width: "100%", maxWidth: "400px" }}>
       <Box
         sx={{
           display: "flex",
@@ -85,7 +85,7 @@ const HelpAndOfferCard = (props) => {
           </Button>
         </CardContent>
       </Card>
-    </>
+    </Box>
   );
 };
 
