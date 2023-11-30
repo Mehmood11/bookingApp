@@ -23,6 +23,7 @@ const OneWay = ({ watch, getValues }) => {
       <Grid xs={12} item sx={{ color: "black" }}>
         <RHFRadioGroup
           name="ways"
+          value="oneWay"
           options={[
             { label: "One Way", value: "oneWay" },
             { label: "Round Way", value: "roundWay" },
@@ -115,7 +116,7 @@ const OneWay = ({ watch, getValues }) => {
             component="span"
             sx={{ fontWeight: "500" }}
           >
-            Indira Gandhi International airport
+            DEL, Delhi Airport india
           </Typography>
         </Box>
       </Grid>

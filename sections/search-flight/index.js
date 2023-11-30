@@ -149,14 +149,21 @@ const SearchFlight = () => {
             <Button
               variant="contained"
               sx={{
-                borderRadius: "0.4125rem",
+                borderRadius: "10px",
                 backgroundColor: "#EB3334",
+                boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
+                backdropFilter: "blur(7px)",
+                fontSize: "18px",
+                fontWeight: 500,
                 mb: 0.5,
-                p: "10px 14px",
+                p: "15px 30px",
                 position: "absolute",
-                right: 20,
+                textTransform: "capitalize",
+                bottom: "-2rem",
+                right: 30,
                 "&:hover": {
                   backgroundColor: "#EB3334",
+                  boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
                 },
               }}
               onClick={() => router.push("/flight-details")}
@@ -165,57 +172,64 @@ const SearchFlight = () => {
               <KeyboardArrowRightIcon />
             </Button>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            marginY={4}
-            sx={{
-              borderRadius: " 0.75rem",
-              background:
-                "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
-              boxShadow: " 0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
-              backdropFilter: "blur(12px)",
-              paddingX: "50px",
-              paddingBottom: 2,
-            }}
-          >
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={3} lg={3}>
-                <Box>Looking For Help?</Box>
-              </Grid>
 
-              {socialData.map((item, i) => {
-                return (
-                  <Grid key={i} item xs={12} md={3} lg={3}>
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                      <Box>
-                        <img src={item.img.src} alt="sms" />
-                      </Box>
-                      <Box>
-                        <Box
-                          sx={{
-                            fontSize: "14px",
-                            fontWeight: 500,
-                            color: "#64748B",
-                          }}
-                        >
-                          {item.name}
+          <Grid item xs={12}>
+            <Box
+              sx={{
+                borderRadius: " 0.75rem",
+                background:
+                  "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+                boxShadow: " 0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+                backdropFilter: "blur(12px)",
+                paddingX: "50px",
+                paddingY: 4,
+                marginY: 6,
+              }}
+            >
+              <Grid container spacing={3}>
+                <Grid item xs={12} md={3} lg={3}>
+                  <Box
+                    sx={{ fontSize: "24px", fontWeight: 600, color: "#465365" }}
+                  >
+                    Looking For Help?
+                  </Box>
+                </Grid>
+
+                {socialData.map((item, i) => {
+                  return (
+                    <Grid key={i} item xs={12} md={3} lg={3}>
+                      <Box
+                        sx={{ display: "flex", alignItems: "center", gap: 2 }}
+                      >
+                        <Box>
+                          <img src={item.img.src} alt="sms" />
                         </Box>
-                        <Box
-                          sx={{
-                            fontSize: "14px",
-                            fontWeight: 500,
-                            color: "#64748B",
-                          }}
-                        >
-                          {item.contact}
+                        <Box>
+                          <Box
+                            sx={{
+                              fontSize: "14px",
+                              fontWeight: 500,
+                              color: "#64748B",
+                            }}
+                          >
+                            {item.name}
+                          </Box>
+                          <Box
+                            sx={{
+                              fontSize: "14px",
+                              fontWeight: 500,
+                              color: "#64748B",
+                            }}
+                          >
+                            {item.contact}
+                          </Box>
                         </Box>
                       </Box>
-                    </Box>
-                  </Grid>
-                );
-              })}
-            </Grid>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </Box>
           </Grid>
         </Grid>
       </Grid>
