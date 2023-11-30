@@ -17,7 +17,7 @@ const Payment = () => {
   };
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmitHandler)}>
-      <Box sx={{ paddingX: "5rem" }}>
+      <Box sx={{ paddingX: { lg: "5rem" } }}>
         <Box
           sx={{
             fontSize: "20px",
@@ -35,6 +35,7 @@ const Payment = () => {
             <RHFRadioGroup
               defultValue="Credit Limit"
               name="ways"
+              sx={{ color: "#000" }}
               options={[
                 { label: "Credit Limit", value: "Credit Limit" },
                 { label: "Credit Card", value: "Credit Card" },
