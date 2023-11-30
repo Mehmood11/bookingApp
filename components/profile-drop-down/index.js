@@ -4,6 +4,7 @@ import { useState } from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ProfileDropDown = () => {
   const router = useRouter();
@@ -96,7 +97,19 @@ const ProfileDropDown = () => {
             fontSize: "14px",
           }}
         >
-          Sign Out
+          <Link
+              style={{
+                fontSize: "16px",
+                fontWeight: "400",
+                color: "rgba(235, 51, 52, 0.80)",
+                textDecoration: "none",
+                marginLeft: "4px",
+              }}
+              href="/sign-in"
+            >
+              Sign Out
+            </Link>
+          
         </MenuItem>
       </Menu>
     </>
