@@ -34,8 +34,6 @@ const HelpAndOfferCard = (props) => {
         sx={{
           textAlign: "center",
           borderRadius: "12px",
-          width: "100%",
-          maxWidth: "400px",
           px: 2,
         }}
       >
