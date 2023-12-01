@@ -1,5 +1,14 @@
-import { Grid, Typography, Box, Divider } from "@mui/material";
-import React from "react";
+import {
+  Grid,
+  Typography,
+  Box,
+  Divider,
+  Menu,
+  MenuItem,
+  Button,
+  TextField,
+} from "@mui/material";
+import React, { useState } from "react";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import RHFAutoCompleteAsync from "../rhf/rhf-auto-complete-async";
 import { useLazyUsersQuery } from "@/services/flight-service-api/flight-service-api";
@@ -14,12 +23,20 @@ import calender from "../../assets/search-flight/calender.svg";
 import RHFDatePicker from "../rhf/rhf-date-picker";
 import dayjs from "dayjs";
 import { RHFCheckbox } from "../rhf/rhf-checkbox";
+import CustomModal from "../custom-modal/customModal";
 
 const OneWay = ({ watch, getValues }) => {
   const apiQuery = useLazyUsersQuery();
   console.log("from ", watch("from"));
+
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <Grid container sx={{ alignItems: "center" }}>
+      <CustomModal open={open} setOpen={setOpen} />
       <Grid xs={12} item sx={{ color: "black" }}>
         <RHFRadioGroup
           name="ways"
@@ -230,6 +247,7 @@ const OneWay = ({ watch, getValues }) => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              cursor: "pointer",
             }}
             p={2}
           >
@@ -258,6 +276,7 @@ const OneWay = ({ watch, getValues }) => {
             </Typography>
           </Box>
         </Grid>
+
         <Grid xs={12} sm={4} item sx={{ color: "black" }}>
           <Box
             sx={{
@@ -270,8 +289,10 @@ const OneWay = ({ watch, getValues }) => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              cursor: "pointer",
             }}
             p={2}
+            onClick={handleClickOpen}
           >
             <Box
               sx={{

@@ -1,8 +1,11 @@
+"use client";
 import AvailableFlightCard from "@/components/available-flight-card/availableFlightCard";
 import CalendarCard from "@/components/calendar-card";
 import OneWay from "@/components/one-way";
+import FormProvider from "@/components/rhf/form-provider";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const cardData = [
   {
@@ -52,6 +55,11 @@ const SelectFlight = ({ nextStepHandler }) => {
   const handleMouseUp = () => {
     setIsPressed(false);
   };
+
+  const methods = useForm({});
+
+  const { watch, getValues } = methods;
+
   return (
     <Box>
       <Box sx={{ color: "#465365", fontSize: "24px", fontWeight: 600 }}>
@@ -82,9 +90,11 @@ const SelectFlight = ({ nextStepHandler }) => {
         })}
       </Box>
 
-      {/* <Box>
-        <OneWay watch={() => {}} />
-      </Box> */}
+      <Box sx={{ marginY: 4 }}>
+        <FormProvider methods={methods}>
+          <OneWay watch={watch} />
+        </FormProvider>
+      </Box>
 
       <Box>
         <Box
