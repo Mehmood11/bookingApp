@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }) => {
       sx={{
         // minHeight: "100vh",
         height: "100vh",
-        maxHeight: "90vh",
+        maxHeight: "93vh",
         backgroundImage: `url(${bg.src})`,
         backgroundPosition: "top",
         backgroundSize: "contain",

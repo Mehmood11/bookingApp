@@ -16,6 +16,8 @@ import {
   Stack,
   Grid,
   Badge,
+  TextField,
+  InputAdornment,
 } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -38,6 +40,8 @@ import DashboardCard from "@/components/dashboard-card";
 import { TableData, cardData, columns } from "./super-admin-data";
 import TableHeader from "@/components/custom-table/table-header";
 import CustomTable from "@/components/custom-table";
+import SearchIcon from "@mui/icons-material/Search";
+import FilterListIcon from "@mui/icons-material/FilterList";
 
 const NavBar = [
   {
@@ -100,9 +104,7 @@ const SuperAdmin = () => {
   };
 
   return (
-    <Box>
-      {/* Navbar */}
-
+    <Box sx={{background: "#F9FDFF"}}>
       <AppBar
         position="static"
         sx={{ backgroundColor: "transparent", boxShadow: "none", mb: 4 }}
@@ -237,7 +239,7 @@ const SuperAdmin = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Badge badgeContent={4} color="error">
+                <Badge sx={{ mr: "2rem" }} badgeContent={4} color="error">
                   <NotificationsIcon style={{ color: "#489ae9" }} />
                 </Badge>
                 <Avatar src={userIcon} alt="user Icon">
@@ -290,35 +292,90 @@ const SuperAdmin = () => {
           </Grid>
         ))}
       </Grid>
+
       <Card>
         <CardContent>
-          <TableHeader
-            onChanged={(e) => {
-              setSearchParam(e);
+         
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
             }}
-            filterButtonShow
-            filterButtonLabel="Filter"
-            tableHeaderData={[
-              {
-                type: "search",
-                FieldProps: {
-                  name: "search",
-                  placeholder: "Search name",
-                },
-              },
-            ]}
-          />
+          >
+            <Box>Recent Flights Booking</Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2, pb: 2 }}>
+              <TextField
+                variant="outlined"
+                fullWidth
+                size="small"
+                onChange={(e) => e.target.value}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <Button
+                onClick={() => {
+                  // show ? setShow(false) : setShow(true);
+                }}
+                sx={{
+                  borderRadius: "4px",
+                  border: "1px solid var(--gray-300, #D0D5DD)",
+                  background: "#fff",
+                  boxShadow: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
+                  padding: "8px 16px",
+                  fontWeight: 400,
+                  fontSize: "14px",
+                  color: "#344054",
+                }}
+              >
+                Filters
+                <FilterListIcon
+                  sx={{
+                    color: "text.primary",
+                  }}
+                />
+              </Button>
+            </Box>
+          </Box>
 
           <CustomTable
             columns={columns}
             data={TableData}
             isFetching={false}
             isError={false}
+            tableContainerSX={{ backgroundColor: "red" }}
             isSuccess
             isPagination
           />
         </CardContent>
       </Card>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          boxShadow: "0px -2.262px 13.574px -1.131px rgba(67, 67, 67, 0.17)",
+          mt: 4,
+          padding: "20px 40px",
+        }}
+      >
+        <Image src={dashboardLogo} alt="dashboard logo" />
+        <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+          <Box sx={{ fontSize: "16px", fontWeight: "400", color: "#56656B" }}>
+            Privacy Policy
+          </Box>
+
+          <Box sx={{ fontSize: "16px", fontWeight: "400", color: "#56656B" }}>
+            Terms and Condition
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };

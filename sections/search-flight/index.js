@@ -182,8 +182,8 @@ const SearchFlight = () => {
                 boxShadow: " 0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
                 backdropFilter: "blur(12px)",
                 paddingX: "50px",
-                paddingY: 4,
-                marginY: 6,
+                paddingY: 3,
+                mt: 5,
               }}
             >
               <Grid container spacing={3}>

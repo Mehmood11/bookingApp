@@ -50,50 +50,55 @@ const UserSideBar = () => {
         boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
         backdropFilter: "blur(12px)",
         height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
-      <Box sx={{ textAlign: "center" }}>
-        <img
-          src={ProfileImg.src}
-          alt="profile-img"
-          height={"106px"}
-          width={"106px"}
-          style={{
-            borderRadius: "50%",
-            boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
-            backdropFilter: "blur(12px)",
-          }}
-        />
-        <Box
-          sx={{
-            color: "#465365",
-            fontWeight: 600,
-            fontSize: "20px",
-            marginTop: 2,
-          }}
-        >
-          John Workman
+      <Box>
+        <Box sx={{ textAlign: "center" }}>
+          <img
+            src={ProfileImg.src}
+            alt="profile-img"
+            height={"106px"}
+            width={"106px"}
+            style={{
+              borderRadius: "50%",
+              boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+              backdropFilter: "blur(12px)",
+            }}
+          />
+          <Box
+            sx={{
+              color: "#465365",
+              fontWeight: 600,
+              fontSize: "20px",
+              marginTop: 2,
+            }}
+          >
+            John Workman
+          </Box>
         </Box>
-      </Box>
 
-      <Stack p={5} flexDirection={"column"} gap={4}>
-        {sideBarData.map((item, i) => {
-          return (
-            <Box
-              sx={{
-                color: "#64748B",
-                fontWeight: 400,
-                fontSize: "18px",
-                cursor: "pointer",
-              }}
-              key={i}
-              onClick={() => router.push(item.link)}
-            >
-              {item.name}
-            </Box>
-          );
-        })}
-      </Stack>
+        <Stack p={5} flexDirection={"column"} gap={4}>
+          {sideBarData.map((item, i) => {
+            return (
+              <Box
+                sx={{
+                  color: "#64748B",
+                  fontWeight: 400,
+                  fontSize: "18px",
+                  cursor: "pointer",
+                }}
+                key={i}
+                onClick={() => router.push(item.link)}
+              >
+                {item.name}
+              </Box>
+            );
+          })}
+        </Stack>
+      </Box>
       <HelpAndOfferCard
         btnTitle="Chat Now"
         description="A central hub for resolution center, FAQs, live chats and a community. A central hub for resolution center, FAQs, live chats and a community."

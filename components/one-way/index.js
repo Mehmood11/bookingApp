@@ -192,15 +192,15 @@ const OneWay = ({ watch, getValues }) => {
               </Box>
               {/* <p>{watch("date").toLocaleString()}</p> */}
               <Typography variant="h2">
-                {dayjs(watch("date").toLocaleString()).format("DD")}
+                {dayjs(watch("date")?.toLocaleString()).format("DD")}
               </Typography>
               <Box>
                 <Typography variant="body1">
                   {" "}
-                  {dayjs(watch("date").toLocaleString()).format("MMM")}
+                  {dayjs(watch("date")?.toLocaleString()).format("MMM")}
                 </Typography>
                 <Typography variant="body1">
-                  {dayjs(watch("date").toLocaleString()).format("YYYY")}
+                  {dayjs(watch("date")?.toLocaleString()).format("YYYY")}
                 </Typography>
               </Box>
             </Box>

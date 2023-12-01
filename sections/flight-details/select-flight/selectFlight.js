@@ -1,5 +1,6 @@
 import AvailableFlightCard from "@/components/available-flight-card/availableFlightCard";
 import CalendarCard from "@/components/calendar-card";
+import OneWay from "@/components/one-way";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 
@@ -80,7 +81,10 @@ const SelectFlight = ({ nextStepHandler }) => {
           );
         })}
       </Box>
-      <Box></Box>
+
+      {/* <Box>
+        <OneWay watch={() => {}} />
+      </Box> */}
 
       <Box>
         <Box
