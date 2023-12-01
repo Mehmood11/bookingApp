@@ -56,7 +56,7 @@ const SignIn = () => {
           })}
           <Button
             sx={{
-              mt:2,
+              mt: 2,
               p: 2,
               width: "100%",
               fontWeight: "500",
@@ -75,7 +75,14 @@ const SignIn = () => {
             variant="contained"
             onClick={() => {}}
           >
-            Sign In
+            <Link
+              style={{
+                textDecoration: "none",
+              }}
+              href="/"
+            >
+              Sign In
+            </Link>
           </Button>
 
           <Box

@@ -77,12 +77,13 @@ const BookingSummarySidbar = () => {
   ];
   return (
     <Box
-    sx={{
-      height: "100%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    }}
+      sx={{
+        height: "100%",
+        minHeight: "93vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
     >
       <Box>
         <Box sx={{ fontSize: "24px", fontWeight: 600, mb: 1 }}>

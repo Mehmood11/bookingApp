@@ -4,6 +4,7 @@ import FormProvider from "@/components/rhf/form-provider";
 import { RHFCheckbox } from "@/components/rhf/rhf-checkbox";
 import RHFRadioGroup from "@/components/rhf/rhf-radio-group";
 import { Box, Button, Grid } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -94,7 +95,14 @@ const Payment = () => {
           }}
           variant="contained"
         >
-          Pay Now
+          <Link
+            style={{
+              textDecoration: "none",
+            }}
+            href="/"
+          >
+            Pay Now
+          </Link>
         </Button>
       </Box>
     </FormProvider>
