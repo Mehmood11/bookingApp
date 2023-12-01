@@ -11,19 +11,25 @@ import {
 } from "@mui/material";
 import RHFRadioGroup from "../rhf/rhf-radio-group";
 
-const travellerData = [
+const adultsData = [
   {
     title: "ADULTS (12y +)",
     disc: "on the day of travel",
     number: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
+];
+
+const infantsData = [
   {
-    title: "CHILDREN (2y - 12y )",
+    title: "INFANTS (below 2y)",
     disc: "on the day of travel",
     number: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
+];
+
+const childrenData = [
   {
-    title: "INFANTS (below 2y)",
+    title: "CHILDREN (2y - 12y )",
     disc: "on the day of travel",
     number: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
@@ -34,10 +40,20 @@ const CustomModal = ({ open, setOpen }) => {
     setOpen(false);
   };
 
-  const [selectedNumber, setSelectedNumber] = useState(3);
+  const [adult, setAdult] = useState(3);
+  const [children, setChildren] = useState(1);
+  const [infants, setInfants] = useState(2);
 
-  const handleNumberClick = (number) => {
-    setSelectedNumber(number);
+  const handleAdult = (number) => {
+    setAdult(number);
+  };
+
+  const handleChildren = (number) => {
+    setChildren(number);
+  };
+
+  const handleInfants = (number) => {
+    setInfants(number);
   };
 
   return (
@@ -51,61 +67,200 @@ const CustomModal = ({ open, setOpen }) => {
     >
       <DialogContent>
         <Box>
-          {travellerData.map((item, i) => {
-            return (
-              <Box>
-                <Box sx={{ mb: 1 }}>
-                  <Box
-                    sx={{ fontSize: "16px", fontWeight: 500, color: "#23A2DE" }}
-                  >
-                    {item.title}
+          <Box>
+            {adultsData.map((item, i) => {
+              return (
+                <Box>
+                  <Box sx={{ mb: 1 }}>
+                    <Box
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        color: "#23A2DE",
+                      }}
+                    >
+                      {item.title}
+                    </Box>
+                    <Box
+                      sx={{
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        color: "#64748B",
+                      }}
+                    >
+                      {item.disc}
+                    </Box>
                   </Box>
                   <Box
-                    sx={{ fontSize: "14px", fontWeight: 500, color: "#64748B" }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      backgroundColor: "#ffffff",
+                      boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.2)",
+                      marginBottom: "24px",
+                      borderRadius: "10px",
+                      p: 1,
+                    }}
                   >
-                    {item.disc}
+                    {item.number.map((number) => {
+                      return (
+                        <Box
+                          sx={{
+                            color: adult === number ? "white" : "#000",
+                            p: 2,
+                            background: adult === number ? "#008cff" : "",
+                            BoxShadow:
+                              adult === number
+                                ? "0 0 6px 0 rgba(0, 0, 0, 0.2)"
+                                : "",
+                            borderRadius: adult === number ? "4px" : "",
+                            cursor: "pointer",
+                          }}
+                          key={number}
+                          variant="contained"
+                          color={adult === number ? "white" : "white"}
+                          onClick={() => handleAdult(number)}
+                        >
+                          {number}
+                        </Box>
+                      );
+                    })}
                   </Box>
                 </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                    backgroundColor: "#ffffff",
-                    boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.2)",
-                    marginBottom: "24px",
-                    borderRadius: "10px",
-                    p: 1,
-                  }}
-                >
-                  {item.number.map((number) => {
-                    return (
-                      <Box
-                        sx={{
-                          color: selectedNumber === number ? "white" : "#000",
-                          p: 2,
-                          background:
-                            selectedNumber === number ? "#008cff" : "",
-                          BoxShadow:
-                            selectedNumber === number
-                              ? "0 0 6px 0 rgba(0, 0, 0, 0.2)"
-                              : "",
-                          borderRadius: selectedNumber === number ? "4px" : "",
-                          cursor: "pointer",
-                        }}
-                        key={number}
-                        variant="contained"
-                        color={selectedNumber === number ? "white" : "white"}
-                        onClick={() => handleNumberClick(number)}
-                      >
-                        {number}
-                      </Box>
-                    );
-                  })}
+              );
+            })}
+          </Box>
+
+          <Box>
+            {childrenData.map((item, i) => {
+              return (
+                <Box>
+                  <Box sx={{ mb: 1 }}>
+                    <Box
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        color: "#23A2DE",
+                      }}
+                    >
+                      {item.title}
+                    </Box>
+                    <Box
+                      sx={{
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        color: "#64748B",
+                      }}
+                    >
+                      {item.disc}
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      backgroundColor: "#ffffff",
+                      boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.2)",
+                      marginBottom: "24px",
+                      borderRadius: "10px",
+                      p: 1,
+                    }}
+                  >
+                    {item.number.map((number) => {
+                      return (
+                        <Box
+                          sx={{
+                            color: children === number ? "white" : "#000",
+                            p: 2,
+                            background: children === number ? "#008cff" : "",
+                            BoxShadow:
+                              children === number
+                                ? "0 0 6px 0 rgba(0, 0, 0, 0.2)"
+                                : "",
+                            borderRadius: children === number ? "4px" : "",
+                            cursor: "pointer",
+                          }}
+                          key={number}
+                          variant="contained"
+                          color={children === number ? "white" : "white"}
+                          onClick={() => handleChildren(number)}
+                        >
+                          {number}
+                        </Box>
+                      );
+                    })}
+                  </Box>
                 </Box>
-              </Box>
-            );
-          })}
+              );
+            })}
+          </Box>
+
+          <Box>
+            {infantsData.map((item, i) => {
+              return (
+                <Box>
+                  <Box sx={{ mb: 1 }}>
+                    <Box
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        color: "#23A2DE",
+                      }}
+                    >
+                      {item.title}
+                    </Box>
+                    <Box
+                      sx={{
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        color: "#64748B",
+                      }}
+                    >
+                      {item.disc}
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      backgroundColor: "#ffffff",
+                      boxShadow: "0 0 6px 0 rgba(0, 0, 0, 0.2)",
+                      marginBottom: "24px",
+                      borderRadius: "10px",
+                      p: 1,
+                    }}
+                  >
+                    {item.number.map((number) => {
+                      return (
+                        <Box
+                          sx={{
+                            color: infants === number ? "white" : "#000",
+                            p: 2,
+                            background: infants === number ? "#008cff" : "",
+                            BoxShadow:
+                              infants === number
+                                ? "0 0 6px 0 rgba(0, 0, 0, 0.2)"
+                                : "",
+                            borderRadius: infants === number ? "4px" : "",
+                            cursor: "pointer",
+                          }}
+                          key={number}
+                          variant="contained"
+                          color={infants === number ? "white" : "white"}
+                          onClick={() => handleInfants(number)}
+                        >
+                          {number}
+                        </Box>
+                      );
+                    })}
+                  </Box>
+                </Box>
+              );
+            })}
+          </Box>
           <Box>
             <Box sx={{ mb: 1 }}>
               <Box sx={{ fontSize: "16px", fontWeight: 500, color: "#23A2DE" }}>
