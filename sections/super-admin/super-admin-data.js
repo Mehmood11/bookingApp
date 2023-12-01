@@ -9,177 +9,241 @@ import dashboardCardFour from "../../assets/images/dashboardCardFour.svg";
 import turkishAirline from "../../assets/images/turkish-airline.svg";
 import americanAirline from "../../assets/images/american-airline.svg";
 import southAirline from "../../assets/images/southwest-airline.svg";
-import EastIcon from '@mui/icons-material/East';
+import EastIcon from "@mui/icons-material/East";
 import Image from "next/image";
 import { Box, Button } from "@mui/material";
 
+import dashboardIcon from "../../assets/dashboard-icons/dashboardIcon.svg";
+import searchFlight from "../../assets/dashboard-icons/searchFlight.svg";
+import bookingHistory from "../../assets/dashboard-icons/bookingHistory.svg";
+import agent from "../../assets/dashboard-icons/agent.svg";
+import creditHistory from "../../assets/dashboard-icons/creditHistory.svg";
+import report from "../../assets/dashboard-icons/report.svg";
+
 export const cardData = [
-    {
-      id: 1,
-      title: "Revenue",
-      amount: "12",
-      backgroundImage: dashboardCardOne,
-      src: revenue,
+  {
+    id: 1,
+    title: "Revenue",
+    amount: "12",
+    backgroundImage: dashboardCardOne,
+    src: revenue,
+  },
+  {
+    id: 2,
+    title: "Earning",
+    amount: "12",
+    backgroundImage: dashboardCardTwo,
+    src: earning,
+  },
+  {
+    id: 3,
+    title: "Total Bookings",
+    amount: "12",
+    backgroundImage: dashboardCardThree,
+    src: totalBooking,
+  },
+  {
+    id: 4,
+    title: "Today Bookings",
+    amount: "12",
+    backgroundImage: dashboardCardFour,
+    src: todayBooking,
+  },
+];
+
+export const TableData = [
+  {
+    id: 1,
+    airLine: turkishAirline,
+    bookingId: "BK3663",
+    destination: (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {" "}
+        BGY <EastIcon fontSize="12px" /> ATQ{" "}
+      </Box>
+    ),
+    leadpax: "Baljeet Kaur",
+    departureDate: "12/12/23",
+    agentName: "Baljeet Kaur",
+    total: "76.98$",
+    status: "In Process",
+    bookingDate: "02/07/2022",
+  },
+  {
+    id: 2,
+    airLine: americanAirline,
+    bookingId: "BK3663",
+    destination: (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {" "}
+        BGY <EastIcon fontSize="12px" /> ATQ{" "}
+      </Box>
+    ),
+    leadpax: "Baljeet Kaur",
+    departureDate: "12/12/23",
+    agentName: "Baljeet Kaur",
+    total: "76.98$",
+    status: "Conform",
+    bookingDate: "02/07/2022",
+  },
+  {
+    id: 3,
+    airLine: southAirline,
+    bookingId: "BK3663",
+    destination: (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {" "}
+        BGY <EastIcon fontSize="12px" /> ATQ{" "}
+      </Box>
+    ),
+    leadpax: "Baljeet Kaur",
+    departureDate: "12/12/23",
+    agentName: "Baljeet Kaur",
+    total: "76.98$",
+    status: "Rejected",
+    bookingDate: "02/07/2022",
+  },
+  {
+    id: 4,
+    airLine: southAirline,
+    bookingId: "BK3663",
+    destination: (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {" "}
+        BGY <EastIcon fontSize="12px" /> ATQ{" "}
+      </Box>
+    ),
+    leadpax: "Baljeet Kaur",
+    departureDate: "12/12/23",
+    agentName: "Baljeet Kaur",
+    total: "76.98$",
+    status: "Pending",
+    bookingDate: "02/07/2022",
+  },
+];
+
+export const columns = [
+  {
+    accessorFn: (row) => row.airLine ?? "",
+    id: "airLine",
+    cell: (info) => {
+      return <Image src={info.getValue()} alt="Airline" />;
     },
-    {
-      id: 2,
-      title: "Earning",
-      amount: "12",
-      backgroundImage: dashboardCardTwo,
-      src: earning,
-    },
-    {
-      id: 3,
-      title: "Total Bookings",
-      amount: "12",
-      backgroundImage: dashboardCardThree,
-      src: totalBooking,
-    },
-    {
-      id: 4,
-      title: "Today Bookings",
-      amount: "12",
-      backgroundImage: dashboardCardFour,
-      src: todayBooking,
-    },
-  ];
-  
-  
-  export const TableData = [
-    {
-      id: 1,
-      airLine: turkishAirline,
-      bookingId: "BK3663",
-      destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
-      leadpax: "Baljeet Kaur",
-      departureDate: "12/12/23",
-      agentName: "Baljeet Kaur",
-      total: "76.98$",
-      status: "In Process",
-      bookingDate: "02/07/2022",
-    },
-    {
-      id: 2,
-      airLine: americanAirline,
-      bookingId: "BK3663",
-      destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
-      leadpax: "Baljeet Kaur",
-      departureDate: "12/12/23",
-      agentName: "Baljeet Kaur",
-      total: "76.98$",
-      status: "Conform",
-      bookingDate: "02/07/2022",
-    },
-    {
-      id: 3,
-      airLine: southAirline,
-      bookingId: "BK3663",
-      destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
-      leadpax: "Baljeet Kaur",
-      departureDate: "12/12/23",
-      agentName: "Baljeet Kaur",
-      total: "76.98$",
-      status: "Rejected",
-      bookingDate: "02/07/2022",
-    },
-    {
-      id: 4,
-      airLine: southAirline,
-      bookingId: "BK3663",
-      destination: <Box sx={{display:"flex", alignItems:"center"}}> BGY <EastIcon fontSize="12px" /> ATQ </Box>,
-      leadpax: "Baljeet Kaur",
-      departureDate: "12/12/23",
-      agentName: "Baljeet Kaur",
-      total: "76.98$",
-      status: "Pending",
-      bookingDate: "02/07/2022",
-    },
-  ]
-  
-  export  const columns = [
-    {
-      accessorFn: (row) => row.airLine ?? "",
-      id: "airLine",
-       cell: (info) => {
-        return <Image src={(info.getValue())} alt="Airline"/>;
-      },
-      header: () => <span>Air Line</span>,
-    },
-    {
-      accessorFn: (row) => row.bookingId ?? "",
-      id: "bookingId",
-      cell: (info) => info.getValue(),
-      header: () => <span>Booking Id</span>,
-    },
-    {
-      accessorFn: (row) => row.destination ?? "",
-      id: "destination",
-      cell: (info) => info.getValue(),
-      header: () => <span>Destination</span>,
-    },
-    {
-      accessorFn: (row) => row?.leadpax ?? "",
-      id: "leadpax",
-      cell: (info) => info.getValue(),
-      header: () => <span>Leadpax</span>,
-    },
-    {
-      accessorFn: (row) => row?.departureDate ?? "",
-      id: "departureDate",
-      cell: (info) => info.getValue(),
-      header: () => <span>Departure Date</span>,
-    },
-    {
-      accessorFn: (row) => row?.agentName ?? "",
-      id: "agentName",
-      cell: (info) => info.getValue(),
-      header: () => <span>Agent Name</span>,
-    },
-    {
-      accessorFn: (row) => row?.total ?? "",
-      id: "total",
-      cell: (info) => info.getValue(),
-      header: () => <span>Total</span>,
-    },
-    {
-      accessorFn: (row) => row?.status ?? "",
-      id: "status",
-      cell: (info) => {
-        return <Button variant="contained" sx={{
-          width: "95px",
-          backgroundColor: `${
-            info.getValue() === "Rejected"
-              ? "#ff0000" 
-              : info.getValue() === "Conform"
-              ? "#40c79a" 
-              : info.getValue() === "In Process"
-              ? "#629bf8"
-              : "#f7b13c" // Pending Color
-          }`,
-          "&:hover": {
+    header: () => <span>Air Line</span>,
+  },
+  {
+    accessorFn: (row) => row.bookingId ?? "",
+    id: "bookingId",
+    cell: (info) => info.getValue(),
+    header: () => <span>Booking Id</span>,
+  },
+  {
+    accessorFn: (row) => row.destination ?? "",
+    id: "destination",
+    cell: (info) => info.getValue(),
+    header: () => <span>Destination</span>,
+  },
+  {
+    accessorFn: (row) => row?.leadpax ?? "",
+    id: "leadpax",
+    cell: (info) => info.getValue(),
+    header: () => <span>Leadpax</span>,
+  },
+  {
+    accessorFn: (row) => row?.departureDate ?? "",
+    id: "departureDate",
+    cell: (info) => info.getValue(),
+    header: () => <span>Departure Date</span>,
+  },
+  {
+    accessorFn: (row) => row?.agentName ?? "",
+    id: "agentName",
+    cell: (info) => info.getValue(),
+    header: () => <span>Agent Name</span>,
+  },
+  {
+    accessorFn: (row) => row?.total ?? "",
+    id: "total",
+    cell: (info) => info.getValue(),
+    header: () => <span>Total</span>,
+  },
+  {
+    accessorFn: (row) => row?.status ?? "",
+    id: "status",
+    cell: (info) => {
+      return (
+        <Button
+          variant="contained"
+          sx={{
+            width: "95px",
             backgroundColor: `${
               info.getValue() === "Rejected"
-                ? "#ff0000" // Red
+                ? "#ff0000"
                 : info.getValue() === "Conform"
-                ? "#40c79a" // Green
+                ? "#40c79a"
                 : info.getValue() === "In Process"
-                ? "#629bf8" // Blue
-                : "#f7b13c" // Pending
+                ? "#629bf8"
+                : "#f7b13c" // Pending Color
             }`,
-          },
-          fontSize: "12px",
-          fontWeight: "500",
-          textTransform: "capitalize",
-        }}>{(info.getValue())}</Button>;
-      },
-      header: () => <span>Status</span>,
+            "&:hover": {
+              backgroundColor: `${
+                info.getValue() === "Rejected"
+                  ? "#ff0000" // Red
+                  : info.getValue() === "Conform"
+                  ? "#40c79a" // Green
+                  : info.getValue() === "In Process"
+                  ? "#629bf8" // Blue
+                  : "#f7b13c" // Pending
+              }`,
+            },
+            fontSize: "12px",
+            fontWeight: "500",
+            textTransform: "capitalize",
+          }}
+        >
+          {info.getValue()}
+        </Button>
+      );
     },
-    {
-      accessorFn: (row) => row?.bookingDate ?? "",
-      id: "bookingDate",
-      cell: (info) => info.getValue(),
-      header: () => <span>Booking Date</span>,
-    },
-  
-  ];
-  
+    header: () => <span>Status</span>,
+  },
+  {
+    accessorFn: (row) => row?.bookingDate ?? "",
+    id: "bookingDate",
+    cell: (info) => info.getValue(),
+    header: () => <span>Booking Date</span>,
+  },
+];
+
+export const NavBar = [
+  {
+    id: 1,
+    nav: "Dashboard",
+    navIcon: dashboardIcon,
+  },
+  {
+    id: 2,
+    nav: "Search Flight",
+    navIcon: searchFlight,
+  },
+  {
+    id: 3,
+    nav: "Booking History",
+    navIcon: bookingHistory,
+  },
+  {
+    id: 4,
+    nav: "Agent",
+    navIcon: agent,
+  },
+  {
+    id: 5,
+    nav: "Credit History",
+    navIcon: creditHistory,
+  },
+  {
+    id: 6,
+    nav: "Reports",
+    navIcon: report,
+  },
+];

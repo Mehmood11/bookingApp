@@ -11,7 +11,6 @@ import {
   Tooltip,
   Toolbar,
   MenuItem,
-  Container,
   Typography,
   Stack,
   Grid,
@@ -19,78 +18,36 @@ import {
   TextField,
   InputAdornment,
 } from "@mui/material";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 // Navbar icons
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import dashboardLogo from "../../assets/dashboardLogo.svg";
-import dashboardIcon from "../../assets/dashboard-icons/dashboardIcon.svg";
-import searchFlight from "../../assets/dashboard-icons/searchFlight.svg";
-import bookingHistory from "../../assets/dashboard-icons/bookingHistory.svg";
-import agent from "../../assets/dashboard-icons/agent.svg";
-import creditHistory from "../../assets/dashboard-icons/creditHistory.svg";
-import report from "../../assets/dashboard-icons/report.svg";
+
 import userIcon from "../../assets/dashboard-icons/userIcon.svg";
 import dashboardBg from "../../assets/dashboard-icons/dashboardBg.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import DashboardCard from "@/components/dashboard-card";
-import { TableData, cardData, columns } from "./super-admin-data";
+import { NavBar, TableData, cardData, columns } from "./super-admin-data";
 import TableHeader from "@/components/custom-table/table-header";
 import CustomTable from "@/components/custom-table";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
-
-const NavBar = [
-  {
-    id: 1,
-    nav: "Dashboard",
-    navIcon: dashboardIcon,
-  },
-  {
-    id: 2,
-    nav: "Search Flight",
-    navIcon: searchFlight,
-  },
-  {
-    id: 3,
-    nav: "Booking History",
-    navIcon: bookingHistory,
-  },
-  {
-    id: 4,
-    nav: "Agent",
-    navIcon: agent,
-  },
-  {
-    id: 5,
-    nav: "Credit History",
-    navIcon: creditHistory,
-  },
-  {
-    id: 6,
-    nav: "Reports",
-    navIcon: report,
-  },
-];
+import SuperAdminDrawer from "./super-admin-drawer";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const SuperAdmin = () => {
   const [searchParam, setSearchParam] = useState();
+  const [open, setOpen] = useState(false);
 
   const imageWidth = 24;
   const imageHeight = 24;
-  const router = useRouter();
 
-  const [anchorElNav, setAnchorElNav] = useState();
   const [anchorElUser, setAnchorElUser] = useState();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -104,7 +61,8 @@ const SuperAdmin = () => {
   };
 
   return (
-    <Box sx={{background: "#F9FDFF"}}>
+    <Box sx={{ background: "#F9FDFF" }}>
+      <SuperAdminDrawer open={open} setOpen={setOpen} />
       <AppBar
         position="static"
         sx={{ backgroundColor: "transparent", boxShadow: "none", mb: 4 }}
@@ -139,56 +97,12 @@ const SuperAdmin = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={() => setOpen(true)}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: "#000000" }} />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {NavBar?.map((navLink) => {
-                return (
-                  <MenuItem key={navLink?.id} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{navLink?.nav}</Typography>
-                  </MenuItem>
-                );
-              })}
-            </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <Image src={dashboardLogo} alt="dashboard logo" />
-          </Typography>
           <Box
             sx={{
               flexGrow: 1,
@@ -202,7 +116,7 @@ const SuperAdmin = () => {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              minWidth: "970px",
+              // minWidth: "970px",
               margin: "0px auto",
               width: "auto",
               height: "88px",
@@ -239,7 +153,11 @@ const SuperAdmin = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Badge sx={{ mr: "2rem" }} badgeContent={4} color="error">
+                <Badge
+                  sx={{ mr: "23px", marginTop: "5px" }}
+                  badgeContent={4}
+                  color="error"
+                >
                   <NotificationsIcon style={{ color: "#489ae9" }} />
                 </Badge>
                 <Avatar src={userIcon} alt="user Icon">
@@ -295,7 +213,6 @@ const SuperAdmin = () => {
 
       <Card>
         <CardContent>
-         
           <Box
             sx={{
               display: "flex",
@@ -303,7 +220,13 @@ const SuperAdmin = () => {
               justifyContent: "space-between",
             }}
           >
-            <Box>Recent Flights Booking</Box>
+            <Typography
+              variant="h1"
+              component="h1"
+              sx={{ fontSize: "20px", fontWeight: "600", mb: "10px" }}
+            >
+              Recent Flights Booking
+            </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2, pb: 2 }}>
               <TextField
                 variant="outlined"
@@ -357,11 +280,11 @@ const SuperAdmin = () => {
       </Card>
       <Box
         sx={{
+          mt: 4,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           boxShadow: "0px -2.262px 13.574px -1.131px rgba(67, 67, 67, 0.17)",
-          mt: 4,
           padding: "20px 40px",
         }}
       >
