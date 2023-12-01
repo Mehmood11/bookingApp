@@ -54,26 +54,9 @@ const SignUp = () => {
               </Grid>
             );
           })}
-          {/* {signUpData?.map((form) => {
-            return (
-              <Grid item xs={12} md={12} lg={form?.gridLength} key={form?.id}>
-                <>
-                  <form.component size="small" {...form.componentProps}>
-                    {form.componentProps.select
-                      ? form.options?.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))
-                      : null}
-                  </form.component>
-                </>
-              </Grid>
-            );
-          })} */}
           <Button
             sx={{
-              mt:5,
+              mt: 5,
               p: 2,
               width: "100%",
               fontWeight: "500",
@@ -91,7 +74,14 @@ const SignUp = () => {
             variant="contained"
             onClick={() => {}}
           >
-            Sign Up
+            <Link
+              style={{
+                textDecoration: "none",
+              }}
+              href="/sign-in"
+            >
+              Sign Un
+            </Link>
           </Button>
 
           <Box
