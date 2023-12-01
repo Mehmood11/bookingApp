@@ -11,7 +11,7 @@ const FlightDetailsLayout = ({ children }) => {
         background:
           "linear-gradient(180deg, #1E5E89 0%, #FFF 82.66%, #FFF 139.45%)",
         height: "100%",
-        maxHeight: "90vh",
+        maxHeight: "93vh",
         p: 3,
         overflow: "auto",
         "&::-webkit-scrollbar": {

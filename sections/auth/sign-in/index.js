@@ -28,8 +28,10 @@ const SignIn = () => {
           "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
         boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
         backdropFilter: "blur(12px)",
-        p: 4,
-        width: "30%",
+        p: { xs: 2, md: 4 },
+        margin: "0 auto",
+        maxWidth: "500px",
+        width: "100%",
       }}
     >
       <Box
@@ -43,42 +45,29 @@ const SignIn = () => {
         Sign In
       </Box>
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmitHandler)}>
-        <Grid container spacing={2}>
-          {signInData?.map((form) => {
+        <Grid container rowSpacing={3}>
+          {signInData?.map((item) => {
+            const { component: Component, componentProps } = item;
             return (
-              <Grid item xs={12} md={6} lg={form?.gridLength} key={form?.id}>
-                <>
-                  <form.component size="small" {...form.componentProps}>
-                    {form.componentProps.select
-                      ? form.options?.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))
-                      : null}
-                  </form.component>
-                </>
+              <Grid item xs={12} md={12} lg={item?.gridLength} key={item?.id}>
+                <Component {...componentProps} />
               </Grid>
             );
           })}
-          <Grid item xs={12}>
-            <RHFCheckbox name="rememberMe" label="Remember Me" size="medium" />
-          </Grid>
           <Button
             sx={{
-              borderRadius: "10px",
-              background: "rgba(235, 51, 52, 0.80)",
-              boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
-              color: "#FFF",
-              fontSize: "16px",
-              fontWeight: 500,
-              backdropFilter: "blur(7px)",
-              textTransform: "capitalize",
-              mt: 2,
-              padding: "14px 40px",
+              mt:2,
+              p: 2,
               width: "100%",
+              fontWeight: "500",
+              fontSize: "14px",
+              borderRadius: "10px",
+              textTransform: "capitalize",
+              backgroundColor: "#e9585a",
+              boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
+
               "&:hover": {
-                background: "rgba(235, 51, 52, 0.80)",
+                backgroundColor: "#e9585a",
                 boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
               },
             }}

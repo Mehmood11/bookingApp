@@ -29,6 +29,14 @@ export const signInData = [
     },
     component: RHFTextField,
   },
-
-  
+  {
+    id: 3,
+    gridLength: 12,
+    componentProps: {
+      name: "rememberMe",
+      label: "Remember me",
+      size: "medium",
+    },
+    component: RHFCheckbox,
+  },
 ];

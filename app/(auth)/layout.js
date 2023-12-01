@@ -3,7 +3,7 @@ import React from "react";
 
 export default function authLauout({ children }) {
   return (
-    <Stack
+    <Box
       sx={{
         borderRadius: "1.3125rem",
         background:
@@ -12,9 +12,6 @@ export default function authLauout({ children }) {
         maxHeight: "90vh",
         p: 3,
         overflow: "auto",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         "&::-webkit-scrollbar": {
           width: "0.4em",
           height: "95%",
@@ -30,10 +27,7 @@ export default function authLauout({ children }) {
         },
       }}
     >
-     
-      
-        {children}
-      
-    </Stack>
+      {children}
+    </Box>
   );
 }
