@@ -22,20 +22,20 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 // Navbar icons
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import dashboardLogo from "../../assets/dashboardLogo.svg";
+import SearchIcon from "@mui/icons-material/Search";
+import FilterListIcon from "@mui/icons-material/FilterList";
 
+// Images
+import dashboardLogo from "../../assets/dashboardLogo.svg";
 import userIcon from "../../assets/dashboard-icons/userIcon.svg";
 import dashboardBg from "../../assets/dashboard-icons/dashboardBg.svg";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 import DashboardCard from "@/components/dashboard-card";
-import { NavBar, TableData, cardData, columns } from "./super-admin-data";
 import TableHeader from "@/components/custom-table/table-header";
 import CustomTable from "@/components/custom-table";
-import SearchIcon from "@mui/icons-material/Search";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import SuperAdminDrawer from "./super-admin-drawer";
+import { NavBar, TableData, cardData, columns } from "./super-admin-data";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
