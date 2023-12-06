@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { NavBar } from "./super-admin-data";
 import React from "react";
-import dashboardLogo from "../../assets/dashboardLogo.svg";
+import dashboardLogo from "../../assets/logo.svg";
 import Image from "next/image";
 
 const SuperAdminDrawer = ({ open, setOpen }) => {
@@ -24,12 +24,8 @@ const SuperAdminDrawer = ({ open, setOpen }) => {
       role="presentation"
       onClick={() => setOpen(false)}
     >
-      <Box sx={{ textAlign: "center", py:3 }}>
-        <Typography
-          variant="h5"
-          component="a"
-          href="#app-bar-with-responsive-menu"
-        >
+      <Box sx={{ textAlign: "center", py: 3 }}>
+        <Typography variant="h5" component="a">
           <Image src={dashboardLogo} alt="dashboard logo" />
         </Typography>
       </Box>

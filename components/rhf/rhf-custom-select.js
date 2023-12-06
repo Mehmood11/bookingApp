@@ -12,6 +12,7 @@ const RHFCustomSelect = ({
   options,
   outerLabel,
   styleMenu,
+  size = "small",
   placeholder,
   fullWidth = true,
   color = "#465365",
@@ -38,6 +39,7 @@ const RHFCustomSelect = ({
           )}
           <Select
             displayEmpty
+            size={size}
             menuProps={menuProps}
             inputRef={field.ref}
             {...field}

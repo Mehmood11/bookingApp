@@ -1,4 +1,4 @@
-import SignIn from "@/sections/auth/sign-in";
+import SignIn from "@/sections/agent-auth/sign-in";
 import React from "react";
 
 const page = () => {
