@@ -208,16 +208,19 @@ const OneWay = ({ watch, getValues }) => {
                 />
               </Box>
               {/* <p>{watch("date").toLocaleString()}</p> */}
-              <Typography variant="h2">
-                {dayjs(watch("date")?.toLocaleString()).format("DD")}
+              <Typography variant="h2" color={"#4A9CE9"}>
+                {/* {dayjs(watch("date")?.toLocaleString()).format("DD")} */}
+                01
               </Typography>
               <Box>
                 <Typography variant="body1">
                   {" "}
-                  {dayjs(watch("date")?.toLocaleString()).format("MMM")}
+                  {/* {dayjs(watch("date")?.toLocaleString()).format("MMM")} */}
+                  dec
                 </Typography>
                 <Typography variant="body1">
-                  {dayjs(watch("date")?.toLocaleString()).format("YYYY")}
+                  {/* {dayjs(watch("date")?.toLocaleString()).format("YYYY")} */}
+                  2023
                 </Typography>
               </Box>
             </Box>
@@ -266,12 +269,26 @@ const OneWay = ({ watch, getValues }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                mt: 1,
               }}
             >
-              <Image src={calender} alt="calender" />
+              {/* <Image src={calender} alt="calender" /> */}
+              <Typography variant="h2" color={"#4A9CE9"}>
+                {/* {dayjs(watch("date")?.toLocaleString()).format("DD")} */}
+                06
+              </Typography>
+              <Box>
+                <Typography variant="body1">
+                  {" "}
+                  {/* {dayjs(watch("date")?.toLocaleString()).format("MMM")} */}
+                  dec
+                </Typography>
+                <Typography variant="body1">
+                  {/* {dayjs(watch("date")?.toLocaleString()).format("YYYY")} */}
+                  2023
+                </Typography>
+              </Box>
             </Box>
-            <Typography variant="body2" sx={{ fontSize: "10px", m: 0, mt: 1 }}>
+            <Typography variant="body4" sx={{ fontSize: "10px" }}>
               Add a return date for bigger discount
             </Typography>
           </Box>
@@ -311,10 +328,12 @@ const OneWay = ({ watch, getValues }) => {
                 alignItems: "center",
               }}
             >
-              <Typography variant="h2">14</Typography>
+              <Typography variant="h2" color={"#4A9CE9"}>
+                1
+              </Typography>
               <Box>
-                <Typography variant="body1">SEP</Typography>
-                <Typography variant="body1">2023</Typography>
+                <Typography variant="body1">Traveller</Typography>
+                <Typography variant="body1">Economy</Typography>
               </Box>
             </Box>
             <Box

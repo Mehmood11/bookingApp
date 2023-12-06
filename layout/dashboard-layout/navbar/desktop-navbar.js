@@ -15,10 +15,10 @@ const poppins = Poppins({
 });
 
 const pagesNavbar = [
-  { id: 1, title: "About Us", link: "/search-flight" },
-  { id: 2, title: "Flight Schedule", link: "/flight-schedule" },
-  { id: 3, title: "Account Settings", link: "/account-setting" },
-  { id: 4, title: "Manage Bookings", link: "/manage-bookings" },
+  { id: 1, title: "About Us", link: "/agent/search-flight" },
+  { id: 2, title: "Flight Schedule", link: "/agent/flight-schedule" },
+  { id: 3, title: "Account Settings", link: "/agent/account-setting" },
+  { id: 4, title: "Manage Bookings", link: "/agent/manage-bookings" },
 ];
 
 const DesktopNavbar = () => {
@@ -27,7 +27,7 @@ const DesktopNavbar = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
-        <Link href="/">
+        <Link href="/agent/search-flight">
           <Image src={logo} alt="logo" />
         </Link>
       </Box>

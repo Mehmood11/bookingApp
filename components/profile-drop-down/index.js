@@ -51,14 +51,14 @@ const ProfileDropDown = () => {
             component="p"
             color="primary"
             sx={{ fontSize: "14px" }}
-            onClick={() => router.push("/profile")}
+            onClick={() => router.push("/agent/profile")}
           >
             Profile
           </Typography>
         </MenuItem>
         <MenuItem
           onClick={() => {
-            handleClose, router.push("/dashboard");
+            handleClose, router.push("/agent/dashboard");
           }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
@@ -66,7 +66,7 @@ const ProfileDropDown = () => {
         </MenuItem>
         <MenuItem
           onClick={() => {
-            handleClose, router.push("/booking");
+            handleClose, router.push("/agent/booking");
           }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
@@ -74,7 +74,7 @@ const ProfileDropDown = () => {
         </MenuItem>
         <MenuItem
           onClick={() => {
-            handleClose, router.push("/report");
+            handleClose, router.push("/agent/report");
           }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
@@ -82,7 +82,7 @@ const ProfileDropDown = () => {
         </MenuItem>
         <MenuItem
           onClick={() => {
-            handleClose, router.push("/setting");
+            handleClose, router.push("/agent/setting");
           }}
           sx={{ color: "#64748B", fontSize: "14px" }}
         >
@@ -98,18 +98,17 @@ const ProfileDropDown = () => {
           }}
         >
           <Link
-              style={{
-                fontSize: "16px",
-                fontWeight: "400",
-                color: "rgba(235, 51, 52, 0.80)",
-                textDecoration: "none",
-                marginLeft: "4px",
-              }}
-              href="/sign-in"
-            >
-              Sign Out
-            </Link>
-          
+            style={{
+              fontSize: "16px",
+              fontWeight: "400",
+              color: "rgba(235, 51, 52, 0.80)",
+              textDecoration: "none",
+              marginLeft: "4px",
+            }}
+            href="/agent/sign-in"
+          >
+            Sign Out
+          </Link>
         </MenuItem>
       </Menu>
     </>

@@ -66,6 +66,8 @@ const FlightDetails = () => {
       <Grid item lg={9} md={8} xs={12}>
         <Box
           sx={{
+            display: "flex",
+            justifyContent: "center",
             background:
               "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
             boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
@@ -74,7 +76,7 @@ const FlightDetails = () => {
             width: "100%",
             p: 5,
             maxHeight: "120px",
-
+            overflowX: "auto",
             "& ::-webkit-scrollbar": {
               height: "5px !important",
             },

@@ -22,7 +22,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 // Navbar icons
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import dashboardLogo from "../../assets/dashboardLogo.svg";
+import dashboardLogo from "../../assets/logo.svg";
 
 import userIcon from "../../assets/dashboard-icons/userIcon.svg";
 import dashboardBg from "../../assets/dashboard-icons/dashboardBg.svg";

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Box, Stack } from "@mui/material";
-import ProfileImg from "../../../assets/search-flight/Airline.png";
+import ProfileImg from "../../../assets/user.png";
 import { useRouter } from "next/navigation";
 import HelpAndOfferCard from "@/components/help-and-offer-card";
 
@@ -9,27 +9,27 @@ const sideBarData = [
   {
     id: 1,
     name: "Profile",
-    link: "/profile",
+    link: "/agent/profile",
   },
   {
     id: 2,
     name: "Dashboard",
-    link: "/dashboard",
+    link: "/agent/dashboard",
   },
   {
     id: 3,
     name: "Booking",
-    link: "/booking",
+    link: "/agent/booking",
   },
   {
     id: 3,
     name: "Report",
-    link: "/report",
+    link: "/agent/report",
   },
   {
     id: 3,
     name: "Settings",
-    link: "/settings",
+    link: "/agent/settings",
   },
 ];
 
@@ -76,7 +76,7 @@ const UserSideBar = () => {
               marginTop: 2,
             }}
           >
-            John Workman
+            Isabella
           </Box>
         </Box>
 

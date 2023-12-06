@@ -10,7 +10,7 @@ export const passengerData = [
     componentProps: {
       placeholder: "First Name",
       name: "firstName",
-      size: "medium",
+      size: "small",
       fullWidth: true,
     },
     component: RHFTextField,
@@ -21,7 +21,7 @@ export const passengerData = [
     componentProps: {
       placeholder: "Last Name",
       name: "lastName",
-      size: "medium",
+      size: "small",
       fullWidth: true,
     },
     component: RHFTextField,
@@ -33,7 +33,7 @@ export const passengerData = [
       name: "emailId",
       placeholder: "Email Id",
       fullWidth: true,
-      size: "medium",
+      size: "small",
       select: true,
       options: [
         { label: "id1", value: "id1" },
@@ -46,7 +46,7 @@ export const passengerData = [
     id: 4,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       name: "dob",
       placeholder: "DOB: DD/MM/YYYY*",
       fullWidth: true,
@@ -57,7 +57,7 @@ export const passengerData = [
     id: 5,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       name: "issueDate",
       placeholder: "DOB: DD/MM/YYYY*",
       fullWidth: true,
@@ -68,7 +68,7 @@ export const passengerData = [
     id: 6,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       name: "expiryDate",
       placeholder: "DOB: DD/MM/YYYY*",
@@ -80,7 +80,7 @@ export const passengerData = [
     id: 7,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       name: "placeOfIssue",
       placeholder: "Place of issue",
@@ -97,7 +97,7 @@ export const passengerData = [
     id: 8,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       placeholder: "Passport no*",
       name: "passportNo",
@@ -109,7 +109,7 @@ export const passengerData = [
     id: 9,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       name: "nationality",
       placeholder: "Nationality*",
@@ -126,7 +126,7 @@ export const passengerData = [
     id: 10,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       placeholder: "Choice File",
       name: "choiceFile",
@@ -138,7 +138,7 @@ export const passengerData = [
     id: 11,
     gridLength: 4,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       placeholder: "Contact number",
       name: "contactNumber",
@@ -150,7 +150,7 @@ export const passengerData = [
     id: 12,
     gridLength: 2,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       name: "nationality",
       placeholder: "Meal",
@@ -164,7 +164,7 @@ export const passengerData = [
     id: 12,
     gridLength: 2,
     componentProps: {
-      size: "medium",
+      size: "small",
       outerLabel: "",
       name: "wchr",
       placeholder: "WCHR",
@@ -180,7 +180,7 @@ export const passengerData = [
     componentProps: {
       name: "wchr",
       label: "Check Extra Service or go to payment page",
-      size: "medium",
+      size: "small",
     },
     component: RHFCheckbox,
   },
