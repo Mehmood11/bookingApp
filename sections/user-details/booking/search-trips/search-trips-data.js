@@ -7,6 +7,7 @@ export const searchTripData = [
       id: 1,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "Search Result",
         name: "searchResult",
         fullWidth: true,
@@ -18,6 +19,7 @@ export const searchTripData = [
       id: 2,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "From",
         name: "from",
         fullWidth: true,
@@ -28,6 +30,7 @@ export const searchTripData = [
       id: 3,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "To",
         name: "toDate",
         fullWidth: true,
@@ -38,6 +41,7 @@ export const searchTripData = [
       id: 4,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "Reference Number",
         placeholder: "Reference Number",
         name: "referenceNumber",
@@ -48,6 +52,7 @@ export const searchTripData = [
       id: 5,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "Booking Status",
         name: "bookingStatus",
         fullWidth: true,
@@ -60,6 +65,7 @@ export const searchTripData = [
       id: 7,
       gridLength:4,
       componentProps: {
+         size:"small",
         outerLabel: "Passenger Name",
         name: "passengerName",
       },

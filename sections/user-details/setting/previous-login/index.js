@@ -6,7 +6,7 @@ import TableHeader from "@/components/custom-table/table-header";
 
 const PreviousLogin = () => {
   return (
-    <Grid container rowSpacing={5} columnSpacing={10}>
+    <Grid container spacing={1}>
       <Grid item xs={12} md={4}>
         <Typography
           variant="h5"

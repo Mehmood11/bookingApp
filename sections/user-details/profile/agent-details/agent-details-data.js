@@ -5,6 +5,7 @@ export const agentDetailsData = [
     id: 1,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Agent Code",
       name: "agentCode",
       fullWidth: true,
@@ -15,6 +16,7 @@ export const agentDetailsData = [
     id: 2,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "User Name",
       placeholder: "User Name",
       name: "userName",
@@ -25,6 +27,7 @@ export const agentDetailsData = [
     id: 3,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Travel Agency",
       name: "travelAgency",
       fullWidth: true,
@@ -35,6 +38,7 @@ export const agentDetailsData = [
     id: 4,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Designation",
       name: "designation",
       fullWidth: true,
@@ -45,6 +49,7 @@ export const agentDetailsData = [
     id: 5,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Preferred Currency",
       name: "preferredCurrency",
       fullWidth: true,

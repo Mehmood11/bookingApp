@@ -14,14 +14,13 @@ const Booking = () => {
           color: "#2278C8",
           fontSize: "24px",
           fontWeight: "600",
-          mt: 2,
-          mb: 5,
+          my:1
         }}
       >
         Booking
       </Typography>
       <SearchTrips />
-      <Divider sx={{ mb: 4 }} />
+      <Divider sx={{ mb: 2 }} />
       <AdvanceBooking />
       <Stack spacing={2} direction="row" justifyContent="end">
         <Button
@@ -52,7 +51,7 @@ const Booking = () => {
           Booking Date
         </Button>
       </Stack>
-      <Divider sx={{ my: 4 }} />
+      <Divider sx={{ my: 2 }} />
       <BookingTable />
     </Box>
   );

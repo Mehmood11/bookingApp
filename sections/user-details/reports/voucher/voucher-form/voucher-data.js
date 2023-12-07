@@ -7,10 +7,10 @@ export const voucherData = [
     id: 1,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Agent & Subagent Details",
       name: "agentDetails",
       fullWidth: true,
-      select: true,
       options: [
         { label: "All", value: "all" },
         { label: "Gofal Fostering", value: "Gofal_Fostering" },
@@ -22,6 +22,7 @@ export const voucherData = [
     id: 2,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Booking Ref. No.",
       placeholder: "Booking Ref. No.",
       name: "bookingRefNo",
@@ -33,10 +34,10 @@ export const voucherData = [
     id: 3,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Services",
       name: "services",
       fullWidth: true,
-      select: true,
       options: [
         { label: "All", value: "all" },
         { label: "Gofal Fostering", value: "Gofal_Fostering" },
@@ -48,6 +49,7 @@ export const voucherData = [
     id: 4,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "From",
       name: "from",
       fullWidth: true,
@@ -58,6 +60,7 @@ export const voucherData = [
     id: 5,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "To",
       name: "toDate",
       fullWidth: true,
