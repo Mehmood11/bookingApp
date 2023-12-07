@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Card, CardContent, Stack } from "@mui/material";
 import ProfileImg from "../../../assets/user.png";
 import { useRouter } from "next/navigation";
 import HelpAndOfferCard from "@/components/help-and-offer-card";
@@ -37,11 +37,10 @@ const UserSideBar = () => {
   const router = useRouter();
 
   return (
-    <Box
+    <Card
       sx={{
         backgroundColor: "#f1f1f1",
         borderRadius: "12px",
-        p: 3,
         boxSizing: "border-box",
         color: "#465365",
         border: "1px solid #FFF",
@@ -80,7 +79,7 @@ const UserSideBar = () => {
           </Box>
         </Box>
 
-        <Stack p={5} flexDirection={"column"} gap={4}>
+        <Stack p={2} flexDirection={"column"} gap={2}>
           {sideBarData.map((item, i) => {
             return (
               <Box
@@ -99,12 +98,14 @@ const UserSideBar = () => {
           })}
         </Stack>
       </Box>
-      <HelpAndOfferCard
-        btnTitle="Chat Now"
-        description="A central hub for resolution center, FAQs, live chats and a community. A central hub for resolution center, FAQs, live chats and a community."
-        type="offer"
-      />
-    </Box>
+      <CardContent style={{ textAlign: "-webkit-center" }}>
+        <HelpAndOfferCard
+          btnTitle="Chat Now"
+          description="A central hub for resolution center, FAQs, live chats and a community. A central hub for resolution center, FAQs, live chats and a community."
+          type="offer"
+        />
+      </CardContent>
+    </Card>
   );
 };
 

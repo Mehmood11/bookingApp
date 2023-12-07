@@ -48,7 +48,7 @@ const ChangePassword = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Box sx={{ textAlign: "end", my: 4 }}>
+      <Box sx={{ textAlign: "end", mt: 2 }}>
         <Button
           size="large"
           type="submit"

@@ -15,18 +15,17 @@ const Setting = () => {
           color: "#2278C8",
           fontSize: "24px",
           fontWeight: "600",
-          mt: 2,
-          mb: 5,
+          my:1
         }}
       >
         Setting
       </Typography>
       <CreditLimit />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 4 }} />
       <ChangePassword />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 4 }} />
       <TopUpCreditLimit />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 4 }} />
       <PreviousLogin />
     </Box>
   );

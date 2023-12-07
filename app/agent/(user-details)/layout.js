@@ -31,29 +31,31 @@ const UserDetailsLayout = ({ children }) => {
       }}
     >
       <Header />
-      <Grid mt={1} container spacing={3}>
-        <Grid item xs={12} md={4} lg={3}>
-          <UserSideBar />
+      <Box sx={{mx:{lg:3, xs:0}}}>
+        <Grid mt={1} container columnSpacing={4} rowSpacing={1}>
+          <Grid item xs={12} md={4} lg={3}>
+            <UserSideBar />
+          </Grid>
+          <Grid item xs={12} md={8} lg={9}>
+            <Box
+              sx={{
+                backgroundColor: "#f1f1f1",
+                borderRadius: "12px",
+                p: 3,
+                boxSizing: "border-box",
+                color: "#465365",
+                border: "1px solid #FFF",
+                background:
+                  "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
+                boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
+                backdropFilter: "blur(12px)",
+              }}
+            >
+              {children}
+            </Box>
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={8} lg={9}>
-          <Box
-            sx={{
-              backgroundColor: "#f1f1f1",
-              borderRadius: "12px",
-              p: 3,
-              boxSizing: "border-box",
-              color: "#465365",
-              border: "1px solid #FFF",
-              background:
-                "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
-              boxShadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
-              backdropFilter: "blur(12px)",
-            }}
-          >
-            {children}
-          </Box>
-        </Grid>
-      </Grid>
+      </Box>
     </Stack>
   );
 };

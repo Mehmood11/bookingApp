@@ -7,10 +7,14 @@ export const searchTripData = [
     id: 1,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Search Type",
       name: "searchType",
       fullWidth: true,
-      options: [{ label: "Scot Fostering", value: "searchType" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "Scot Fostering", value: "searchType" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
     },
     component: RHFCustomSelect,
   },
@@ -18,10 +22,14 @@ export const searchTripData = [
     id: 2,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Payment Type",
       name: "paymentType",
       fullWidth: true,
-      options: [{ label: "Scot Fostering", value: "paymentType" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "Scot Fostering", value: "paymentType" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
     },
     component: RHFCustomSelect,
   },
@@ -29,11 +37,14 @@ export const searchTripData = [
     id: 3,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "AgentDetails",
       name: "agentDetails",
       fullWidth: true,
-      options: [{ label: "Scot Fostering", value: "agentDetails" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
-
+      options: [
+        { label: "Scot Fostering", value: "agentDetails" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
     },
     component: RHFCustomSelect,
   },
@@ -41,9 +52,13 @@ export const searchTripData = [
     id: 4,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Source",
       name: "source",
-      options: [{ label: "Scot Fostering", value: "source" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "Scot Fostering", value: "source" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
     },
     component: RHFCustomSelect,
   },
@@ -51,10 +66,14 @@ export const searchTripData = [
     id: 5,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Page Record",
       name: "pageRecord",
       fullWidth: true,
-      options: [{ label: "Scot Fostering", value: "pageRecord" }, { label: "Gofal Fostering", value: "Gofal_Fostering" }],
+      options: [
+        { label: "Scot Fostering", value: "pageRecord" },
+        { label: "Gofal Fostering", value: "Gofal_Fostering" },
+      ],
     },
     component: RHFCustomSelect,
   },
@@ -62,6 +81,7 @@ export const searchTripData = [
     id: 7,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Passenger Name",
       name: "passengerName",
       multiline: true,

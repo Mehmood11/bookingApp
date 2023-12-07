@@ -5,6 +5,7 @@ export const profileAddressData = [
     id: 1,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Street Address",
       name: "streetAddress",
       fullWidth: true,
@@ -15,6 +16,7 @@ export const profileAddressData = [
     id: 2,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Zip Code",
       name: "zipCode",
     },
@@ -24,6 +26,7 @@ export const profileAddressData = [
     id: 3,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Town/ City",
       name: "townCity",
       fullWidth: true,
@@ -34,6 +37,7 @@ export const profileAddressData = [
     id: 5,
     gridLength: 3,
     componentProps: {
+      size: "small",
       outerLabel: "Country",
       name: "country",
       fullWidth: true,
