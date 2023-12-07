@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { ToggleButton, ToggleButtonGroup, Paper } from "@mui/material";
 
-const MultiButtons = ({ options, onSelect }) => {
-  const [selectedButton, setSelectedButton] = useState("One way");
+const MultiButtons = ({ options, onSelect, name }) => {
+  const [selectedButton, setSelectedButton] = useState("oneWay");
 
   const handleButtonChange = (event, newSelectedButton) => {
     setSelectedButton(newSelectedButton);
@@ -11,6 +11,7 @@ const MultiButtons = ({ options, onSelect }) => {
   };
   return (
     <ToggleButtonGroup
+      name={name}
       value={selectedButton}
       exclusive
       onChange={handleButtonChange}

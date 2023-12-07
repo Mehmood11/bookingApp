@@ -135,7 +135,7 @@ const SearchFlight = () => {
             item
             xs={12}
             sx={{
-              mt: 3,
+              mt: 6,
               minHeight: "14rem",
               borderRadius: " 0.75rem",
               background:
