@@ -18,8 +18,7 @@ const Reports = () => {
           color: "#2278C8",
           fontSize: "24px",
           fontWeight: "600",
-          mt: 2,
-          mb: 5,
+          my: 1,
         }}
       >
         Report

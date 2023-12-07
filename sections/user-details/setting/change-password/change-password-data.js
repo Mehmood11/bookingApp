@@ -5,6 +5,7 @@ export const changePasswordData = [
     id: 1,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Old Password",
       name: "oldPassword",
       fullWidth: true,
@@ -15,6 +16,7 @@ export const changePasswordData = [
     id: 2,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "New Password",
       placeholder: "New Password",
       name: "newPassword",
@@ -25,6 +27,7 @@ export const changePasswordData = [
     id: 3,
     gridLength: 4,
     componentProps: {
+      size: "small",
       outerLabel: "Confirm Password",
       name: "confirmPassword",
       fullWidth: true,

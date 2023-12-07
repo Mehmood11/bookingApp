@@ -5,6 +5,7 @@ export const ProfileCreditLimitData = [
     id: 1,
     gridLength: 4,
     componentProps: {
+      size:"small",
       outerLabel: "Credit Limit",
       name: "creditLimit",
       fullWidth: true,
@@ -15,6 +16,7 @@ export const ProfileCreditLimitData = [
     id: 2,
     gridLength: 4,
     componentProps: {
+      size:"small",
       outerLabel: "Utilized Limit",
       placeholder: "Utilized Limit",
       name: "utilizedLimit",
@@ -25,6 +27,7 @@ export const ProfileCreditLimitData = [
     id: 3,
     gridLength: 4,
     componentProps: {
+      size:"small",
       outerLabel: "Available Limit",
       name: "availableLimit",
       fullWidth: true,

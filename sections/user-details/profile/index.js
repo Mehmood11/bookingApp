@@ -16,22 +16,20 @@ const Profile = () => {
           color: "#2278C8",
           fontSize: "24px",
           fontWeight: "600",
-          mt: 2,
-          mb: 5,
         }}
       >
         Profile
       </Typography>
 
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 1 }} />
       <ProfileCreditLimit />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 1 }} />
       <AgentDetails />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 1 }} />
       <ProfileAddress />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 1 }} />
       <SubAgent />
-      <Divider sx={{ my: 5 }} />
+      <Divider sx={{ my: 1 }} />
       <ManageSubUser />
     </Box>
   );

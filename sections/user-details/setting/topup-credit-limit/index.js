@@ -40,6 +40,7 @@ const TopUpCreditLimit = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <RHFTextField
+              size="small"
                 type="text"
                 name="amount"
                 defaultValues="ytu"
@@ -48,7 +49,7 @@ const TopUpCreditLimit = () => {
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box sx={{ textAlign: "end", my: 4 }}>
+              <Box sx={{ textAlign: "end" }}>
                 <Button
                   size="large"
                   type="submit"
