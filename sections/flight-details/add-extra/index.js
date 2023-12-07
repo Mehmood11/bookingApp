@@ -19,11 +19,11 @@ const servicesData = [
 const AddExtra = () => {
   const methods = useForm();
 
-  const { handleSubmit  } = methods;
+  const { handleSubmit } = methods;
 
   const onSubmitHandler = (data) => {
     console.log(data);
-  }
+  };
   return (
     <Box>
       <Typography
@@ -41,13 +41,13 @@ const AddExtra = () => {
         </Typography>
       </Typography>
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmitHandler)}>
-        <Box sx={{width:"100%",maxWidth:"300px"}}>
-        <RHFCustomSelect
-          name="services"
-          outerLabel="Choose Passenger Extra Service"
-          size="small"
-          options={servicesData}
-        />
+        <Box sx={{ width: "100%", maxWidth: "300px" }}>
+          <RHFCustomSelect
+            name="services"
+            size={"large"}
+            outerLabel="Choose Passenger Extra Service"
+            options={servicesData}
+          />
         </Box>
         <Box sx={{ my: 2 }}>
           <List

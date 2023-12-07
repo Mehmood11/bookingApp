@@ -1,21 +1,18 @@
 "use client";
+import React from "react";
 import FormProvider from "@/components/rhf/form-provider";
 import { Box, Button, Grid } from "@mui/material";
-import React from "react";
 import { useForm } from "react-hook-form";
-import { signInData } from "./signInData";
 import { RHFCheckbox } from "@/components/rhf/rhf-checkbox";
+import { signUpData } from "./signUpData";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-const SignIn = () => {
+const SignUp = () => {
   const methods = useForm({});
-  const route = useRouter();
 
   const { handleSubmit } = methods;
 
   const onSubmitHandler = (data) => {
-    route.push("/super-admin");
     console.log(data);
   };
   return (
@@ -45,11 +42,11 @@ const SignIn = () => {
           textAlign: "center",
         }}
       >
-        Sign In
+        Sign Up
       </Box>
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmitHandler)}>
         <Grid container rowSpacing={3}>
-          {signInData?.map((item) => {
+          {signUpData?.map((item) => {
             const { component: Component, componentProps } = item;
             return (
               <Grid item xs={12} md={12} lg={item?.gridLength} key={item?.id}>
@@ -59,7 +56,7 @@ const SignIn = () => {
           })}
           <Button
             sx={{
-              mt: 2,
+              mt: 5,
               p: 2,
               width: "100%",
               fontWeight: "500",
@@ -74,10 +71,17 @@ const SignIn = () => {
                 boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
               },
             }}
-            type="submit"
             variant="contained"
+            onClick={() => {}}
           >
-            Sign In
+            <Link
+              style={{
+                textDecoration: "none",
+              }}
+              href="/sign-in"
+            >
+              Sign Un
+            </Link>
           </Button>
 
           <Box
@@ -90,7 +94,7 @@ const SignIn = () => {
               paddingBottom: "1.3rem",
             }}
           >
-            Don’t have an account?
+            Already have account ?
             <Link
               style={{
                 fontSize: "16px",
@@ -99,9 +103,9 @@ const SignIn = () => {
                 textDecoration: "none",
                 marginLeft: "4px",
               }}
-              href="/sign-up"
+              href="/sign-in"
             >
-              Sign Up
+              Sign In
             </Link>
           </Box>
         </Grid>
@@ -110,4 +114,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

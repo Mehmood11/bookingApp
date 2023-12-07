@@ -99,7 +99,7 @@ const Payment = () => {
             style={{
               textDecoration: "none",
             }}
-            href="/"
+            href="/agent/search-flight"
           >
             Pay Now
           </Link>

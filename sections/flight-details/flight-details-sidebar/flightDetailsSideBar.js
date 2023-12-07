@@ -30,13 +30,13 @@ const FlightDetailsSideBar = () => {
                 type="number"
                 name="min"
                 placeholder=""
-                outerLabel="min"
+                outerLabel="Min"
               />
               <RHFTextField
                 type="number"
                 name="max"
                 placeholder=""
-                outerLabel="max"
+                outerLabel="Max"
               />
             </Stack>
           </FormProvider>

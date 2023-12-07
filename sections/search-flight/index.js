@@ -166,7 +166,7 @@ const SearchFlight = () => {
                   boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
                 },
               }}
-              onClick={() => router.push("/flight-details")}
+              onClick={() => router.push("/agent/flight-details")}
             >
               Search Flight
               <KeyboardArrowRightIcon />
@@ -184,6 +184,7 @@ const SearchFlight = () => {
                 paddingX: "50px",
                 paddingY: 3,
                 mt: 5,
+                mb: 2,
               }}
             >
               <Grid container spacing={3}>

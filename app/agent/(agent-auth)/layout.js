@@ -7,7 +7,7 @@ export default function authLauout({ children }) {
       sx={{
         borderRadius: "1.3125rem",
         background:
-          "linear-gradient(180deg, #8a99a3 0%, #FFF 82.66%, #FFF 139.45%)",
+          "linear-gradient(180deg, #1E5E89 0%, #FFF 82.66%, #FFF 139.45%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

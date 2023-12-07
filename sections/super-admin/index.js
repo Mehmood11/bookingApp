@@ -26,7 +26,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
 // Images
-import dashboardLogo from "../../assets/dashboardLogo.svg";
+import dashboardLogo from "../../assets/logo.svg";
 import userIcon from "../../assets/dashboard-icons/userIcon.svg";
 import dashboardBg from "../../assets/dashboard-icons/dashboardBg.svg";
 import Image from "next/image";

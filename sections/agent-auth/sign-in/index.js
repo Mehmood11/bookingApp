@@ -15,7 +15,7 @@ const SignIn = () => {
   const { handleSubmit } = methods;
 
   const onSubmitHandler = (data) => {
-    route.push("/super-admin");
+    route.push("/agent/search-flight");
     console.log(data);
   };
   return (
@@ -76,6 +76,7 @@ const SignIn = () => {
             }}
             type="submit"
             variant="contained"
+            onClick={() => {}}
           >
             Sign In
           </Button>
