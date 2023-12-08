@@ -38,7 +38,7 @@ const socialData = [
   },
 ];
 
-const SearchFlight = () => {
+const FlightMain = () => {
   const router = useRouter();
   const methods = useForm({
     defaultValues: {
@@ -87,55 +87,11 @@ const SearchFlight = () => {
           </Typography>
         </Grid>
         <Grid mt={4} item xs={12} container rowSpacing={2} columnGap={2}>
-          <Grid item xs={12} md={3}>
-            <RHFTextField
-              name="ticket"
-              placeholder="Enter PNR or ticket no"
-              outerLabel="PNR / Ticket No"
-              StartIcon={<Image src={ticket} alt="ticket" />}
-              color="white"
-            />
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <RHFTextField
-              name="passportNum"
-              placeholder="Enter Passport no"
-              outerLabel="Passport No"
-              StartIcon={<Image src={passportNo} alt="passportNo" />}
-              color="white"
-            />
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <RHFTextField
-              name="passengerName"
-              placeholder="Enter passenger no"
-              outerLabel="Passenger Name"
-              StartIcon={<Image src={profileIcon} alt="ticket" />}
-              color="white"
-            />
-          </Grid>
-          <Grid item xs={12} md={2} display={"flex"} alignItems={"flex-end"}>
-            <Button
-              variant="contained"
-              mt={2}
-              sx={{
-                height: "55px",
-                borderRadius: "0.8125rem",
-                backgroundColor: "#EB3334",
-                // mb: 0.5,
-                "&:hover": {
-                  backgroundColor: "#EB3334",
-                },
-              }}
-            >
-              <ArrowForwardIosIcon />
-            </Button>
-          </Grid>
           <Grid
             item
             xs={12}
             sx={{
-              mt: 6,
+              mt: 3,
               minHeight: "14rem",
               borderRadius: " 0.75rem",
               background:
@@ -166,7 +122,7 @@ const SearchFlight = () => {
                   boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
                 },
               }}
-              onClick={() => router.push("/agent/flight-details")}
+              onClick={() => router.push("/agent/sign-in")}
             >
               Search Flight
               <KeyboardArrowRightIcon />
@@ -238,4 +194,4 @@ const SearchFlight = () => {
   );
 };
 
-export default SearchFlight;
+export default FlightMain;

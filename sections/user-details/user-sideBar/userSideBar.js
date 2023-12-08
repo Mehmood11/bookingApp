@@ -52,6 +52,7 @@ const UserSideBar = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        pt: 2,
       }}
     >
       <Box>
@@ -79,7 +80,7 @@ const UserSideBar = () => {
           </Box>
         </Box>
 
-        <Stack p={2} flexDirection={"column"} gap={2}>
+        <Stack p={2} flexDirection={"column"} gap={3}>
           {sideBarData.map((item, i) => {
             return (
               <Box

@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { ToggleButton, ToggleButtonGroup, Paper } from "@mui/material";
 
-const MultiButtons = ({ options, onSelect }) => {
-  const [selectedButton, setSelectedButton] = useState("One way");
+const MultiButtons = ({ options, onSelect, name }) => {
+  const [selectedButton, setSelectedButton] = useState("oneWay");
 
   const handleButtonChange = (event, newSelectedButton) => {
     setSelectedButton(newSelectedButton);
@@ -11,6 +11,7 @@ const MultiButtons = ({ options, onSelect }) => {
   };
   return (
     <ToggleButtonGroup
+      name={name}
       value={selectedButton}
       exclusive
       onChange={handleButtonChange}
@@ -30,7 +31,7 @@ const MultiButtons = ({ options, onSelect }) => {
             marginRight: index < options.length - 1 ? "1rem" : 0,
             borderRadius: "8px",
             boxShadow: "0px 4px 8px -2px rgba(16, 24, 40, 0.18)",
-            backdropFilter: "blur(12px)",
+            backdropFilter: "blur(100px)",
             fontSize: "16px",
             fontWeight: "500",
             textTransform: "capitalize",

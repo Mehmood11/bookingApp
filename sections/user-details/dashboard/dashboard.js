@@ -19,7 +19,7 @@ const Dashboard = () => {
       </Typography>
       <Box
         sx={{
-          height: "100vh",
+          height: "65vh",
           maxHeight: "90%",
           display: "flex",
           justifyContent: "center",

@@ -8,6 +8,7 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import logo from "../../../assets/logo.svg";
 import ProfileDropDown from "@/components/profile-drop-down";
+import { useRouter } from "next/navigation";
 
 const poppins = Poppins({
   weight: "400",
@@ -22,16 +23,18 @@ const pagesNavbar = [
 ];
 
 const DesktopNavbar = () => {
+  const route = useRouter();
+
   const [login, setLogin] = useState(false);
 
   return (
     <>
       <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" } }}>
         <Link href="/agent/search-flight">
-          <Image src={logo} alt="logo" />
+          <Image src={logo} alt="logo" width={130} />
         </Link>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           flexGrow: 1,
           display: { xs: "none", lg: "flex" },
@@ -44,7 +47,7 @@ const DesktopNavbar = () => {
             {page.title}
           </StyledNavLink>
         ))}
-      </Box>
+      </Box> */}
       <Box
         sx={{
           flexGrow: 1,
@@ -72,6 +75,9 @@ const DesktopNavbar = () => {
                     boxShadow:
                       "0px 3.69709px 7.39418px -2.77282px rgba(16, 24, 40, 0.16)",
                   },
+                }}
+                onClick={() => {
+                  route.push("/agent/sign-up");
                 }}
               >
                 Become An Agent

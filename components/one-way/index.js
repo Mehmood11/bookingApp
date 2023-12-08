@@ -24,6 +24,7 @@ import RHFDatePicker from "../rhf/rhf-date-picker";
 import dayjs from "dayjs";
 import { RHFCheckbox } from "../rhf/rhf-checkbox";
 import CustomModal from "../custom-modal/customModal";
+import MultiButtons from "../multi-buttons";
 
 const OneWay = ({ watch, getValues }) => {
   const apiQuery = useLazyUsersQuery();
@@ -34,18 +35,25 @@ const OneWay = ({ watch, getValues }) => {
     setOpen(true);
   };
 
+  const handleButtonChange = (slectButton) => {
+    console.log(slectButton);
+  };
+
   return (
-    <Grid container sx={{ alignItems: "center" }}>
+    <Grid container sx={{ alignItems: "center", mt: 2 }}>
       <CustomModal open={open} setOpen={setOpen} />
       <Grid xs={12} item sx={{ color: "black" }}>
-        <RHFRadioGroup
-          name="ways"
-          options={[
-            { label: "One Way", value: "oneWay" },
-            { label: "Round Way", value: "roundWay" },
-            { label: "Multi City", value: "multiCity" },
-          ]}
-        />
+        <Box sx={{ position: "absolute", top: -20 }}>
+          <MultiButtons
+            name="ways"
+            options={[
+              { label: "One Way", value: "oneWay" },
+              { label: "Round Way", value: "roundWay" },
+              { label: "Multi City", value: "multiCity" },
+            ]}
+            onSelect={handleButtonChange}
+          />
+        </Box>
       </Grid>
       <Grid xs={12} lg={3} item sx={{ color: "black" }}>
         <Typography variant="body1" sx={{ fontWeight: "600" }}>

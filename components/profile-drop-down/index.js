@@ -39,22 +39,21 @@ const ProfileDropDown = () => {
           onClick={handleClose}
           sx={{ borderBottom: "1px solid #cdd2d9" }}
         >
-          <AccountCircleOutlinedIcon
-            sx={{
-              mr: 0.5,
-              color: "#2278C8",
-              fontSize: "10",
-            }}
-          />
-          <Typography
-            variant="h6"
-            component="p"
-            color="primary"
-            sx={{ fontSize: "14px" }}
+          <Box
+            sx={{ display: "flex" }}
             onClick={() => router.push("/agent/profile")}
           >
-            Profile
-          </Typography>
+            <AccountCircleOutlinedIcon
+              sx={{
+                mr: 0.5,
+                color: "#2278C8",
+                fontSize: "10",
+              }}
+            />
+            <Typography variant="h6" color="primary" sx={{ fontSize: "14px" }}>
+              Profile
+            </Typography>
+          </Box>
         </MenuItem>
         <MenuItem
           onClick={() => {

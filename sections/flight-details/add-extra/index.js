@@ -31,7 +31,7 @@ const AddExtra = () => {
         component="h5"
         sx={{ color: "#465365", fontSize: "12px", fontWeight: "600", my: 2 }}
       >
-        Add Somthing{" "}
+        Add Somthing
         <Typography
           variant="h5"
           component="span"
@@ -44,7 +44,7 @@ const AddExtra = () => {
         <Box sx={{ width: "100%", maxWidth: "300px" }}>
           <RHFCustomSelect
             name="services"
-            size={"large"}
+            size="small"
             outerLabel="Choose Passenger Extra Service"
             options={servicesData}
           />
