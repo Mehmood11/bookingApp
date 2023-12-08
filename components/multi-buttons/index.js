@@ -31,7 +31,7 @@ const MultiButtons = ({ options, onSelect, name }) => {
             marginRight: index < options.length - 1 ? "1rem" : 0,
             borderRadius: "8px",
             boxShadow: "0px 4px 8px -2px rgba(16, 24, 40, 0.18)",
-            backdropFilter: "blur(12px)",
+            backdropFilter: "blur(100px)",
             fontSize: "16px",
             fontWeight: "500",
             textTransform: "capitalize",

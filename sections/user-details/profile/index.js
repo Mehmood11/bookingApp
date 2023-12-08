@@ -21,15 +21,15 @@ const Profile = () => {
         Profile
       </Typography>
 
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1.3 }} />
       <ProfileCreditLimit />
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1.3 }} />
       <AgentDetails />
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1.3 }} />
       <ProfileAddress />
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1.3 }} />
       <SubAgent />
-      <Divider sx={{ my: 1 }} />
+      <Divider sx={{ my: 1.3 }} />
       <ManageSubUser />
     </Box>
   );

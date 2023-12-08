@@ -78,9 +78,9 @@ const SignUp = () => {
               style={{
                 textDecoration: "none",
               }}
-              href="/sign-in"
+              href="/agent/sign-in"
             >
-              Sign Un
+              Sign UP
             </Link>
           </Button>
 
@@ -103,7 +103,7 @@ const SignUp = () => {
                 textDecoration: "none",
                 marginLeft: "4px",
               }}
-              href="/sign-in"
+              href="/agent/sign-in"
             >
               Sign In
             </Link>

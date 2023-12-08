@@ -100,7 +100,7 @@ const SignIn = () => {
                 textDecoration: "none",
                 marginLeft: "4px",
               }}
-              href="/sign-up"
+              href="/agent/sign-up"
             >
               Sign Up
             </Link>
