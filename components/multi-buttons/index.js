@@ -6,9 +6,15 @@ const MultiButtons = ({ options, onSelect, name }) => {
   const [selectedButton, setSelectedButton] = useState("oneWay");
 
   const handleButtonChange = (event, newSelectedButton) => {
-    setSelectedButton(newSelectedButton);
-    onSelect(newSelectedButton);
+    if (newSelectedButton !== null) {
+      setSelectedButton((prevSelectedButton) =>
+        prevSelectedButton === newSelectedButton
+          ? prevSelectedButton
+          : newSelectedButton
+      );
+    }
   };
+
   return (
     <ToggleButtonGroup
       name={name}
@@ -26,7 +32,7 @@ const MultiButtons = ({ options, onSelect, name }) => {
             backgroundColor:
               selectedButton === option.value
                 ? "#1E5E89"
-                : "rgba(255, 255, 255, 0.60)",
+                : "#fff",
             color: selectedButton === option.value ? "#F8FAFC" : "#64748B",
             marginRight: index < options.length - 1 ? "1rem" : 0,
             borderRadius: "8px",

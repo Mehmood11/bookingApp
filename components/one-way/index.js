@@ -26,7 +26,7 @@ import { RHFCheckbox } from "../rhf/rhf-checkbox";
 import CustomModal from "../custom-modal/customModal";
 import MultiButtons from "../multi-buttons";
 
-const OneWay = ({ watch, getValues }) => {
+const OneWay = ({ watch, getValues, pageName }) => {
   const apiQuery = useLazyUsersQuery();
   console.log("from ", watch("from"));
 
@@ -43,17 +43,28 @@ const OneWay = ({ watch, getValues }) => {
     <Grid container sx={{ alignItems: "center", mt: 2 }}>
       <CustomModal open={open} setOpen={setOpen} />
       <Grid xs={12} item sx={{ color: "black" }}>
-        <Box sx={{ position: "absolute", top: -20 }}>
-          <MultiButtons
+        {pageName === "selectFlight" ? (
+          <RHFRadioGroup
             name="ways"
             options={[
               { label: "One Way", value: "oneWay" },
               { label: "Round Way", value: "roundWay" },
               { label: "Multi City", value: "multiCity" },
             ]}
-            onSelect={handleButtonChange}
           />
-        </Box>
+        ) : (
+          <Box sx={{ position: "absolute", top: -20 }}>
+            <MultiButtons
+              name="ways"
+              options={[
+                { label: "One Way", value: "oneWay" },
+                { label: "Round Way", value: "roundWay" },
+                { label: "Multi City", value: "multiCity" },
+              ]}
+              onSelect={handleButtonChange}
+            />
+          </Box>
+        )}
       </Grid>
       <Grid xs={12} lg={3} item sx={{ color: "black" }}>
         <Typography variant="body1" sx={{ fontWeight: "600" }}>

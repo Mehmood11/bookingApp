@@ -10,6 +10,7 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import ProfileDropDown from "@/components/profile-drop-down";
+import { useRouter } from "next/navigation";
 
 const poppins = Poppins({
   weight: "400",
@@ -24,6 +25,8 @@ const pagesNavbar = [
 ];
 
 const MobileNavbar = ({ toggleDrawerMenu, openMenu }) => {
+  const route = useRouter();
+
   const [login, setLogin] = useState(false);
 
   return (
@@ -73,6 +76,9 @@ const MobileNavbar = ({ toggleDrawerMenu, openMenu }) => {
                           backgroundColor: "white",
                         },
                       }}
+                      onClick={() => {
+                        route.push("/agent/sign-up");
+                      }}
                     >
                       Become An Agent
                     </Button>
@@ -83,6 +89,7 @@ const MobileNavbar = ({ toggleDrawerMenu, openMenu }) => {
                     sx={{ border: "none", color: "white" }}
                     onClick={() => {
                       setLogin(true);
+                      route.push("/agent/sign-in");
                     }}
                   >
                     Login

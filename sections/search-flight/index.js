@@ -145,7 +145,11 @@ const SearchFlight = () => {
               p: 2,
             }}
           >
-            <DifferentWay watch={watch} getValues={getValues} />
+            <DifferentWay
+              watch={watch}
+              getValues={getValues}
+              pageName="searchFlight"
+            />
             <Button
               variant="contained"
               sx={{

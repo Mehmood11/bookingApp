@@ -92,7 +92,7 @@ const SelectFlight = ({ nextStepHandler }) => {
 
       <Box sx={{ marginY: 4 }}>
         <FormProvider methods={methods}>
-          <OneWay watch={watch} />
+          <OneWay watch={watch} pageName="selectFlight" />
         </FormProvider>
       </Box>
 

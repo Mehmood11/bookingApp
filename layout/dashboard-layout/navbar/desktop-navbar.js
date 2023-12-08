@@ -98,6 +98,7 @@ const DesktopNavbar = () => {
               }}
               onClick={() => {
                 setLogin(true);
+                route.push("/agent/sign-in");
               }}
             >
               Login
