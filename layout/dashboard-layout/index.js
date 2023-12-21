@@ -9,13 +9,13 @@ const DashboardLayout = ({ children }) => {
       sx={{
         // minHeight: "100vh",
         height: "100vh",
-        maxHeight: "93vh",
+        maxHeight: "100vh",
         backgroundImage: `url(${bg.src})`,
         backgroundPosition: "top",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         p: 3,
-        borderRadius: "10px",
+        borderRadius: "0px",
         boxSizing: "border-box",
         overflow: "auto",
         "&::-webkit-scrollbar": {

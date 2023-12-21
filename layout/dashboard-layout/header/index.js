@@ -31,17 +31,15 @@ const Header = () => {
         boxShadow: "none",
       }}
     >
-      <Container maxWidth="xl">
+      <Box sx={{paddingX:{md:"4rem"}}}>
         <Toolbar disableGutters>
           <DesktopNavbar />
           <MobileNavbar
             toggleDrawerMenu={toggleDrawerMenu}
             openMenu={openMenu}
           />
-
-          
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   );
 };

@@ -53,7 +53,13 @@ const OneWay = ({ watch, getValues, pageName }) => {
             ]}
           />
         ) : (
-          <Box sx={{ position: "absolute", top: -20 }}>
+          <Box
+            sx={{
+              top: -25,
+              position: "-webkit-absolute",
+              position:"absolute",
+            }}
+          >
             <MultiButtons
               name="ways"
               options={[
@@ -370,10 +376,10 @@ const OneWay = ({ watch, getValues, pageName }) => {
           </Box>
         </Grid>
       </Grid>
-      <Grid xs={12} item>
+      {/* <Grid xs={12} item>
         <RHFCheckbox name="WHCR" label="WHCR" />
         <RHFCheckbox name="agent" label="Agent Allocated Flight" />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
