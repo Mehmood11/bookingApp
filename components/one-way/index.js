@@ -171,6 +171,7 @@ const OneWay = ({ watch, getValues, pageName }) => {
         item
         xs={12}
         lg={5}
+        columnSpacing={2}
         spacing={1}
         mt={{ xs: 2, lg: 0 }}
         ml={{ xs: 0, lg: 2 }}

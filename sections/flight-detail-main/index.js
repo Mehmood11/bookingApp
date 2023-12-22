@@ -86,14 +86,14 @@ const FlightMain = () => {
             Explore the World's Wonders From <br /> Any Location , Anytime!
           </Typography>
         </Grid>
-        <Grid mt={4} item xs={12} container rowSpacing={2} columnGap={2}>
+        <Grid mt={4} item xs={12} container rowSpacing={4} columnGap={2}>
           <Grid
             item
             xs={12}
             sx={{
               mt: 3,
               height: "auto",
-              minHeight: "33vh",
+              minHeight: "260px",
               borderRadius: " 0.75rem",
               background:
                 "linear-gradient(92deg, rgba(248, 250, 252, 0.80) 7.57%, rgba(248, 250, 252, 0.73) 32.7%, rgba(248, 250, 252, 0.80) 55.51%, rgba(248, 250, 252, 0.72) 96.73%)",
@@ -112,12 +112,14 @@ const FlightMain = () => {
                 backdropFilter: "blur(7px)",
                 fontSize: "18px",
                 fontWeight: 500,
-                mb: 0.5,
+                mb: { lg: 0.5 },
                 p: "15px 30px",
-                position: "absolute",
+                position: { lg: "absolute" },
                 textTransform: "capitalize",
-                bottom: "-2rem",
-                right: 30,
+                bottom: { lg: "-2rem" },
+                right: { lg: 30 },
+                mt: { xs: "2rem", lg: "0px" },
+                float: { xs: "inline-end", lg: "none" },
                 "&:hover": {
                   backgroundColor: "#EB3334",
                   boxShadow: "0px 14px 28px -10px rgba(237, 76, 78, 0.60)",
@@ -139,7 +141,7 @@ const FlightMain = () => {
                 boxShadow: " 0px 4px 14px 0px rgba(0, 0, 0, 0.15)",
                 backdropFilter: "blur(12px)",
                 paddingX: "50px",
-                paddingY: 3,
+                paddingY: 6,
                 mt: 5,
                 mb: 2,
               }}
@@ -155,7 +157,7 @@ const FlightMain = () => {
 
                 {socialData.map((item, i) => {
                   return (
-                    <Grid key={i} item xs={12} md={3} lg={3}>
+                    <Grid key={i} item xs={12} sm={5} md={3} lg={3}>
                       <Box
                         sx={{ display: "flex", alignItems: "center", gap: 2 }}
                       >
