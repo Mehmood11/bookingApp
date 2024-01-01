@@ -1,14 +1,42 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
+import bg from "../../assets/bg.svg";
 import Header from "./header";
-import Footer from "./footer";
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Stack sx={{ height: "84vh" }}>
+    <Stack
+      sx={{
+        // minHeight: "100vh",
+        height: "100vh",
+        maxHeight: "100vh",
+        backgroundImage: `url(${bg.src})`,
+        backgroundPosition: "top",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        p: 3,
+        borderRadius: "0px",
+        boxSizing: "border-box",
+        overflow: "auto",
+        "&::-webkit-scrollbar": {
+          width: "0.4em",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-track": {
+          backgroundColor: "#C2D3DF",
+          borderRadius: "1rem",
+          height: "95%",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          borderRadius: "1rem",
+          backgroundColor: "#21608B",
+        },
+      }}
+    >
       <Header />
-      <Box>{children}</Box>
-      <Footer />
+      <Box sx={{ p: 2, mt: 2 }} height={"100%"}>
+        {children}
+      </Box>
     </Stack>
   );
 };
